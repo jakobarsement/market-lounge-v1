@@ -14,7 +14,7 @@ const ChartItem = ({ id, apiUrl }) => {
 		const dataConvertedForNivo = convertApiDataForNivoLineChart(
 			response,
 			0,
-			10
+			20
 		);
 		setNivoChartData(dataConvertedForNivo);
 	}, [setNivoChartData, apiUrl]);
