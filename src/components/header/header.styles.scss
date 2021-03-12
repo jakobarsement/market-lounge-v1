@@ -19,24 +19,24 @@
 		background-color: rgb(211, 211, 211);
 		border-radius: 6px;
 		.dashboards-text {
+			font-size: 2.5vw;
 			padding-top: 10px;
-			font-weight: bolder;
-			letter-spacing: 1px;
+			font-weight: bold;
+			letter-spacing: 0.6px;
 		}
 		.option {
 			padding: 10px 15px;
 			cursor: pointer;
 			font-size: 1vw;
-			font-weight: bold;
 			color: white;
 		}
 	}
 	.button {
 		position: relative;
-		top: 18px;
+		top: 15px;
 		background-color: black;
 		margin: 0 15px 0 15px;
-		height: 30px;
-		border-radius: 15px;
+		height: 18px;
+		border-radius: 5px;
 	}
 }
