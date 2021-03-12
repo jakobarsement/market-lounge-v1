@@ -1,4 +1,5 @@
 import HomePage from "./pages/homepage/homepage.component";
+import CompanyPage from "./pages/companypage/companypage.component";
 
 import { Switch, Route } from "react-router-dom";
 
@@ -11,8 +12,9 @@ function App() {
 			<Header />
 			<Switch>
 				<Route exact path="/" component={HomePage} />
-				<Route path="/book" component={HomePage} />
-				<Route exact path="/checkout" component={HomePage} />
+				<Route exact path="/companypage" component={CompanyPage} />
+				<Route exact path="/books" component={null} />
+				<Route exact path="/checkout" component={null} />
 			</Switch>
 		</div>
 	);

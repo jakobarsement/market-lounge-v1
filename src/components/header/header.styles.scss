@@ -1,8 +1,6 @@
 .header {
 	height: 70px;
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
 	margin-bottom: 25px;
 
 	.logo {
@@ -13,14 +11,32 @@
 
 	.options {
 		width: 50%;
-		height: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
+		height: 80px;
+		position: relative;
+		left: 25%;
+		top: -65px;
+		text-align: center;
+		background-color: rgb(211, 211, 211);
+		border-radius: 6px;
+		.dashboards-text {
+			padding-top: 10px;
+			font-weight: bolder;
+			letter-spacing: 1px;
+		}
+		.option {
+			padding: 10px 15px;
+			cursor: pointer;
+			font-size: 1vw;
+			font-weight: bold;
+			color: white;
+		}
 	}
-
-	.option {
-		padding: 10px 15px;
-		cursor: pointer;
+	.button {
+		position: relative;
+		top: 18px;
+		background-color: black;
+		margin: 0 15px 0 15px;
+		height: 30px;
+		border-radius: 15px;
 	}
 }
