@@ -1,20 +1,22 @@
 .header {
+	display: flex;
+	position: relative;
 	height: 70px;
 	width: 100%;
 	margin-bottom: 25px;
 
-	.logo {
-		height: 100%;
-		width: 100px;
-		padding: 25px;
+	.logo-container {
+		position: absolute;
+		left: 40px;
+		top: 25px;
+		.logo {
+			width: 30px;
+		}
 	}
-
 	.options {
-		width: 50%;
 		height: 80px;
-		position: relative;
-		left: 25%;
-		top: -65px;
+		margin: auto;
+		align-self: center;
 		text-align: center;
 		background-color: rgb(211, 211, 211);
 		border-radius: 6px;
@@ -33,7 +35,7 @@
 	}
 	.button {
 		position: relative;
-		top: 15px;
+		top: 12px;
 		background-color: black;
 		margin: 0 15px 0 15px;
 		height: 18px;

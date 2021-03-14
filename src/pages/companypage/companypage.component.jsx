@@ -1,5 +1,6 @@
 import React from "react";
 import MyResponsiveLine from "../../components/nivo-charts/canvas-nivo-line-chart.component";
+
 import "./companypage.styles.scss";
 
 const CompanyPage = () => (
