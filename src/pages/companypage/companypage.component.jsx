@@ -1,17 +1,15 @@
 import React from "react";
-import MyResponsiveLine from "../../components/nivo-charts/canvas-nivo-line-chart.component";
+
+import RightColumn from "../../components/right-column/right-column.component";
+import LeftColumn from "../../components/left-column/left-column.component";
 
 import "./companypage.styles.scss";
 
 const CompanyPage = () => (
-	<div>
-		<div className="companypage">
-			<div className="left-column"></div>
-			<div className="middle-column">
-				<MyResponsiveLine />
-			</div>
-			<div className="right-column"></div>
-		</div>
+	<div className="companypage">
+		<LeftColumn></LeftColumn>
+		<div className="middle-column"></div>
+		<RightColumn></RightColumn>
 	</div>
 );
 

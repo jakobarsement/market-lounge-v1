@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import { convertDataForNivoLineChart } from "./chart-item.utils";
 import SVGNivoLineChart from "../nivo-charts/svg-nivo-line-chart.component";
-import MyResponsiveLine from "../nivo-charts/canvas-nivo-line-chart.component";
+// import MyResponsiveLine from "../nivo-charts/canvas-nivo-line-chart.component";
 
 import "./chart-item.styles.scss";
 
@@ -25,9 +25,6 @@ const ChartItem = ({ id, apiUrl }) => {
 		staticApiCallAndConversionForNivoFormat();
 	}, [staticApiCallAndConversionForNivoFormat]);
 
-	useEffect(() => {
-		console.log(dateRange);
-	}, [dateRange]);
 	return (
 		<div className="chart-item">
 			<SVGNivoLineChart key={id} nivoData={nivoChartData} />

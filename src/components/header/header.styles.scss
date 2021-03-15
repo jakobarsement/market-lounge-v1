@@ -3,7 +3,7 @@
 	position: relative;
 	height: 70px;
 	width: 100%;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 
 	.logo-container {
 		position: absolute;
@@ -19,7 +19,7 @@
 		align-self: center;
 		text-align: center;
 		background-color: rgb(211, 211, 211);
-		border-radius: 6px;
+		border-radius: 0px 0px 6px 6px;
 		.dashboards-text {
 			font-size: 2.5vw;
 			padding-top: 10px;
