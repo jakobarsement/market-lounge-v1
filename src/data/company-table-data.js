@@ -1,11 +1,10 @@
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY;
 
-const CHART_DATA = [
+const COMPANY_TABLE_DATA = [
 	{
 		id: 1,
-		title: "First Chart",
-		routeName: "chart1",
-		apiUrl: `https://financialmodelingprep.com/api/v3/historical-price-full/AAPL?serietype=line&apikey=${FIN_PREP_API_KEY}`,
+		title: "First Cell",
+		apiUrl: `https://financialmodelingprep.com/api/v3/market-capitalization/MSFT?apikey=${FIN_PREP_API_KEY}`,
 	},
 	// {
 	// 	id: 2,
@@ -30,4 +29,4 @@ const CHART_DATA = [
 	// },
 ];
 
-export default CHART_DATA;
+export default COMPANY_TABLE_DATA;
