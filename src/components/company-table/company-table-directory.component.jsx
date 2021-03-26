@@ -6,7 +6,6 @@ import COMPANY_TABLE_DATA from "../../data/company-table-data";
 import "./company-table-directory.styles.scss";
 
 const CompanyTableDirectory = () => {
-	console.log(COMPANY_TABLE_DATA);
 	return (
 		<div className="company-table">
 			{COMPANY_TABLE_DATA.map((cellN) => (

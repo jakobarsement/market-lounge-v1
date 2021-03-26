@@ -17,10 +17,6 @@ const RightColumn = () => {
 		callNewsfeedApi();
 	}, [callNewsfeedApi]);
 
-	useEffect(() => {
-		console.log(responseState);
-	}, [responseState]);
-
 	return <div className="right-column">Right</div>;
 };
 
