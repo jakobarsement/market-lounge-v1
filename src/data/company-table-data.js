@@ -13,13 +13,13 @@ const COMPANY_TABLE_DATA = [
 		location: "data[0].avgVolume",
 		apiUrl: `https://financialmodelingprep.com/api/v3/quote/MSFT?apikey=${FIN_PREP_API_KEY}`,
 	},
-	{
-		id: 3,
-		title: "Third Chart",
-		routeName: "chart3",
-		apiUrl:
-			"https://financialmodelingprep.com/api/v3/historical-price-full/MSFT?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb",
-	},
+	// {
+	// 	id: 3,
+	// 	title: "Third Chart",
+	// 	routeName: "chart3",
+	// 	apiUrl:
+	// 		"https://financialmodelingprep.com/api/v3/historical-price-full/MSFT?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb",
+	// },
 	// {
 	// 	id: 4,
 	// 	title: "Fourth Chart",
