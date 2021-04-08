@@ -12,24 +12,24 @@ const Feedback = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		setSubmittedState("submitted");
-		// console.log("submitted...");
-		// if (submitted !== "submitted") {
-		// 	emailjs
-		// 		.sendForm(
-		// 			"service_bbj10yg",
-		// 			"template_ifync5l",
-		// 			e.target,
-		// 			"user_uLYAClKNSo75N0nWaLUmN"
-		// 		)
-		// 		.then(
-		// 			(result) => {
-		// 				console.log(result.text);
-		// 			},
-		// 			(error) => {
-		// 				console.log(error.text);
-		// 			}
-		// 		);
-		// }
+		console.log("submitted...");
+		if (submitted !== "submitted") {
+			emailjs
+				.sendForm(
+					"service_bbj10yg",
+					"template_ifync5l",
+					e.target,
+					"user_uLYAClKNSo75N0nWaLUmN"
+				)
+				.then(
+					(result) => {
+						console.log(result.text);
+					},
+					(error) => {
+						console.log(error.text);
+					}
+				);
+		}
 	}
 
   return (
