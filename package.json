@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.2",
     "axios": "^0.21.1",
+    "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
     "lodash": "^4.17.21",
     "nivo": "^0.31.0",
