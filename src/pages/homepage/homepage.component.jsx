@@ -1,19 +1,16 @@
 import React from "react";
 
-import RightColumn from "../../components/right-column/right-column.component";
-import LeftColumn from "../../components/left-column/left-column.component";
-
-import ChartDirectory from "../../components/chart-directory/chart-directory.component";
+import Header from "../../components/header/header-landing.component";
+import Footer from "../../components/footer/footer-landing.component"
+import LandingPage from "../../components/landing-page/landing-page.component"
 
 import "./homepage.styles.scss";
 
 const HomePage = () => (
 	<div className="homepage">
-		<LeftColumn></LeftColumn>
-		<div className="middle-column">
-			<ChartDirectory />
-		</div>
-		<RightColumn></RightColumn>
+		<Header></Header>
+		<LandingPage></LandingPage>
+		{/* <Footer></Footer> */}
 	</div>
 );
 
