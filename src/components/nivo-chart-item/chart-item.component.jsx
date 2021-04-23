@@ -40,4 +40,4 @@ const ChartItem = ({ id, apiUrl }) => {
 	);
 };
 
-export default ChartItem;
+// export default ChartItem;

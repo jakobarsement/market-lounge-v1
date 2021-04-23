@@ -1,16 +1,19 @@
 import React from "react";
 
 import "./landing-page.styles.scss";
-import Searchicon from "../../assets/images/search-icon-pink.png"
+import SearchIcon from "../../assets/images/search-icon-pink.png";
 
-const LandingPage = () => (
+const LandingSearch = () => (
 	<div className="main">
 		<div className="content-container">
 			<h1>Simply Markets</h1>
-			<p>Your personal tool to help to analyse companies better and find the next multi bagger for your portfolio.</p>
+			<p>
+				Your personal tool to help to analyse companies better and find the next
+				multi bagger for your portfolio.
+			</p>
 			<div className="searchbar-container">
-				<img src={Searchicon} className="search-icon"/>
-				<input type="text" className="searchbar"/>
+				<img src={SearchIcon} alt="Search" className="search-icon" />
+				<input type="text" className="searchbar" />
 			</div>
 			<div className="company-container">
 				<p>What's trending:</p>
@@ -28,4 +31,4 @@ const LandingPage = () => (
 	</div>
 );
 
-export default LandingPage;
+export default LandingSearch;
