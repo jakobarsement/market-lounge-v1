@@ -5,17 +5,17 @@ import { Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
-function App() {
+const App: React.FC = () => {
 	return (
 		<div className="App">
 			<Switch>
 				<Route exact path="/" component={LandingPage} />
 				<Route exact path="/companypage" component={CompanyPage} />
-				<Route exact path="/books" component={null} />
-				<Route exact path="/checkout" component={null} />
+				<Route exact path="/books" component={CompanyPage} />
+				<Route exact path="/checkout" component={CompanyPage} />
 			</Switch>
 		</div>
 	);
-}
+};
 
 export default App;
