@@ -36,7 +36,7 @@ export const RatioLineChart = ({
 			{
 				name: company,
 				data: chartData.map((data) => data[indicator]),
-				color: "black",
+				color: "blue",
 			},
 		],
 	};

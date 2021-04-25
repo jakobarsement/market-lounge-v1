@@ -4,6 +4,9 @@ import * as d3 from "d3";
 import "./intensity-bar.styles.scss";
 
 export const IntensityBar = ({ company, indicator, title, chartData }) => {
+	let barWidth = 90;
+	let svgWidth = 100;
+
 	if (!chartData) return null;
 
 	const domainValues = chartData.map((data) => data[indicator]);
@@ -13,7 +16,7 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 		.range([0.3, 1]);
 
 	return (
-		<svg width="900" height="120">
+		<svg width={`${svgWidth}%`} height="120">
 			<defs>
 				<linearGradient id={indicator}>
 					{chartData.map((data, index) => (
@@ -30,22 +33,25 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 				className="intensity-bar-title"
 				x="10"
 				y="30"
-				fontSize="18px"
+				fontSize="15px"
 				fontWeight="bold"
+				fill="white"
 			>
 				{title}
 			</text>
+
 			<rect
 				x="20"
 				y="50"
-				width="50vw"
-				height="20"
+				width={`${barWidth}%`}
+				height="10"
 				fill={`url(#${indicator})`}
 				stroke="none"
 				strokeWidth="1"
 				rx="7"
 				ry="7"
 			/>
+
 			<g transform={`translate(25,100)`}>
 				{chartData.map((data, index) => (
 					<text
@@ -53,6 +59,7 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 						x={98 * index}
 						textAnchor="middle"
 						fontSize="15px"
+						fill="white"
 					>
 						{data[indicator]}%
 					</text>
@@ -66,6 +73,7 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 						textAnchor="middle"
 						fontSize="15px"
 						fontWeight="500"
+						fill="white"
 					>
 						{data.formattedDate}
 					</text>
