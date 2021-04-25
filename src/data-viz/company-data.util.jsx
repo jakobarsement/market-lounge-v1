@@ -1,15 +1,15 @@
 import { useState, useRef } from "react";
 import { HighChartStockLine } from "./graphs/share-price-chart";
 import { FinancialGrowth } from "./components/intensity-bar-directory";
-import { FinancialRatios } from "./components/company-ratio-chart-directory";
-import CompanyTableDirectory from "../components/company-table/company-table-directory.component";
+import { FinancialRatios } from "./components/company-ratio-chart-directory.jsx";
+import CompanyTableDirectory from "../components/company-table-directory/company-table-directory.component";
 
 function CompanyData() {
 	const [company, setCompanyName] = useState("MSFT");
 	const inputEl = useRef(null);
 
 	const handleSearchClick = () => {
-		setCompanyName(inputEl.current.value);
+		if (inputEl.current.value) setCompanyName(inputEl.current.value);
 	};
 
 	return (

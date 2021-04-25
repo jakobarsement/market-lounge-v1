@@ -24,13 +24,19 @@
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 	}
+	.send-button {
+		padding-bottom: 8px;
+		border-bottom: 0.1em solid rgb(76, 76, 68);
+	}
 	.MuiButton-contained {
 		margin-top: 4px;
 		width: 100px;
 		background-color: rgb(185, 198, 226);
 	}
 	.donate-box {
-		margin-top: 16px;
+		margin-top: 12px;
+		margin-bottom: 4px;
+		border-radius: 6px;
 		width: 30%;
 	}
 	.success-message {

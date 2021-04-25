@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { RatioLineChart } from "../graphs/RatioLineChart";
+import { RatioLineChart } from "../graphs/company-ratio-chart";
 import { useFetchData } from "../hooks/useFetchData";
 
 import "./company-ratio-chart-directory.styles.scss";
