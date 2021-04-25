@@ -1,6 +1,8 @@
 import React from "react";
 import * as d3 from "d3";
 
+import "./intensity-bar.styles.scss";
+
 export const IntensityBar = ({ company, indicator, title, chartData }) => {
 	if (!chartData) return null;
 
@@ -18,13 +20,19 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 						<stop
 							key={data.date}
 							offset={`${14.28 * index}%`}
-							stopColor="#000080"
+							stopColor="rgb(12,97,251)"
 							stopOpacity={opacityScale(data[indicator])}
 						></stop>
 					))}
 				</linearGradient>
 			</defs>
-			<text x="10" y="30" fontSize="18px" fontWeight="bold">
+			<text
+				className="intensity-bar-title"
+				x="10"
+				y="30"
+				fontSize="18px"
+				fontWeight="bold"
+			>
 				{title}
 			</text>
 			<rect

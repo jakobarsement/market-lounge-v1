@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "../../components/header/header-landing.component";
-import LandingSearch from "../../components/landing-page/landing-page.component";
+import LandingSearch from "../../components/landing-search/landing-page.component";
 
 import "./landingpage.styles.scss";
 

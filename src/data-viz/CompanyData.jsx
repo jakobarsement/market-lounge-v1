@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { HighChartStockLine } from "./graphs/HighChartStockLine";
-import { FinancialGrowth } from "./components/revenue-growth-bars";
-import { FinancialRatios } from "./components/FinancialRatios";
+import { HighChartStockLine } from "./graphs/share-price-chart";
+import { FinancialGrowth } from "./components/intensity-bar-directory";
+import { FinancialRatios } from "./components/company-ratio-chart-directory";
 import CompanyTableDirectory from "../components/company-table/company-table-directory.component";
 
 function CompanyData() {
