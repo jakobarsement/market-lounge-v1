@@ -6,10 +6,10 @@ import LandingSearch from "../../components/landing-search/landing-page.componen
 import "./landingpage.styles.scss";
 
 const LandingPage = () => (
-  <div className="landingpage">
-    <Header></Header>
-    <LandingSearch></LandingSearch>
-  </div>
+	<div className="landingpage">
+		<Header></Header>
+		<LandingSearch></LandingSearch>
+	</div>
 );
 
 export default LandingPage;

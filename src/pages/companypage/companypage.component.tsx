@@ -7,13 +7,13 @@ import CompanyData from "../../data-viz/company-data.util";
 import "./companypage.styles.scss";
 
 const CompanyPage = () => (
-  <div className="companypage">
-    <LeftColumn></LeftColumn>
-    <div className="middle-column">
-      <CompanyData />
-    </div>
-    <RightColumn></RightColumn>
-  </div>
+	<div className="companypage">
+		<LeftColumn></LeftColumn>
+		<div className="middle-column">
+			<CompanyData />
+		</div>
+		<RightColumn></RightColumn>
+	</div>
 );
 
 export default CompanyPage;

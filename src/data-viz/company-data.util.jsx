@@ -5,35 +5,35 @@ import { FinancialRatios } from "./chart-directories/company-ratio-chart-directo
 import CompanyTableDirectory from "../components/company-table-directory/company-table-directory.component";
 
 function CompanyData() {
-  const [company, setCompanyName] = useState("MSFT");
-  const inputEl = useRef(null);
+	const [company, setCompanyName] = useState("MSFT");
+	const inputEl = useRef(null);
 
-  const handleSearchClick = () => {
-    if (inputEl.current.value) setCompanyName(inputEl.current.value);
-  };
+	const handleSearchClick = () => {
+		if (inputEl.current.value) setCompanyName(inputEl.current.value);
+	};
 
-  return (
-    <div
-      style={
-        {
-          // height: '100vh',
-          // margin: 'auto',
-          // width: '80vw',
-        }
-      }
-    >
-      <div>
-        <input ref={inputEl} />
-        <button onClick={handleSearchClick}>Search</button>
-      </div>
-      <div style={{ padding: "20px" }}>
-        <HighChartStockLine company={company} />
-        <CompanyTableDirectory />
-        <FinancialGrowth company={company} />
-        <FinancialRatios company={company} />
-      </div>
-    </div>
-  );
+	return (
+		<div
+			style={
+				{
+					// height: '100vh',
+					// margin: 'auto',
+					// width: '80vw',
+				}
+			}
+		>
+			<div>
+				<input ref={inputEl} />
+				<button onClick={handleSearchClick}>Search</button>
+			</div>
+			<div style={{ padding: "20px" }}>
+				<HighChartStockLine company={company} />
+				<CompanyTableDirectory />
+				<FinancialGrowth company={company} />
+				<FinancialRatios company={company} />
+			</div>
+		</div>
+	);
 }
 
 export default CompanyData;

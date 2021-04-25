@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Hind-Light";
-  src: url("../../assets/Hind-Light.woff");
-  font-size: 10px;
+	font-family: "Hind-Light";
+	src: url("../../assets/Hind-Light.woff");
+	font-size: 10px;
 }
 .landingpage {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #342e37;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #342e37;
 
-  .middle-column {
-    border-radius: 1px;
-    margin: 0px 10px 0px 10px;
-    padding: 4px 4px 0px 4px;
-    height: 100vh;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(36, 36, 36);
-  }
+	.middle-column {
+		border-radius: 1px;
+		margin: 0px 10px 0px 10px;
+		padding: 4px 4px 0px 4px;
+		height: 100vh;
+		width: 60%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: rgb(36, 36, 36);
+	}
 }
