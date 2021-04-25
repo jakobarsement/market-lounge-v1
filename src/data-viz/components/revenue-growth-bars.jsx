@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { IntensityBar } from "../graphs/IntensityBar";
 import { useFetchData } from "../hooks/useFetchData";
 
+import "./revenue-growth-bars.styles.scss";
 export const FinancialGrowth = ({ company }) => {
 	const url = `https://financialmodelingprep.com/api/v3/financial-growth/${company}?period=quarter&limit=80&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
@@ -27,21 +28,21 @@ export const FinancialGrowth = ({ company }) => {
 	}
 
 	return (
-		<React.Fragment>
+		<div className="intensity-bars">
 			<IntensityBar
 				key="revenueGrowth"
 				company={company}
 				indicator="revenueGrowth"
-				title="Q/Q Revenue Growth Timeline"
+				title="Q/Q Revenue Growth"
 				chartData={data}
 			/>
 			<IntensityBar
 				key="ebitgrowth"
 				company={company}
 				indicator="ebitgrowth"
-				title="Q/Q EBIT Growth Timeline"
+				title="Q/Q EBIT Growth"
 				chartData={data}
 			/>
-		</React.Fragment>
+		</div>
 	);
 };

@@ -1,13 +1,17 @@
 .company-table {
 	display: flex;
+	flex-direction: row;
 	color: white;
 	justify-content: center;
 	flex-wrap: wrap;
-	font-size: 0.5em;
+	font-size: 0.8em;
+	width: 90%;
 
 	.table-cell {
-		border: 1px solid rgb(255, 195, 127);
-		background-color: rgb(161, 161, 161);
-		width: 50px;
+		border: 1px solid rgb(76, 76, 68);
+		background-color: rgb(47, 47, 42);
+		height: 30px;
+		padding: 5px;
+		width: 180px;
 	}
 }

@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { HighChartStockLine } from "./graphs/HighChartStockLine";
-import { FinancialGrowth } from "./components/FinancialGrowth";
+import { FinancialGrowth } from "./components/revenue-growth-bars";
 import { FinancialRatios } from "./components/FinancialRatios";
 import CompanyTableDirectory from "../components/company-table/company-table-directory.component";
 

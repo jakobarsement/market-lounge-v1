@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Paypal } from "./paypal.component";
 import emailjs from "emailjs-com";
 import Button from "@material-ui/core/Button";
-import "./emailjs.styles.scss";
+import "./feedback.styles.scss";
 
 const Feedback = () => {
 	const [submitted, setSubmittedState] = useState("");
@@ -34,15 +34,15 @@ const Feedback = () => {
 	return (
 		<>
 			<form className="contact-form" onSubmit={handleSubmit}>
-				<label className="message-title">Feedback</label>
+				<label className="feedback-title">Feedback</label>
 				<textarea
-					className="input-box message"
+					className="feedback-box message"
 					name="feedback"
 					placeholder="Instant feedback... you will not be redirected."
 				/>
 				<Button
 					variant="contained"
-					color="primary"
+					// color="primary"
 					className="contact-submit-button"
 					type="submit"
 					value="Send"
@@ -50,8 +50,8 @@ const Feedback = () => {
 					Send
 				</Button>
 				<input
-					className="input-box name"
-					placeholder="Donate amount"
+					className="donate-box name"
+					placeholder="Donate"
 					pattern="[0-9]*"
 					type="number"
 					onChange={(e) => setAmount(e.target.value)}
