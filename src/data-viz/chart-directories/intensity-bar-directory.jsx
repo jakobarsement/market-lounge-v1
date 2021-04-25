@@ -2,7 +2,7 @@ import React, { useCallback } from "react";
 import { IntensityBar } from "../graphs/intensity-bar.component";
 import { useFetchData } from "../hooks/useFetchData";
 
-import "./revenue-growth-bars.styles.scss";
+import "./intensity-bar.styles.scss";
 export const FinancialGrowth = ({ company }) => {
 	const url = `https://financialmodelingprep.com/api/v3/financial-growth/${company}?period=quarter&limit=80&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 

@@ -38,10 +38,10 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 			<rect
 				x="20"
 				y="50"
-				width="700"
+				width="50vw"
 				height="20"
 				fill={`url(#${indicator})`}
-				stroke="black"
+				stroke="none"
 				strokeWidth="1"
 				rx="7"
 				ry="7"

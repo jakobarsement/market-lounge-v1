@@ -10,3 +10,14 @@ code {
 	font-family: "Montserrat", "Darker Grotesque", "Open Sans Condensed",
 		sans-serif;
 }
+
+a {
+	text-decoration: none;
+	color: rgb(194, 26, 26);
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0px;
+}
