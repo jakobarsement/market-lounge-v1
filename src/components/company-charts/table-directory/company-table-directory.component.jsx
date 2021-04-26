@@ -1,11 +1,11 @@
 import React from "react";
 
 import TableCell from "./company-table-cell/table-cell.component";
-import COMPANY_TABLE_DATA from "../../data/company-table-data";
+import COMPANY_TABLE_DATA from "../../../data/company-table-data";
 
 import "./company-table-directory.styles.scss";
 
-const CompanyTableDirectory = () => {
+const CompanyTableDirectory = ({ company }) => {
 	const renderTableOne = () => {
 		return COMPANY_TABLE_DATA.map((cellN) => {
 			const { id } = cellN;

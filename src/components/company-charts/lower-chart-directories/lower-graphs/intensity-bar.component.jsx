@@ -1,11 +1,10 @@
 import React from "react";
 import * as d3 from "d3";
 
-import "./intensity-bar.styles.scss";
-
 export const IntensityBar = ({ company, indicator, title, chartData }) => {
-	let barWidth = 90;
-	let svgWidth = 100;
+	let barWidth = 96;
+	let barHeight = 10;
+	// let svgWidth = 100;
 
 	if (!chartData) return null;
 
@@ -16,7 +15,12 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 		.range([0.3, 1]);
 
 	return (
-		<svg width={`${svgWidth}%`} height="120">
+		<svg
+			viewBox="0 0 1000 150 "
+			preserveAspectRatio="xMidYMin"
+			// width={`${svgWidth}%`}
+			// height="120"
+		>
 			<defs>
 				<linearGradient id={indicator}>
 					{chartData.map((data, index) => (
@@ -44,7 +48,7 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 				x="20"
 				y="50"
 				width={`${barWidth}%`}
-				height="10"
+				height={`${barHeight}%`}
 				fill={`url(#${indicator})`}
 				stroke="none"
 				strokeWidth="1"
@@ -56,7 +60,7 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 				{chartData.map((data, index) => (
 					<text
 						key={data.formattedDate}
-						x={98 * index}
+						x={136 * index}
 						textAnchor="middle"
 						fontSize="15px"
 						fill="white"
@@ -69,7 +73,7 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 				{chartData.map((data, index) => (
 					<text
 						key={data.formattedDate}
-						x={98 * index}
+						x={136 * index}
 						textAnchor="middle"
 						fontSize="15px"
 						fontWeight="500"

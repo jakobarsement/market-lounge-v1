@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import { useFetchData } from "../hooks/useFetchData";
+import { useFetchData } from "../../hooks/useFetchData";
 
 export const HighChartStockLine = ({ company }) => {
 	const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${company}?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
@@ -16,6 +16,17 @@ export const HighChartStockLine = ({ company }) => {
 	const { data } = useFetchData(url, company, formatData);
 
 	const stockOptions = {
+		chart: {
+			backgroundColor: "rgb(47, 47, 42)",
+		},
+
+		rangeSelector: {
+			enabled: false,
+		},
+		scrollbar: {
+			enabled: false,
+		},
+
 		navigation: {
 			bindingsClassName: "tools-container", // informs Stock Tools where to look for HTML elements for adding technical indicators, annotations etc.
 		},
@@ -26,10 +37,12 @@ export const HighChartStockLine = ({ company }) => {
 		},
 		title: {
 			text: company,
+			style: {
+				color: "white",
+			},
 		},
 		subtitle: {
-			text:
-				"User the window below to have a custom range of time frame and drag it to compare",
+			text: "",
 		},
 		series: [
 			{

@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { IntensityBar } from "../graphs/intensity-bar.component";
+import { IntensityBar } from "./lower-graphs/intensity-bar.component";
 import { useFetchData } from "../hooks/useFetchData";
 
 import "./intensity-bar.styles.scss";
