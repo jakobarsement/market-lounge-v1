@@ -17,6 +17,7 @@ export const HighChartStockLine = ({ company }) => {
     );
 
     const { data } = useFetchData(url, company, formatData)
+    console.log(data)
 
     const stockOptions = {
         navigation: {
