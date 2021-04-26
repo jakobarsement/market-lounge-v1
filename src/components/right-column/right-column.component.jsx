@@ -3,7 +3,7 @@ import axios from "axios";
 
 import "./right-column.styles.scss";
 import NewsFeedTable from "./news-feed-table/news-feed-table.component";
-import Feedback from "../feedback/feedback.component";
+import Feedback from "./feedback/feedback.component";
 
 const RightColumn = () => {
 	const [responseState, setResponseState] = useState([]);
