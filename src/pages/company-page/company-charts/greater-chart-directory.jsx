@@ -7,29 +7,24 @@ import CompanyTableDirectory from "./table-directory/company-table-directory.com
 import "./greater-chart-directory.styles.scss";
 function CompanyData() {
 	const [company, setCompanyName] = useState("MSFT");
-	const inputEl = useRef(null);
+	const inputRef = useRef(null);
 
-	const handleSearchClick = () => {
-		if (inputEl.current.value) setCompanyName(inputEl.current.value);
+	const handleSubmit = (e) => {
+		if (e.key === "Enter" && inputRef.current.value) {
+			setCompanyName(inputRef.current.value);
+		}
 	};
 
 	return (
-		<div
-			style={
-				{
-					// height: '100vh',
-					// margin: 'auto',
-					// width: '80vw',
-				}
-			}
-		>
-			<div>
-				<input className="company-input-box" ref={inputEl} />
-				<button className="company-search-button" onClick={handleSearchClick}>
-					Search
-				</button>
+		<div>
+			<div className="company-search">
+				<input
+					className="company-input-box"
+					ref={inputRef}
+					onKeyPress={handleSubmit}
+				/>
 			</div>
-			<div style={{ padding: "20px" }}>
+			<div className="greater-chart-directory">
 				<HighChartStockLine company={company} />
 				<CompanyTableDirectory company={company} />
 				<FinancialGrowth company={company} />

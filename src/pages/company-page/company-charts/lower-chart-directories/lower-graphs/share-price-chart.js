@@ -19,6 +19,9 @@ export const HighChartStockLine = ({ company }) => {
 		chart: {
 			backgroundColor: "rgb(47, 47, 42)",
 		},
+		line: {
+			color: "rgb(47, 47, 42)",
+		},
 		navigator: {
 			height: 15,
 		},
@@ -55,6 +58,7 @@ export const HighChartStockLine = ({ company }) => {
 				tooltip: {
 					valueDecimals: 2,
 				},
+				color: "rgb(123, 181, 230)",
 			},
 		],
 	};
