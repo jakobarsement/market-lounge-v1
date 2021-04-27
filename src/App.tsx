@@ -1,4 +1,4 @@
-import LandingPage from "./pages/landing-page/landingpage.component";
+import LandingPage from "./pages/landing-page/landing-page.component";
 import CompanyPage from "./pages/company-page/companypage.component";
 
 import { Switch, Route } from "react-router-dom";

@@ -19,6 +19,9 @@ export const HighChartStockLine = ({ company }) => {
 		chart: {
 			backgroundColor: "rgb(47, 47, 42)",
 		},
+		navigator: {
+			height: 15,
+		},
 
 		rangeSelector: {
 			enabled: false,
