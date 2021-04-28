@@ -51,7 +51,6 @@ export const RatioLineChart = ({
 		],
 	};
 
-	console.log(options);
 	return (
 		<div className="company-ratio-chart">
 			<HighchartsReact highcharts={Highcharts} options={options} />

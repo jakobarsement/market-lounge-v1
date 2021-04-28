@@ -9,8 +9,6 @@ export function convertNumberToAbbreviation(number) {
 	if (shortValue % 1 !== 0) {
 		shortValue = shortValue.toFixed(1);
 	}
-	console.log(shortValue);
-	console.log(suffixes[suffixNum]);
 
 	return shortValue + suffixes[suffixNum];
 }

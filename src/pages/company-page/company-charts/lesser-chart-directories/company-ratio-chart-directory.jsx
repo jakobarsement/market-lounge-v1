@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
 import { RatioLineChart } from "./lesser-graphs/company-ratio-chart";
-import { useFetchData } from "../utils/useFetchData";
+import { useFetchData } from "../chart-utils/useFetchData";
 
-import "./ratio-chart-directory.styles.scss";
+import "./company-ratio-chart-directory.styles.scss";
 
-export const FinancialRatios = ({ company }) => {
+const CompanyRatiosChartDirectory = ({ company }) => {
 	const url = `https://financialmodelingprep.com/api/v3/ratios/${company}?period=quarter&limit=140&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
@@ -65,3 +65,5 @@ export const FinancialRatios = ({ company }) => {
 		</div>
 	);
 };
+
+export default CompanyRatiosChartDirectory;

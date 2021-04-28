@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import IntensityBar from "./lesser-graphs/intensity-bar.component";
-import { useFetchData } from "../utils/useFetchData";
+import { useFetchData } from "../chart-utils/useFetchData";
 
 import "./intensity-bar.styles.scss";
 const IntensityBarDirectory = ({ company }) => {

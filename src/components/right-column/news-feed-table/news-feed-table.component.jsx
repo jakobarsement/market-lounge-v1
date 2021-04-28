@@ -10,7 +10,7 @@ const NewsFeedTable = ({ feeds }) => {
 					{feeds.map((item, index) => {
 						const { image, publishedDate, title, url } = item;
 						return (
-							<thead key={"head" + index} className="table-item">
+							<tbody key={"head" + index} className="table-item">
 								<tr key={"row" + index}>
 									<td key={"image" + index}>
 										{image && (
@@ -19,16 +19,20 @@ const NewsFeedTable = ({ feeds }) => {
 									</td>
 									<tr key={"title" + index} className="link-tag">
 										{url && (
-											<a href={url} target="_blank" rel="noreferrer">
-												{title}
-											</a>
+											<td>
+												<a href={url} target="_blank" rel="noreferrer">
+													{title}
+												</a>
+											</td>
 										)}
 									</tr>
 									<tr key={"publishDate" + index} className="date-tag">
-										{publishedDate && formatPublishedDateTime(publishedDate)}
+										<td>
+											{publishedDate && formatPublishedDateTime(publishedDate)}
+										</td>
 									</tr>
 								</tr>
-							</thead>
+							</tbody>
 						);
 					})}
 				</table>
@@ -42,7 +46,7 @@ const NewsFeedTable = ({ feeds }) => {
 		<div className="news-feeds-table">
 			<div className="news-feed-title">
 				<h3>
-					<i class="fas fa-newspaper fa-1x"></i> News Feed
+					<i className="fas fa-newspaper fa-1x"></i> News Feed
 				</h3>
 			</div>
 			{renderNewsFeeds()}

@@ -1,37 +1,24 @@
-import { useState, useRef } from "react";
+import React, { useContext } from "react";
 import { HighChartStockLine } from "./lesser-chart-directories/lesser-graphs/share-price-chart";
 import IntensityBarDirectory from "./lesser-chart-directories/intensity-bar-directory";
-import { FinancialRatios } from "./lesser-chart-directories/ratio-chart-directory.jsx";
+import CompanyRatiosChartDirectory from "./lesser-chart-directories/company-ratio-chart-directory.jsx";
 import CompanyTableDirectory from "./table-directory/company-table-directory.component";
-
+import { CompanyContext } from "../company-utils/companyContext";
 import "./greater-chart-directory.styles.scss";
-function CompanyData() {
-	const [company, setCompanyName] = useState("MSFT");
-	const inputRef = useRef(null);
 
-	const handleSubmit = (e) => {
-		if (e.key === "Enter" && inputRef.current.value) {
-			setCompanyName(inputRef.current.value);
-		}
-	};
+function GreaterChartDirectory() {
+	const { company } = useContext(CompanyContext);
 
 	return (
 		<div>
-			<div className="company-search">
-				<input
-					className="company-input-box"
-					ref={inputRef}
-					onKeyPress={handleSubmit}
-				/>
-			</div>
 			<div className="greater-chart-directory">
 				<HighChartStockLine company={company} />
 				<CompanyTableDirectory company={company} />
 				<IntensityBarDirectory company={company} />
-				<FinancialRatios company={company} />
+				<CompanyRatiosChartDirectory company={company} />
 			</div>
 		</div>
 	);
 }
 
-export default CompanyData;
+export default GreaterChartDirectory;
