@@ -14,7 +14,7 @@ function CompanySearch() {
 		}
 	};
 	return (
-		<div className="company-search">
+		<div className="company-search-container">
 			<input
 				className="company-input-box"
 				ref={inputRef}

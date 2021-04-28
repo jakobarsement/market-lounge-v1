@@ -34,7 +34,7 @@ const Feedback = () => {
 	return (
 		<>
 			<form className="contact-form" onSubmit={handleSubmit}>
-				<label className="feedback-title">Feedback</label>
+				<h3 className="feedback-title">Feedback</h3>
 				<textarea
 					className="feedback-box message"
 					name="feedback"

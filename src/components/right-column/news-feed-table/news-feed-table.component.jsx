@@ -14,7 +14,7 @@ const NewsFeedTable = ({ feeds }) => {
 								<tr key={"row" + index}>
 									<td key={"image" + index}>
 										{image && (
-											<img src={image} alt="img" className="feedImage" />
+											<img src={image} alt="img" className="feed-image" />
 										)}
 									</td>
 									<tr key={"title" + index} className="link-tag">

@@ -37,7 +37,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 				className="intensity-bar-title"
 				x="10"
 				y="30"
-				fontSize="15px"
+				fontSize="20px"
 				fontWeight="bold"
 				fill="white"
 			>

@@ -1,13 +1,16 @@
-.company-search {
+.company-search-container {
 	position: absolute;
 	top: 15px;
 	right: 23%;
 	margin: 0px 20px 0px 20px;
+	padding: 0px 10px 0px 10px;
 	z-index: 1;
 
-	background-color: rgb(47, 47, 42);
 	.company-input-box {
-		border-radius: 100px;
-		width: 100px;
+		border-radius: 5px;
+		width: 8vw;
+		background-color: rgb(32, 32, 32);
+		border-color: rgb(71, 68, 59);
+		color: white;
 	}
 }
