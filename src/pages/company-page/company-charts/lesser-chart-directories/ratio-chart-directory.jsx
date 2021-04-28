@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
-import { RatioLineChart } from "./lower-graphs/company-ratio-chart";
-import { useFetchData } from "../hooks/useFetchData";
+import { RatioLineChart } from "./lesser-graphs/company-ratio-chart";
+import { useFetchData } from "../utils/useFetchData";
 
 import "./ratio-chart-directory.styles.scss";
 

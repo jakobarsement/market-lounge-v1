@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
-import { IntensityBar } from "./lower-graphs/intensity-bar.component";
-import { useFetchData } from "../hooks/useFetchData";
+import IntensityBar from "./lesser-graphs/intensity-bar.component";
+import { useFetchData } from "../utils/useFetchData";
 
 import "./intensity-bar.styles.scss";
-export const FinancialGrowth = ({ company }) => {
+const IntensityBarDirectory = ({ company }) => {
 	const url = `https://financialmodelingprep.com/api/v3/financial-growth/${company}?period=quarter&limit=80&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
@@ -46,3 +46,5 @@ export const FinancialGrowth = ({ company }) => {
 		</div>
 	);
 };
+
+export default IntensityBarDirectory;

@@ -1,7 +1,7 @@
 import React from "react";
 import * as d3 from "d3";
 
-export const IntensityBar = ({ company, indicator, title, chartData }) => {
+const IntensityBar = ({ company, indicator, title, chartData }) => {
 	let barWidth = 96;
 	let barHeight = 10;
 	// let svgWidth = 100;
@@ -86,3 +86,5 @@ export const IntensityBar = ({ company, indicator, title, chartData }) => {
 		</svg>
 	);
 };
+
+export default IntensityBar;

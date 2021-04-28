@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import { HighChartStockLine } from "./lower-chart-directories/lower-graphs/share-price-chart";
-import { FinancialGrowth } from "./lower-chart-directories/intensity-bar-directory";
-import { FinancialRatios } from "./lower-chart-directories/ratio-chart-directory.jsx";
+import { HighChartStockLine } from "./lesser-chart-directories/lesser-graphs/share-price-chart";
+import IntensityBarDirectory from "./lesser-chart-directories/intensity-bar-directory";
+import { FinancialRatios } from "./lesser-chart-directories/ratio-chart-directory.jsx";
 import CompanyTableDirectory from "./table-directory/company-table-directory.component";
 
 import "./greater-chart-directory.styles.scss";
@@ -27,7 +27,7 @@ function CompanyData() {
 			<div className="greater-chart-directory">
 				<HighChartStockLine company={company} />
 				<CompanyTableDirectory company={company} />
-				<FinancialGrowth company={company} />
+				<IntensityBarDirectory company={company} />
 				<FinancialRatios company={company} />
 			</div>
 		</div>

@@ -46,7 +46,8 @@ const TableCell = ({ id, title, location, apiUrl }) => {
 
 	return (
 		<div className="table-cell">
-			{title}: {cellData}
+			<span className="cell-title">{title}:</span>
+			<span className="cell-content">{cellData}</span>
 		</div>
 	);
 };
