@@ -1,29 +1,47 @@
 import React from "react";
-
-import SearchIcon from "../../../assets/images/search-icon-pink.png";
+import Button from "@material-ui/core/Button";
 
 import "./landing-search.styles.scss";
 
 const LandingSearch = () => (
 	<div className="main">
 		<div className="content-container">
-			<h1>Simple Markets</h1>
-			<p>Search any U.S. company below:</p>
+			<h1 className="title">Simple Markets</h1>
+			<p className="subtitle">Search any U.S. company:</p>
 			<div className="searchbar-container">
-				<img src={SearchIcon} alt="Search" className="search-icon" />
+				<i className="fas fa-search fa-2x search-icon"></i>
 				<input type="text" className="searchbar" />
 			</div>
-			<div className="company-container">
-				<p>What's trending:</p>
-				<label htmlFor="">Microsoft Corp</label>
-				<label htmlFor="">Google</label>
-				<label htmlFor="">Amazon.com</label>
-				<label htmlFor="">Upwork</label>
-				<label htmlFor="">Fiverr</label>
-				<label htmlFor="">Beyond Meat</label>
-				<label htmlFor="">Etsy</label>
-				<label htmlFor="">Walt Disney </label>
-				<label htmlFor="">Philip Morris International</label>
+			<div className="trending-container">
+				<p className="whats-trending">What's trending:</p>
+
+				<Button variant="contained" className="contact-submit-button">
+					Microsoft Corp
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Google
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Amazon.com
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Upwork
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Fiverr
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Beyond Meat
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Etsy
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Walt Disney
+				</Button>
+				<Button variant="contained" className="contact-submit-button">
+					Philip Morris International
+				</Button>
 			</div>
 		</div>
 	</div>

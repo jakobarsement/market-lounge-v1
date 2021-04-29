@@ -6,6 +6,7 @@ import CompanyData from "./company-charts/greater-chart-directory";
 
 import "./companypage.styles.scss";
 import CompanySearch from "./company-search.component";
+import Header from "../../components/header/header-landing.component";
 
 const CompanyPage = () => (
 	<div className="companypage">
