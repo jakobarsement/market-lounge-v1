@@ -43,7 +43,6 @@ const Feedback = () => {
 				<div className="send-button">
 					<Button
 						variant="contained"
-						// color="primary"
 						className="contact-submit-button"
 						type="submit"
 						value="Send"

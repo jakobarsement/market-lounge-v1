@@ -3,8 +3,9 @@ import IntensityBar from "./lesser-graphs/intensity-bar.component";
 import { useFetchData } from "../chart-utils/useFetchData";
 
 import "./intensity-bar.styles.scss";
-const IntensityBarDirectory = ({ company }) => {
-	const url = `https://financialmodelingprep.com/api/v3/financial-growth/${company}?period=quarter&limit=80&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
+
+const IntensityBarDirectory = ({ companySymbol }) => {
+	const url = `https://financialmodelingprep.com/api/v3/financial-growth/${companySymbol}?period=quarter&limit=80&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
 		const lastEightQuarters = data
@@ -21,7 +22,7 @@ const IntensityBarDirectory = ({ company }) => {
 		);
 	}, []);
 
-	const { status, data } = useFetchData(url, company, formatData);
+	const { status, data } = useFetchData(url, companySymbol, formatData);
 
 	if (status !== "DONE") {
 		return null;
@@ -31,14 +32,14 @@ const IntensityBarDirectory = ({ company }) => {
 		<div className="intensity-bars">
 			<IntensityBar
 				key="revenueGrowth"
-				company={company}
+				company={companySymbol}
 				indicator="revenueGrowth"
 				title="Q/Q Revenue Growth"
 				chartData={data}
 			/>
 			<IntensityBar
 				key="ebitgrowth"
-				company={company}
+				company={companySymbol}
 				indicator="ebitgrowth"
 				title="Q/Q EBIT Growth"
 				chartData={data}

@@ -1,20 +1,22 @@
 import React, { useContext, useRef } from "react";
+import { CompanySymbolContext } from "./company-utils/companyContext";
+import _ from "lodash";
 
 import "./company-search.styles.scss";
-import { CompanyContext } from "./company-utils/companyContext";
 
 function CompanySearch() {
 	const inputRef = useRef(null);
-	const { company, setCompany } = useContext(CompanyContext);
+	const { setCompanySymbol } = useContext(CompanySymbolContext);
 
 	const handleSubmit = (e) => {
 		if (e.key === "Enter" && inputRef.current.value) {
-			setCompany(inputRef.current.value);
-			console.log("submit company");
+			const uppercaseCompanySymbol = _.upperCase(inputRef.current.value);
+			setCompanySymbol(uppercaseCompanySymbol);
 		}
 	};
 	return (
 		<div className="company-search-container">
+			<i className="fas fa-search"></i>
 			<input
 				className="company-input-box"
 				ref={inputRef}

@@ -19,9 +19,9 @@ const TableCell = ({ id, title, location, apiUrl }) => {
 			const response = await axios.get(apiUrl);
 
 			var dataPoint = _.get(response, location, null);
-
 			if (dataPoint) {
 				if (dataPoint > 1000) {
+					dataPoint = Number.parseFloat(dataPoint).toFixed(0);
 					dataPoint = convertNumberToAbbreviation(dataPoint);
 				} else {
 					dataPoint =
@@ -30,8 +30,10 @@ const TableCell = ({ id, title, location, apiUrl }) => {
 				}
 
 				dataPoint = appendPrefixOrSuffix(dataPoint, title);
+			} else if (dataPoint === null) {
+				dataPoint = "NA";
 			} else {
-				dataPoint = "(Something went wrong)";
+				dataPoint = "Error";
 			}
 
 			setCellData(dataPoint);

@@ -1,4 +1,5 @@
 export function convertNumberToAbbreviation(number) {
+	// console.log(number);
 	var suffixes = ["", "K", "M", "B", "T"];
 	var suffixNum = Math.floor(("" + number).length / 3);
 	var shortValue = parseFloat(

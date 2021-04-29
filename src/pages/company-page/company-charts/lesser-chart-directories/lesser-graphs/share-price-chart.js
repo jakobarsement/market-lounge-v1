@@ -1,10 +1,10 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import { useFetchData } from "../../chart-utils/useFetchData";
 
-export const HighChartStockLine = ({ company }) => {
-	const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${company}?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
+export const HighChartStockLine = ({ companySymbol }) => {
+	const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${companySymbol}?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
 		const { historical } = data;
@@ -14,7 +14,7 @@ export const HighChartStockLine = ({ company }) => {
 			.sort((a, b) => a[0] - b[0]);
 	}, []);
 
-	const { data } = useFetchData(url, company, formatData);
+	const { data } = useFetchData(url, companySymbol, formatData);
 
 	const stockOptions = {
 		chart: {
@@ -61,7 +61,7 @@ export const HighChartStockLine = ({ company }) => {
 			},
 		},
 		title: {
-			text: company,
+			text: companySymbol,
 			style: {
 				color: "white",
 			},
@@ -71,8 +71,8 @@ export const HighChartStockLine = ({ company }) => {
 		},
 		series: [
 			{
-				id: company,
-				name: company,
+				id: companySymbol,
+				name: companySymbol,
 				data,
 				tooltip: {
 					valueDecimals: 2,

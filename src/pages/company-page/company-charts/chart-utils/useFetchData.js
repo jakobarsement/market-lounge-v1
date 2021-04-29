@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export const useFetchData = (url, company, formatterCallback) => {
+export const useFetchData = (url, companySymbol, formatterCallback) => {
 	const [status, setStatus] = useState("IDLE");
 	const [data, setData] = useState([]);
 
@@ -16,7 +16,7 @@ export const useFetchData = (url, company, formatterCallback) => {
 		};
 
 		fetchData();
-	}, [url, company, formatterCallback]);
+	}, [url, companySymbol, formatterCallback]);
 
 	return { status, data };
 };

@@ -1,15 +1,13 @@
-body {
-	font-family: "Montserrat", "Darker Grotesque", "Open Sans Condensed",
-		sans-serif;
-}
-
 a {
 	text-decoration: none;
 	color: rgb(194, 26, 26);
 }
 
 * {
+	font-family: "Montserrat", "Darker Grotesque", "Open Sans Condensed",
+		sans-serif;
 	box-sizing: border-box;
 	padding: 0px;
 	margin: 0px;
+	/* background-color: rgb(38, 38, 34); */
 }

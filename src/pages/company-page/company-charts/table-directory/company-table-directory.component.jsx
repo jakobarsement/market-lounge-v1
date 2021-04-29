@@ -1,13 +1,15 @@
 import React from "react";
 
 import TableCell from "./company-table-cell/table-cell.component";
-import COMPANY_TABLE_DATA from "../../../../data/company-table-data";
+import getInterpolatedApiUrl from "../../../../data/company-table-data";
 
 import "./company-table-directory.styles.scss";
 
-const CompanyTableDirectory = ({ company }) => {
+const CompanyTableDirectory = ({ companySymbol }) => {
 	const renderTableOne = () => {
-		return COMPANY_TABLE_DATA.map((cellN) => {
+		const company_data = getInterpolatedApiUrl(companySymbol);
+
+		return company_data.map((cellN) => {
 			const { id } = cellN;
 			return <TableCell key={"tableOne" + id} id={id} {...cellN} />;
 		});

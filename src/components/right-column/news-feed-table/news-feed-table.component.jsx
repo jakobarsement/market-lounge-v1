@@ -1,5 +1,5 @@
-import React from "react";
 import { formatPublishedDateTime } from "./news-feed.utils";
+
 import "./news-feed-table.styles.scss";
 
 const NewsFeedTable = ({ feeds }) => {

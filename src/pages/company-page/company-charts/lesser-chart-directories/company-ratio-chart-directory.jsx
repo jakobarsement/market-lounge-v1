@@ -4,8 +4,8 @@ import { useFetchData } from "../chart-utils/useFetchData";
 
 import "./company-ratio-chart-directory.styles.scss";
 
-const CompanyRatiosChartDirectory = ({ company }) => {
-	const url = `https://financialmodelingprep.com/api/v3/ratios/${company}?period=quarter&limit=140&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
+const CompanyRatiosChartDirectory = ({ companySymbol }) => {
+	const url = `https://financialmodelingprep.com/api/v3/ratios/${companySymbol}?period=quarter&limit=140&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
 		const lastEightQuarters = data
@@ -31,7 +31,7 @@ const CompanyRatiosChartDirectory = ({ company }) => {
 		);
 	}, []);
 
-	const { status, data } = useFetchData(url, company, formatData);
+	const { status, data } = useFetchData(url, companySymbol, formatData);
 
 	if (status !== "DONE") {
 		return null;
@@ -41,25 +41,25 @@ const CompanyRatiosChartDirectory = ({ company }) => {
 			<RatioLineChart
 				chartData={data}
 				yAxisLabel="PE Ratio"
-				company={company}
+				company={companySymbol}
 				indicator="priceEarningsRatio"
 			/>
 			<RatioLineChart
 				chartData={data}
 				yAxisLabel="Return On Equity"
-				company={company}
+				company={companySymbol}
 				indicator="returnOnEquity"
 			/>
 			<RatioLineChart
 				chartData={data}
 				yAxisLabel="Debt to Equity"
-				company={company}
+				company={companySymbol}
 				indicator="debtEquityRatio"
 			/>
 			<RatioLineChart
 				chartData={data}
 				yAxisLabel="Current Ratio"
-				company={company}
+				company={companySymbol}
 				indicator="currentRatio"
 			/>
 		</div>
