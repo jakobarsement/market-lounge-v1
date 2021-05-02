@@ -2,9 +2,9 @@ import React, { useContext, useRef } from "react";
 import { CompanySymbolContext } from "./company-utils/companyContext";
 import _ from "lodash";
 
-import "./company-search.styles.scss";
+import "./company-header.styles.scss";
 
-function CompanySearch() {
+function CompanyHeader() {
 	const inputRef = useRef(null);
 	const { setCompanySymbol } = useContext(CompanySymbolContext);
 
@@ -15,15 +15,18 @@ function CompanySearch() {
 		}
 	};
 	return (
-		<div className="company-search-container">
-			<i className="fas fa-search"></i>
-			<input
-				className="company-input-box"
-				ref={inputRef}
-				onKeyPress={handleSubmit}
-			/>
+		<div className="company-header">
+			<div className="company-search-container">
+				<i className="fas fa-search"></i>
+				<input
+					className="company-input-box"
+					ref={inputRef}
+					onKeyPress={handleSubmit}
+				/>
+			</div>
+			<div className="company-details">Bing{console.log("company name: ")}</div>
 		</div>
 	);
 }
 
-export default CompanySearch;
+export default CompanyHeader;

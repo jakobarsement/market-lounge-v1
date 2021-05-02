@@ -24,7 +24,7 @@ const SharePriceChart = ({ companySymbol }) => {
 			color: "rgb(47, 47, 42)",
 		},
 		navigator: {
-			height: 15,
+			height: 18,
 		},
 		yAxis: {
 			gridLineColor: "rgb(199, 195, 181)",
@@ -60,12 +60,7 @@ const SharePriceChart = ({ companySymbol }) => {
 				enabled: false, // disable the built-in toolbar
 			},
 		},
-		title: {
-			text: companySymbol,
-			style: {
-				color: "white",
-			},
-		},
+
 		subtitle: {
 			text: "",
 		},

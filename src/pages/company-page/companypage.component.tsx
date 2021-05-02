@@ -5,7 +5,7 @@ import LeftColumn from "../../components/left-column/left-column.component";
 import GreaterChartDirectory from "./company-charts/greater-chart-directory";
 
 import "./companypage.styles.scss";
-import CompanySearch from "./company-search.component";
+import CompanyHeader from "./company-header.component";
 import HeaderMain from "../../components/header/header-main.component";
 
 const CompanyPage = () => (
@@ -14,7 +14,7 @@ const CompanyPage = () => (
 		<div className="company-page">
 			<LeftColumn></LeftColumn>
 			<div className="middle-column">
-				<CompanySearch />
+				<CompanyHeader />
 				<GreaterChartDirectory />
 			</div>
 			<RightColumn></RightColumn>
