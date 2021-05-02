@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from "react";
-import { CompanySymbolContext } from "./company-utils/companyContext";
+import { CompanySymbolContext } from "../../../utils/companyContext";
 import _ from "lodash";
 
 import "./company-header.styles.scss";

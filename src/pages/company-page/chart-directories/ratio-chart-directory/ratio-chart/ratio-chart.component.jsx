@@ -2,7 +2,7 @@ import React from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 
-import "./company-ratio-chart.styles.scss";
+import "./ratio-chart.styles.scss";
 export const RatioLineChart = ({
 	company,
 	chartData,

@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
-import { RatioLineChart } from "./lesser-charts/company-ratio-chart";
-import { useFetchData } from "../chart-utils/useFetchData";
+import { RatioLineChart } from "./ratio-chart/ratio-chart.component";
+import { useFetchData } from "../../../../utils/useFetchData";
 
-import "./company-ratio-chart-directory.styles.scss";
+import "./ratio-chart.styles.scss";
 
 const CompanyRatiosChartDirectory = ({ companySymbol }) => {
 	const url = `https://financialmodelingprep.com/api/v3/ratios/${companySymbol}?period=quarter&limit=140&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;

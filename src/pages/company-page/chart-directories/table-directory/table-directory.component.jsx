@@ -1,9 +1,9 @@
 import React from "react";
 
-import TableCell from "./company-table-cell/table-cell.component";
+import TableCell from "./table-cell/table-cell.component";
 import getInterpolatedApiUrl from "../../../../data/company-table-data";
 
-import "./company-table-directory.styles.scss";
+import "./table-directory.styles.scss";
 
 const CompanyTableDirectory = ({ companySymbol }) => {
 	const renderTableOne = () => {

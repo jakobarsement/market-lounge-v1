@@ -4,7 +4,7 @@ import axios from "axios";
 import "./right-column.styles.scss";
 import NewsFeedTable from "./news-feed-table/news-feed-table.component";
 import Feedback from "./feedback/feedback.component";
-import { CompanySymbolContext } from "../../pages/company-page/company-utils/companyContext";
+import { CompanySymbolContext } from "../../utils/companyContext";
 import BookOfTheWeek from "./books/book-of-the-week.component";
 
 const RightColumn = () => {
