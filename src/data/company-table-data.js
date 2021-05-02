@@ -35,7 +35,7 @@ function getInterpolatedApiUrl(companySymbol) {
 		},
 		{
 			id: 6,
-			title: "Div/Yeild",
+			title: "Dividend",
 			location: "data[0].dividendYielPercentageTTM",
 			apiUrl: `${baseURL}/ratios-ttm/${companySymbol}?apikey=${FIN_PREP_API_KEY}`,
 		},

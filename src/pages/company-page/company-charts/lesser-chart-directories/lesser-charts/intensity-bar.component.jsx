@@ -12,7 +12,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 	const opacityScale = d3
 		.scaleLinear()
 		.domain([d3.min(domainValues), d3.max(domainValues)])
-		.range([0.3, 1]);
+		.range([0.05, 1]);
 
 	return (
 		<svg
@@ -23,6 +23,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 		>
 			<defs>
 				<linearGradient id={indicator}>
+					{console.log(chartData)}
 					{chartData.map((data, index) => (
 						<stop
 							key={data.date}

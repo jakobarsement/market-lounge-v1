@@ -1,5 +1,6 @@
 .left-column {
 	width: 20%;
+	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -8,7 +9,7 @@
 	.chart {
 		width: 90%;
 		height: 150px;
-		margin: 15px 0px 0px 3px;
+		margin: 0px 0px 15px 3px;
 		background-color: rgb(47, 47, 42);
 	}
 }

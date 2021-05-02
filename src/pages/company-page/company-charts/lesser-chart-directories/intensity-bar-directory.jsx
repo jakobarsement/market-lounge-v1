@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import IntensityBar from "./lesser-graphs/intensity-bar.component";
+import IntensityBar from "./lesser-charts/intensity-bar.component";
 import { useFetchData } from "../chart-utils/useFetchData";
 
 import "./intensity-bar.styles.scss";

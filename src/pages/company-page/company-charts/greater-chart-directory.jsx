@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { HighChartStockLine } from "./lesser-chart-directories/lesser-graphs/share-price-chart";
+import SharePriceChart from "./lesser-chart-directories/lesser-charts/share-price-chart";
 import IntensityBarDirectory from "./lesser-chart-directories/intensity-bar-directory";
 import CompanyRatiosChartDirectory from "./lesser-chart-directories/company-ratio-chart-directory.jsx";
 import CompanyTableDirectory from "./table-directory/company-table-directory.component";
@@ -12,7 +12,7 @@ function GreaterChartDirectory() {
 	return (
 		<div>
 			<div className="greater-chart-directory">
-				<HighChartStockLine companySymbol={companySymbol} />
+				<SharePriceChart companySymbol={companySymbol} />
 				<CompanyTableDirectory companySymbol={companySymbol} />
 				<IntensityBarDirectory companySymbol={companySymbol} />
 				<CompanyRatiosChartDirectory companySymbol={companySymbol} />

@@ -3,7 +3,7 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import { useFetchData } from "../../chart-utils/useFetchData";
 
-export const HighChartStockLine = ({ companySymbol }) => {
+const SharePriceChart = ({ companySymbol }) => {
 	const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${companySymbol}?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
@@ -90,3 +90,5 @@ export const HighChartStockLine = ({ companySymbol }) => {
 		/>
 	);
 };
+
+export default SharePriceChart;

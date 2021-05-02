@@ -5,7 +5,7 @@ import "./landing-search.styles.scss";
 
 const LandingSearch = () => (
 	<div className="main">
-		<div className="content-container">
+		<div className="content">
 			<h1 className="title">Simple Markets</h1>
 			<p className="subtitle">Search any U.S. company:</p>
 			<div className="searchbar-container">

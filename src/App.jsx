@@ -5,7 +5,7 @@ import LandingPage from "./pages/landing-page/landing-page.component";
 import CompanyPage from "./pages/company-page/companypage.component";
 import { CompanySymbolContext } from "./pages/company-page/company-utils/companyContext";
 
-import "./App.css";
+import "./App.scss";
 
 const App = () => {
 	const [companySymbol, setCompanySymbol] = useState("GOOG");
