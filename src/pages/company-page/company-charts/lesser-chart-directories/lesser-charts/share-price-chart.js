@@ -14,7 +14,7 @@ const SharePriceChart = ({ companySymbol }) => {
 			.sort((a, b) => a[0] - b[0]);
 	}, []);
 
-	const { data } = useFetchData(url, companySymbol, formatData);
+	const data = useFetchData(url, companySymbol, formatData);
 
 	const stockOptions = {
 		chart: {

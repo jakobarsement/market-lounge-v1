@@ -7,10 +7,14 @@ const LandingSearch = () => (
 	<div className="main">
 		<div className="content">
 			<h1 className="title">Simple Markets</h1>
-			<p className="subtitle">Search any U.S. company:</p>
+
 			<div className="searchbar-container">
 				<i className="fas fa-search fa-2x search-icon"></i>
-				<input type="text" className="searchbar" />
+				<input
+					type="text"
+					placeholder="Search a company..."
+					className="searchbar"
+				/>
 			</div>
 			<div className="trending-container">
 				<p className="whats-trending">What's trending:</p>

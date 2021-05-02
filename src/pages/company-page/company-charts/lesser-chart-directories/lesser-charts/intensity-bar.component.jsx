@@ -23,6 +23,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 		>
 			<defs>
 				<linearGradient id={indicator}>
+					{console.log("in chart: ")}
 					{console.log(chartData)}
 					{chartData.map((data, index) => (
 						<stop

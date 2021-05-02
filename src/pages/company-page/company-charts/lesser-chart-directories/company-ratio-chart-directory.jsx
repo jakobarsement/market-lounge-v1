@@ -31,11 +31,8 @@ const CompanyRatiosChartDirectory = ({ companySymbol }) => {
 		);
 	}, []);
 
-	const { status, data } = useFetchData(url, companySymbol, formatData);
+	const data = useFetchData(url, companySymbol, formatData);
 
-	if (status !== "DONE") {
-		return null;
-	}
 	return (
 		<div className="company-ratio-charts">
 			<RatioLineChart
