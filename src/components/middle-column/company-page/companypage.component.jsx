@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 
-import HeaderMain from "../../components/header/header-main.component";
-import RightColumn from "../../components/right-column/right-column.component";
-import LeftColumn from "../../components/left-column/left-column.component";
+import HeaderMain from "../../header/header-main.component";
+import RightColumn from "../../right-column/right-column.component";
+import LeftColumn from "../../left-column/left-column.component";
 import CompanyHeader from "./company-header/company-header.component";
 import SharePriceChart from "./share-price-chart/share-price-chart.component";
 import CompanyTableDirectory from "./chart-directories/table-directory/table-directory.component";
 import IntensityBarDirectory from "./chart-directories/intensity-bar-directory/intensity-bar-directory";
 
-import { CompanySymbolContext } from "../../utils/companyContext";
+import { CompanySymbolContext } from "../../../utils/companyContext";
 import "./companypage.styles.scss";
 import CompanyRatiosChartDirectory from "./chart-directories/ratio-chart-directory/ratio-chart-directory";
 

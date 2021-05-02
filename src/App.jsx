@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import LandingPage from "./pages/landing-page/landing-page.component";
-import CompanyPage from "./pages/company-page/companypage.component";
+import CompanyPage from "./components/middle-column/company-page/companypage.component";
 import { CompanySymbolContext } from "./utils/companyContext";
 
 import "./App.scss";
