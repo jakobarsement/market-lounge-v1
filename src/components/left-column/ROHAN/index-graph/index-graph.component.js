@@ -1,39 +1,14 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import { useFetchData } from "../../../../utils/useFetchData";
-import Axios from "axios";
-const company = "CHRIS";
 
 export const IndexGraph = () => {
-	//const[data, setData] = useState(null);
 
 	const russel_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5ERUT?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 	const s_p_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5EGSPC?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 	const nasaq_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5EIXIC?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 	const dow_jones_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5EDJI?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
-
-	// useEffect(() => {
-	//     const formatData = async() => {
-	//         const response = await Axios.get(russel_url);
-	//         const dataset_data = await response.data;
-	//         const { historical } = dataset_data;
-	//         console.log(historical)
-	//         //console.log(data.map(d => [new Date(d[0]).getTime(), d[3], d[2]]))
-	//         // let temp = [];
-	//         // data.forEach(element => {
-	//         //     temp.push({
-	//         //         date: new Date(element[0]).getTime(),
-	//         //         low: element[3],
-	//         //         high: element[2],
-	//         //     })
-	//         // });
-	//         //setData(temp);
-	//         //console.log(temp);
-	//         setData(historical.reverse())
-	//     }
-	//     formatData();
-	// }, [])
 
 	const formatData = useCallback((data) => {
 		const { historical } = data;
@@ -42,35 +17,39 @@ export const IndexGraph = () => {
 			.sort((a, b) => a[0] - b[0]);
 	}, []);
 
-	const data_1 = useFetchData(russel_url, company, formatData);
-	const data_2 = useFetchData(s_p_url, company, formatData);
-	const data_3 = useFetchData(nasaq_url, company, formatData);
-	const data_4 = useFetchData(dow_jones_url, company, formatData);
+	const russel_data = useFetchData(russel_url, "Russel", formatData);
+	const s_p_data = useFetchData(s_p_url, "S & P", formatData);
+	const nasaq_data = useFetchData(nasaq_url, "Nasaq", formatData);
+	const dow_jones_data = useFetchData(dow_jones_url, "Dow Jones", formatData);
 
-	console.log(data_1, data_2);
+	console.log(russel_data, s_p_data);
 
 	const data = [
 		{
 			name: "Russel",
-			data: data_1.data,
+			data: russel_data,
 		},
 		{
 			name: "S & P",
-			data: data_2.data,
+			data: s_p_data,
 		},
 		{
 			name: "Nasaq",
-			data: data_3.data,
+			data: nasaq_data,
 		},
 		{
 			name: "Dow Jones",
-			data: data_4.data,
+			data: dow_jones_data,
 		},
 	];
 
-	console.log(data);
-
 	const stockOptions = {
+		chart: {
+			backgroundColor: "rgb(47, 47, 42)",
+		},
+		line: {
+			color: "rgb(47, 47, 42)",
+		},
 		xAxis: {
 			type: "datetime",
 		},
@@ -81,56 +60,6 @@ export const IndexGraph = () => {
 		scrollbar: {
 			enabled: true,
 		},
-		plotOptions: {
-			area: {
-				fillColor: {
-					linearGradient: {
-						x1: 0,
-						y1: 0,
-						x2: 0,
-						y2: 1,
-					},
-					stops: [
-						[0, Highcharts.getOptions().colors[0]],
-						[
-							1,
-							Highcharts.color(Highcharts.getOptions().colors[0])
-								.setOpacity(0)
-								.get("rgba"),
-						],
-					],
-				},
-				marker: {
-					radius: 2,
-				},
-				lineWidth: 1,
-				states: {
-					hover: {
-						lineWidth: 1,
-					},
-				},
-				threshold: null,
-			},
-		},
-
-		// responsive: {
-		//     rules: [{
-		//         condition: {
-		//             maxWidth: 200
-		//         },
-		//         chartOptions: {
-		//             chart: {
-		//                 height: 300
-		//             },
-		//             subtitle: {
-		//                 text: null
-		//             },
-		//             navigator: {
-		//                 enabled: false
-		//             }
-		//         }
-		//     }]
-		// }
 	};
 
 	return (
