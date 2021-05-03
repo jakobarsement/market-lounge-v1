@@ -21,8 +21,6 @@ const IntensityBarDirectory = ({ companySymbol }) => {
 	}, []);
 
 	let data = useFetchData(url, companySymbol, formatData);
-	console.log("in directory: ");
-	console.log(data);
 	data = data.reverse(); //so that time is going left to right
 
 	return (
