@@ -1,14 +1,16 @@
+@use "../../../../../../scss/abstracts/" as *;
+
 .table-cell {
-	border: 1px solid rgb(76, 76, 68);
-	background-color: rgb(47, 47, 42);
+	border: 1px solid $eleven;
+	background-color: $secondary-background;
 	padding: 8px;
 	width: 20%;
 	font-weight: bold;
 	.cell-title {
-		color: rgb(194, 190, 176);
+		color: $seventeen;
 	}
 	.cell-content {
 		margin-left: 5px;
-		color: rgb(226, 218, 185);
+		color: $three;
 	}
 }

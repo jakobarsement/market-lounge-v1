@@ -3,8 +3,7 @@ import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 import { useFetchData } from "../../../../utils/useFetchData";
 
-export const IndexGraph = () => {
-
+const IndexGraph = () => {
 	const russel_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5ERUT?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 	const s_p_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5EGSPC?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 	const nasaq_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5EIXIC?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
@@ -18,11 +17,9 @@ export const IndexGraph = () => {
 	}, []);
 
 	const russel_data = useFetchData(russel_url, "Russel", formatData);
-	const s_p_data = useFetchData(s_p_url, "S & P", formatData);
-	const nasaq_data = useFetchData(nasaq_url, "Nasaq", formatData);
+	const s_p_data = useFetchData(s_p_url, "S&P", formatData);
+	const nasaq_data = useFetchData(nasaq_url, "Nasdaq", formatData);
 	const dow_jones_data = useFetchData(dow_jones_url, "Dow Jones", formatData);
-
-	console.log(russel_data, s_p_data);
 
 	const data = [
 		{
@@ -30,11 +27,11 @@ export const IndexGraph = () => {
 			data: russel_data,
 		},
 		{
-			name: "S & P",
+			name: "S&P",
 			data: s_p_data,
 		},
 		{
-			name: "Nasaq",
+			name: "Nasdaq",
 			data: nasaq_data,
 		},
 		{
@@ -44,31 +41,54 @@ export const IndexGraph = () => {
 	];
 
 	const stockOptions = {
+		series: data,
 		chart: {
 			backgroundColor: "rgb(47, 47, 42)",
+			animation: false,
+			height: 250,
 		},
-		line: {
-			color: "rgb(47, 47, 42)",
+		plotOptions: {
+			line: {
+				animation: false,
+			},
+		},
+		navigator: {
+			height: 15,
+		},
+		yAxis: {
+			gridLineColor: "rgb(199, 195, 181)",
+			gridLineWidth: 0.1,
+			tickAmount: 7,
+			labels: {
+				align: "left",
+				x: 2,
+				style: {
+					color: "rgb(226, 218, 185)",
+				},
+			},
 		},
 		xAxis: {
-			type: "datetime",
+			labels: {
+				style: {
+					color: "rgb(226, 218, 185)",
+				},
+			},
 		},
-		series: data,
-		navigator: {
+		rangeSelector: {
 			enabled: false,
 		},
 		scrollbar: {
-			enabled: true,
+			enabled: false,
 		},
 	};
 
 	return (
-		<div style={{ maxWidth: "100%", padding: "16px" }}>
-			<HighchartsReact
-				highcharts={Highcharts}
-				options={stockOptions}
-				constructorType="stockChart"
-			/>
-		</div>
+		<HighchartsReact
+			highcharts={Highcharts}
+			options={stockOptions}
+			constructorType="stockChart"
+		/>
 	);
 };
+
+export default IndexGraph;

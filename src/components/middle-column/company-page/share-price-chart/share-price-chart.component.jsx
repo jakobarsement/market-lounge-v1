@@ -17,12 +17,21 @@ const SharePriceChart = ({ companySymbol }) => {
 	const data = useFetchData(url, companySymbol, formatData);
 
 	const stockOptions = {
+		series: [
+			{
+				id: companySymbol,
+				name: companySymbol,
+				data,
+				tooltip: {
+					valueDecimals: 2,
+				},
+				color: "rgb(123, 181, 230)",
+			},
+		],
 		chart: {
 			backgroundColor: "rgb(47, 47, 42)",
 		},
-		line: {
-			color: "rgb(47, 47, 42)",
-		},
+
 		navigator: {
 			height: 18,
 		},
@@ -51,30 +60,6 @@ const SharePriceChart = ({ companySymbol }) => {
 		scrollbar: {
 			enabled: false,
 		},
-
-		navigation: {
-			bindingsClassName: "tools-container", // informs Stock Tools where to look for HTML elements for adding technical indicators, annotations etc.
-		},
-		stockTools: {
-			gui: {
-				enabled: false, // disable the built-in toolbar
-			},
-		},
-
-		subtitle: {
-			text: "",
-		},
-		series: [
-			{
-				id: companySymbol,
-				name: companySymbol,
-				data,
-				tooltip: {
-					valueDecimals: 2,
-				},
-				color: "rgb(123, 181, 230)",
-			},
-		],
 	};
 
 	return (

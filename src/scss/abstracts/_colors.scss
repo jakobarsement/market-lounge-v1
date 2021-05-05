@@ -1,13 +1,28 @@
-//backgrounds
 $primary-background: rgb(38, 38, 34);
 $secondary-background: rgb(47, 47, 42);
 
-$border-color: rgb(76, 76, 68);
+$line-1: rgb(122, 180, 228);
+$line-2: rgb(244, 200, 28);
 
-$most-yellow: rgb(226, 218, 185);
-$less-yellow: rgb(199, 195, 181);
+$ten: rgb(216, 216, 215);
+$one: rgb(74, 74, 66);
+$two: rgb(188, 184, 170);
+$eight: rgb(198, 194, 180);
+$three: rgb(226, 218, 185);
+$seven: rgb(178, 172, 146);
+$four: rgb(199, 195, 181);
+$seventeen: rgb(194, 190, 176);
+$nine: rgb(192, 188, 174);
+$five: rgb(167, 163, 151);
+$sixteen: rgb(167, 158, 152);
+$eleven: rgb(76, 76, 68);
+$six: rgb(92, 91, 83);
+$twelve: rgba(0, 0, 0, 0.3);
+$fourteen: rgba(0, 0, 0, 0.5);
+$thirteen: rgb(92, 91, 83);
+$fifteen: rgb(71, 68, 59);
 
-$scrollbar-thumb: rgb(167, 163, 151);
-$scrollbar-track: rgb(92, 91, 83);
-
-// rgb(87,166,255)
+:export {
+	chart1: $one;
+	chart2: $two;
+}

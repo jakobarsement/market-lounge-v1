@@ -1,8 +1,10 @@
+@use "../../../scss/abstracts/" as *;
+
 .contact-form {
 	margin: 20px 0px 0px 3px;
 	width: 90%;
 	padding: 10px;
-	background-color: rgb(47, 47, 42);
+	background-color: $secondary-background;
 	border-radius: 6px;
 	display: flex;
 	flex-direction: column;
@@ -11,7 +13,7 @@
 
 	.feedback-title {
 		font-weight: bold;
-		color: rgb(226, 218, 185);
+		color: $three;
 		font-size: 1.9vw;
 	}
 	textarea {
@@ -24,18 +26,18 @@
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		background-color: rgb(38, 38, 34);
-		border-color: rgb(71, 68, 59);
-		color: white;
+		background-color: $primary-background;
+		border-color: $fifteen;
+		color: $ten;
 	}
 	.send-button {
 		padding-bottom: 8px;
-		border-bottom: 0.1em solid rgb(76, 76, 68);
+		border-bottom: 0.1em solid $eleven;
 	}
 	.MuiButton-contained {
 		margin-top: 4px;
 		width: 100px;
-		background-color: rgb(165, 191, 252);
+		background-color: $line-1;
 	}
 	.donate-box {
 		margin-top: 12px;
@@ -46,11 +48,11 @@
 	.success-message {
 		margin-top: 5px;
 		font-weight: bold;
-		color: rgb(226, 218, 185);
+		color: $three;
 		.sub-success-message {
 			font-size: 0.5em;
 			font-weight: 400;
-			color: rgb(226, 218, 185);
+			color: $three;
 		}
 	}
 }

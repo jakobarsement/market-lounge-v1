@@ -28,6 +28,16 @@ export const RatioLineChart = ({
 					color: "white",
 				},
 			},
+			gridLineColor: "rgb(199, 195, 181)",
+			gridLineWidth: 0.1,
+			tickAmount: 4,
+			labels: {
+				align: "left",
+				x: 2,
+				style: {
+					color: "rgb(226, 218, 185)",
+				},
+			},
 		},
 		plotOptions: {
 			line: {

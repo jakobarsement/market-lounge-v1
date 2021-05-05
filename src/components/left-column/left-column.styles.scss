@@ -1,15 +1,15 @@
+@use "../../scss/abstracts/" as *;
+
 .left-column {
 	width: 20%;
 	margin-top: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: rgba(253, 253, 252, 0);
 	align-self: flex-start;
-	.chart {
+	.graph {
 		width: 90%;
-		height: 150px;
-		margin: 0px 0px 15px 3px;
-		background-color: rgb(47, 47, 42);
+		border-radius: 6px;
+		overflow: hidden;
 	}
 }

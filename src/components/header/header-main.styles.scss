@@ -1,7 +1,8 @@
+@use "../../scss/abstracts/" as *;
+
 .header-main {
 	height: 50px;
 	width: 100%;
-	// background-color: rgb(47, 47, 42);
 
 	display: flex;
 	justify-content: center;
@@ -13,7 +14,7 @@
 			width: 140px;
 			text-align: center;
 			h4 {
-				color: #fff;
+				color: $ten;
 				font-size: 20px;
 				font-weight: initial;
 				text-align: center;

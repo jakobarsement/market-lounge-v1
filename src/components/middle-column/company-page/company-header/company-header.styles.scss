@@ -1,12 +1,14 @@
+@use "../../../../scss/abstracts/" as *;
+
 .company-header {
 	margin: 15px 0px 0px 0px;
 	padding: 1px 10px 10px 0;
-	background-color: rgb(47, 47, 42);
+	background-color: $secondary-background;
 	display: flex;
 	flex-direction: column;
 	.company-details {
 		margin-left: 8px;
-		color: whitesmoke;
+		color: $ten;
 		// width: 200px;
 	}
 	.company-search-container {
@@ -17,7 +19,7 @@
 
 		.fa-search {
 			position: relative;
-			color: whitesmoke;
+			color: $ten;
 			left: 20px;
 			bottom: -1px;
 		}
@@ -25,16 +27,16 @@
 		.company-input-box {
 			border-radius: 5px;
 			width: 8vw;
-			background-color: rgb(38, 38, 34);
-			border-color: rgb(71, 68, 59);
-			color: whitesmoke;
+			background-color: $primary-background;
+			border-color: $fifteen;
+			color: $ten;
 			font-size: 13px;
 			font-weight: bold;
 			padding-left: 26px;
 		}
 		.company-input-box:focus {
 			outline: none !important;
-			border: 2px solid rgb(167, 158, 152);
+			border: 2px solid $sixteen;
 		}
 	}
 }
