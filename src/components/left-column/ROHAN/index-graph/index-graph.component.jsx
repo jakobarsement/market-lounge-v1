@@ -56,6 +56,7 @@ const IndexGraph = () => {
 			height: 15,
 		},
 		yAxis: {
+			min: 0,
 			gridLineColor: "rgb(199, 195, 181)",
 			gridLineWidth: 0.1,
 			tickAmount: 7,
@@ -79,6 +80,9 @@ const IndexGraph = () => {
 		},
 		scrollbar: {
 			enabled: false,
+		},
+		boost: {
+			useGPUTranslations: true,
 		},
 	};
 

@@ -30,7 +30,7 @@ export const RatioLineChart = ({
 			},
 			gridLineColor: "rgb(199, 195, 181)",
 			gridLineWidth: 0.1,
-			tickAmount: 4,
+			tickAmount: 7,
 			labels: {
 				align: "left",
 				x: 2,

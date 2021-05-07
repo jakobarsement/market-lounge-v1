@@ -29,6 +29,7 @@ const SharePriceChart = ({ companySymbol }) => {
 			},
 		],
 		chart: {
+			min: 0,
 			backgroundColor: "rgb(47, 47, 42)",
 		},
 
@@ -36,6 +37,7 @@ const SharePriceChart = ({ companySymbol }) => {
 			height: 18,
 		},
 		yAxis: {
+			min: 0,
 			gridLineColor: "rgb(199, 195, 181)",
 			gridLineWidth: 0.1,
 			tickAmount: 13,

@@ -15,9 +15,9 @@ const LeftColumn = () => (
 		{/* <div className="index graph">
 			<TreasuryGraph />
 		</div> */}
-		<div className="index graph">
+		{/* <div className="index graph">
 			<VixGraph />
-		</div>
+		</div> */}
 		<div className="index graph">
 			<MetalGraph />
 		</div>
