@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import { CompanySymbolContext } from "../../../utils/companyContext";
+import { CompanySymbolContext } from "../../../lib/companyContext";
 import _ from "lodash";
 
 import "./landing-search.styles.scss";

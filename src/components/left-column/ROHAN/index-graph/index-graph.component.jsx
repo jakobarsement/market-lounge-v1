@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import { useFetchData } from "../../../../utils/useFetchData";
+import { useFetchData } from "../../../../lib/useFetchData";
 
 const IndexGraph = () => {
 	const russel_url = `https://financialmodelingprep.com/api/v3/historical-price-full/%5ERUT?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
@@ -43,7 +43,7 @@ const IndexGraph = () => {
 	const stockOptions = {
 		series: data,
 		chart: {
-			backgroundColor: "rgb(47, 47, 42)",
+			backgroundColor: "rgb(22, 22, 20)",
 			animation: false,
 			height: 250,
 		},

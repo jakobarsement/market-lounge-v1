@@ -1,8 +1,11 @@
+import React, { useContext } from "react";
 import { formatPublishedDateTime } from "./news-feed.utils";
-
+import { CompanySymbolContext } from "../../../lib/companyContext";
 import "./news-feed-table.styles.scss";
 
 const NewsFeedTable = ({ feeds }) => {
+	const { companySymbol } = useContext(CompanySymbolContext);
+
 	const renderNewsFeeds = () => {
 		if (feeds.length) {
 			return (
@@ -17,20 +20,21 @@ const NewsFeedTable = ({ feeds }) => {
 											<img src={image} alt="img" className="feed-image" />
 										)}
 									</td>
-									<tr key={"title" + index} className="link-tag">
+									<td key={"title" + index} className="link-tag">
 										{url && (
-											<td>
+											<div>
 												<a href={url} target="_blank" rel="noreferrer">
 													{title}
 												</a>
-											</td>
+											</div>
 										)}
-									</tr>
-									<tr key={"publishDate" + index} className="date-tag">
-										<td>
-											{publishedDate && formatPublishedDateTime(publishedDate)}
-										</td>
-									</tr>
+									</td>
+								</tr>
+								<tr key={"publishDate" + index}>
+									<td> </td>
+									<td className="date-tag">
+										{publishedDate && formatPublishedDateTime(publishedDate)}
+									</td>
 								</tr>
 							</tbody>
 						);
@@ -46,7 +50,7 @@ const NewsFeedTable = ({ feeds }) => {
 		<div className="news-feeds-table">
 			<div className="news-feed-title">
 				<h3>
-					<i className="fas fa-newspaper fa-1x"></i> News Feed
+					<i className="fas fa-newspaper fa-1x"></i> {companySymbol} News
 				</h3>
 			</div>
 			{renderNewsFeeds()}

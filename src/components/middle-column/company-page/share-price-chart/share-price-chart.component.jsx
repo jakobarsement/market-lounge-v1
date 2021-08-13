@@ -1,7 +1,8 @@
 import React, { useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import { useFetchData } from "../../../../utils/useFetchData";
+import { useFetchData } from "../../../../lib/useFetchData";
+import "./share-price-chart.scss";
 
 const SharePriceChart = ({ companySymbol }) => {
 	const url = `https://financialmodelingprep.com/api/v3/historical-price-full/${companySymbol}?serietype=line&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
@@ -29,8 +30,9 @@ const SharePriceChart = ({ companySymbol }) => {
 			},
 		],
 		chart: {
+			height: 300,
 			min: 0,
-			backgroundColor: "rgb(47, 47, 42)",
+			backgroundColor: "rgb(22, 22, 20)",
 		},
 
 		navigator: {
@@ -65,11 +67,13 @@ const SharePriceChart = ({ companySymbol }) => {
 	};
 
 	return (
-		<HighchartsReact
-			highcharts={Highcharts}
-			options={stockOptions}
-			constructorType="stockChart"
-		/>
+		<div className="share-price-chart">
+			<HighchartsReact
+				highcharts={Highcharts}
+				options={stockOptions}
+				constructorType="stockChart"
+			/>
+		</div>
 	);
 };
 

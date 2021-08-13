@@ -3,12 +3,12 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import LandingPage from "./pages/landing-page/landing-page.component";
 import CompanyPage from "./components/middle-column/company-page/companypage.component";
-import { CompanySymbolContext } from "./utils/companyContext";
+import { CompanySymbolContext } from "./lib/companyContext";
 
 import "./App.scss";
 
 const App = () => {
-	const [companySymbol, setCompanySymbol] = useState("GOOG");
+	const [companySymbol, setCompanySymbol] = useState("AAPL");
 
 	return (
 		<BrowserRouter>

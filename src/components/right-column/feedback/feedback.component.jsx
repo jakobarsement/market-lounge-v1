@@ -50,14 +50,14 @@ const Feedback = () => {
 						Send
 					</Button>
 				</div>
-				<input
+				{/* <input
 					className="donate-box name"
 					placeholder="Donate"
 					pattern="[0-9]*"
 					type="number"
 					onChange={(e) => setAmount(e.target.value)}
 				/>
-				<Paypal amount={amount} />
+				<Paypal amount={amount} /> */}
 				{/* <form
 					action="https://www.paypal.com/donate"
 					method="post"

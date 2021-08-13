@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
 
@@ -9,11 +9,16 @@ export const RatioLineChart = ({
 	indicator,
 	yAxisLabel,
 }) => {
+	useEffect(() => {
+		console.log("ratio quarter data: " + chartData);
+	});
+
 	const options = {
 		chart: {
 			type: "line",
-			height: "200px",
-			backgroundColor: "rgb(47,47,42)",
+			height: 200,
+			width: 280,
+			backgroundColor: "rgb(22,22,20)",
 		},
 		title: {
 			text: "",

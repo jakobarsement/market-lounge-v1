@@ -1,19 +1,34 @@
 @use "../../../../scss/abstracts/" as *;
 
 .company-header {
-	margin: 15px 0px 0px 0px;
 	padding: 1px 10px 10px 0;
-	background-color: $secondary-background;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	.company-details {
 		margin-left: 8px;
 		color: $ten;
-		// width: 200px;
+		h2 {
+			margin-bottom: 5px;
+		}
+		.fa-info-circle {
+			margin-left: 8px;
+			width: 18px;
+			color: $line-1;
+		}
+		.company-description {
+			position: absolute;
+			padding: 10px;
+			background-color: $eleven;
+			z-index: 1;
+			width: 40vw;
+			font-size: 0.8em;
+			border-radius: 8px;
+		}
 	}
 	.company-search-container {
 		position: relative;
-		top: 15px;
+		top: 26px;
 		margin-right: 32px;
 		align-self: flex-end;
 

@@ -40,7 +40,7 @@ export const MetalGraph = () => {
 	const stockOptions = {
 		series: data,
 		chart: {
-			backgroundColor: "rgb(47, 47, 42)",
+			backgroundColor: "rgb(22, 22, 20)",
 			animation: false,
 			height: 250,
 		},
@@ -80,12 +80,10 @@ export const MetalGraph = () => {
 	};
 
 	return (
-		<div style={{ maxWidth: "100%", padding: "16px" }}>
-			<HighchartsReact
-				highcharts={Highcharts}
-				options={stockOptions}
-				constructorType="stockChart"
-			/>
-		</div>
+		<HighchartsReact
+			highcharts={Highcharts}
+			options={stockOptions}
+			constructorType="stockChart"
+		/>
 	);
 };

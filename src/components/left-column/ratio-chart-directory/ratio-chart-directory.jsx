@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { RatioLineChart } from "./ratio-chart/ratio-chart.component";
-import { useFetchData } from "../../../../../utils/useFetchData";
+import { useFetchData } from "../../../lib/useFetchData";
 
 import "./ratio-chart.styles.scss";
 
@@ -8,9 +8,8 @@ const CompanyRatiosChartDirectory = ({ companySymbol }) => {
 	const url = `https://financialmodelingprep.com/api/v3/ratios/${companySymbol}?period=quarter&limit=140&apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
 
 	const formatData = useCallback((data) => {
-		const lastEightQuarters = data
-			.slice(0, 16)
-			.filter((data, index) => index % 2 === 0);
+		const lastEightQuarters = data.slice(0, 16);
+		// .filter((data, index) => index % 2 === 0);
 		return lastEightQuarters.map(
 			({
 				date,
@@ -32,9 +31,10 @@ const CompanyRatiosChartDirectory = ({ companySymbol }) => {
 	}, []);
 
 	const data = useFetchData(url, companySymbol, formatData);
-
 	return (
 		<div className="company-ratio-charts">
+			{console.log("ratio quarter data: " + data)}
+
 			<RatioLineChart
 				chartData={data}
 				yAxisLabel="PE Ratio"
