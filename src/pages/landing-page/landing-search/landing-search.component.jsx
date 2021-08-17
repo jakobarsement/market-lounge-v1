@@ -34,7 +34,7 @@ const LandingSearch = () => {
 					<i className="fas fa-search fa-2x search-icon"></i>
 					<input
 						type="text"
-						placeholder="search a company by ticker..."
+						placeholder="search company by ticker..."
 						className="searchbar"
 						ref={inputRef}
 						onKeyPress={handleSubmit}
