@@ -7,7 +7,7 @@ import "./landing-page.styles.scss";
 
 const LandingPage = () => (
 	<div className="landing-page">
-		<HeaderMain></HeaderMain>
+		{/* <HeaderMain></HeaderMain> */}
 		<LandingSearch></LandingSearch>
 	</div>
 );

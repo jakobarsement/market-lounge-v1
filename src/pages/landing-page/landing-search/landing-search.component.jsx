@@ -11,6 +11,10 @@ const LandingSearch = () => {
 	const { setCompanySymbol } = useContext(CompanySymbolContext);
 	let history = useHistory();
 
+	const routeChange = () => {
+		history.push("/companyPage");
+	};
+
 	const handleSubmit = (e) => {
 		if (e.key === "Enter" && inputRef.current.value) {
 			const uppercaseCompanySymbol = _.upperCase(inputRef.current.value);
@@ -37,31 +41,94 @@ const LandingSearch = () => {
 				<div className="trending-container">
 					<p className="whats-trending">What's trending:</p>
 
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("MSFT");
+							routeChange();
+						}}
+					>
 						Microsoft Corp
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("GOOG");
+							routeChange();
+						}}
+					>
 						Google
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("AMZN");
+							routeChange();
+						}}
+					>
 						Amazon.com
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("UPWK");
+							routeChange();
+						}}
+					>
 						Upwork
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("FVRR");
+							routeChange();
+						}}
+					>
 						Fiverr
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("MSFT");
+							routeChange();
+						}}
+					>
 						Beyond Meat
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("ETSY");
+							routeChange();
+						}}
+					>
 						Etsy
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("DIS");
+							routeChange();
+						}}
+					>
 						Walt Disney
 					</Button>
-					<Button variant="contained" className="contact-submit-button">
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("PM");
+							routeChange();
+						}}
+					>
 						Philip Morris International
 					</Button>
 				</div>

@@ -9,28 +9,28 @@ export const RatioLineChart = ({
 	indicator,
 	yAxisLabel,
 }) => {
-	useEffect(() => {
-		console.log("ratio quarter data: " + chartData);
-	});
-
 	const options = {
 		chart: {
 			type: "line",
 			height: 200,
-			width: 280,
 			backgroundColor: "rgb(22,22,20)",
 		},
 		title: {
 			text: "",
 		},
 		xAxis: {
-			categories: chartData.map((data) => data.formattedDate),
+			categories: chartData.reverse().map((data) => data.formattedDate),
+			visible: false,
 		},
 		yAxis: {
+			offset: 20,
 			title: {
 				text: yAxisLabel,
 				style: {
 					color: "white",
+				},
+				labels: {
+					// maxStaggerLines: 1,
 				},
 			},
 			gridLineColor: "rgb(199, 195, 181)",
@@ -40,7 +40,7 @@ export const RatioLineChart = ({
 				align: "left",
 				x: 2,
 				style: {
-					color: "rgb(226, 218, 185)",
+					color: "rgb(199, 195, 181)",
 				},
 			},
 		},
@@ -61,13 +61,18 @@ export const RatioLineChart = ({
 			{
 				name: company,
 				data: chartData.map((data) => data[indicator]),
-				color: "rgb(244,200,28)",
+				color: "rgb(209, 156, 113)",
+				lineWidth: 1.9,
+				marker: {
+					enabled: false,
+				},
 			},
 		],
 	};
 
 	return (
 		<div className="company-ratio-chart">
+			{console.log(chartData)}
 			<HighchartsReact highcharts={Highcharts} options={options} />
 		</div>
 	);

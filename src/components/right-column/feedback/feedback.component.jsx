@@ -11,7 +11,6 @@ const Feedback = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		setSubmittedState("submitted");
-		console.log("submitted...");
 		// if (submitted !== "submitted") {     //uncomment to allow emails
 		// 	emailjs
 		// 		.sendForm(
@@ -68,7 +67,7 @@ const Feedback = () => {
 				</form> */}
 				{submitted && (
 					<div className="success-message">
-						SUCCESS<div className="sub-success-message">Talk soon!</div>
+						SUCCESS<div className="sub-success-message">Talk soon</div>
 					</div>
 				)}
 			</form>

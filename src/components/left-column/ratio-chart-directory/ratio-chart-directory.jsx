@@ -32,7 +32,7 @@ const CompanyRatiosChartDirectory = ({ companySymbol }) => {
 
 	const data = useFetchData(url, companySymbol, formatData);
 	return (
-		<div className="company-ratio-charts">
+		<div className="directory">
 			<RatioLineChart
 				chartData={data}
 				yAxisLabel="PE Ratio"
