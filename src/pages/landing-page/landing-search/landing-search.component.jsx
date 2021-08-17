@@ -26,13 +26,15 @@ const LandingSearch = () => {
 	return (
 		<div className="main">
 			<div className="content">
-				<h1 className="title">Simple Markets</h1>
+				<h1 className="title">
+					<span class="the">the</span> market lounge.
+				</h1>
 
 				<div className="searchbar-container">
 					<i className="fas fa-search fa-2x search-icon"></i>
 					<input
 						type="text"
-						placeholder="Search a company..."
+						placeholder="search a company by ticker..."
 						className="searchbar"
 						ref={inputRef}
 						onKeyPress={handleSubmit}
