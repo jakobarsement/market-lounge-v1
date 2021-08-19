@@ -45,13 +45,11 @@
 		width: 30%;
 	}
 	.success-message {
-		margin-top: 5px;
-		font-weight: bold;
-		color: $three;
 		.sub-success-message {
 			font-size: 0.5em;
 			font-weight: 400;
 			color: $three;
+			margin-left: 1px;
 		}
 	}
 }

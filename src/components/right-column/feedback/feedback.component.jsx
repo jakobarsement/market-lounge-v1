@@ -11,23 +11,23 @@ const Feedback = () => {
 	function handleSubmit(e) {
 		e.preventDefault();
 		setSubmittedState("submitted");
-		// if (submitted !== "submitted") {     //uncomment to allow emails
-		// 	emailjs
-		// 		.sendForm(
-		// 			"service_bbj10yg",
-		// 			"template_ifync5l",
-		// 			e.target,
-		// 			"user_uLYAClKNSo75N0nWaLUmN"
-		// 		)
-		// 		.then(
-		// 			(result) => {
-		// 				console.log(result.text);
-		// 			},
-		// 			(error) => {
-		// 				console.log(error.text);
-		// 			}
-		// 		);
-		// }
+		if (submitted !== "submitted") {
+			emailjs
+				.sendForm(
+					"service_ne3ovm2",
+					"template_c36wzwo",
+					e.target,
+					"user_uLYAClKNSo75N0nWaLUmN"
+				)
+				.then(
+					(result) => {
+						console.log(result.text);
+					},
+					(error) => {
+						console.log(error.text);
+					}
+				);
+		}
 	}
 
 	return (
@@ -67,7 +67,7 @@ const Feedback = () => {
 				</form> */}
 				{submitted && (
 					<div className="success-message">
-						SUCCESS<div className="sub-success-message">Talk soon</div>
+						<div className="sub-success-message">Success.</div>
 					</div>
 				)}
 			</form>
