@@ -14,16 +14,6 @@ const CompanyTableDirectory = ({ companySymbol }) => {
 			return <TableCell key={"tableOne" + id} id={id} {...cellN} />;
 		});
 	};
-
-	// const renderTableTwo = () => {
-	// 	return COMPANY_TABLE_DATA.map((cellN) => {
-	// 		const { id } = cellN;
-	// 		if (id > 5) {
-	// 			return <TableCell key={"tableTwo" + id} id={id} {...cellN} />;
-	// 		}
-	// 	});
-	// };
-
 	return <div className="company-table">{renderTableOne()}</div>;
 };
 
