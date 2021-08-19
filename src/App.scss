@@ -1,11 +1,11 @@
-@use "./scss/abstracts/index";
+@use "./scss/abstracts/" as*;
 
 a {
 	text-decoration: none;
 	color: rgb(194, 26, 26);
 }
 body {
-	background-color: rgb(22, 22, 20);
+	background-color: $primary-background;
 }
 * {
 	font-family: "Montserrat", "Darker Grotesque", "Open Sans Condensed",
