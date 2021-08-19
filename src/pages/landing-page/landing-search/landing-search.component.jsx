@@ -27,14 +27,14 @@ const LandingSearch = () => {
 		<div className="main">
 			<div className="content">
 				<h1 className="title">
-					<span class="the">the</span> market lounge.
+					{/*<span class="the">the</span>*/} market lounge
 				</h1>
 
 				<div className="searchbar-container">
 					<i className="fas fa-search fa-2x search-icon"></i>
 					<input
 						type="text"
-						placeholder="search company by ticker..."
+						placeholder="search by ticker..."
 						className="searchbar"
 						ref={inputRef}
 						onKeyPress={handleSubmit}
@@ -51,7 +51,7 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Microsoft Corp
+						MSFT
 					</Button>
 					<Button
 						variant="contained"
@@ -61,7 +61,7 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Google
+						GOOG
 					</Button>
 					<Button
 						variant="contained"
@@ -71,7 +71,7 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Amazon.com
+						AMZN
 					</Button>
 					<Button
 						variant="contained"
@@ -81,7 +81,17 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Upwork
+						UPWK
+					</Button>
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("BABA");
+							routeChange();
+						}}
+					>
+						BABA
 					</Button>
 					<Button
 						variant="contained"
@@ -91,17 +101,27 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Fiverr
+						FVRR
 					</Button>
 					<Button
 						variant="contained"
 						className="contact-submit-button"
 						onClick={() => {
-							setCompanySymbol("MSFT");
+							setCompanySymbol("BYND");
 							routeChange();
 						}}
 					>
-						Beyond Meat
+						BYND
+					</Button>
+					<Button
+						variant="contained"
+						className="contact-submit-button"
+						onClick={() => {
+							setCompanySymbol("TCEHY");
+							routeChange();
+						}}
+					>
+						TCEHY
 					</Button>
 					<Button
 						variant="contained"
@@ -111,7 +131,7 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Etsy
+						ETSY
 					</Button>
 					<Button
 						variant="contained"
@@ -121,7 +141,7 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Walt Disney
+						DIS
 					</Button>
 					<Button
 						variant="contained"
@@ -131,7 +151,7 @@ const LandingSearch = () => {
 							routeChange();
 						}}
 					>
-						Philip Morris International
+						PM
 					</Button>
 				</div>
 			</div>
