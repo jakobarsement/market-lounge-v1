@@ -54,7 +54,8 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 							x={136 * index}
 							textAnchor="middle"
 							fontSize="15px"
-							fill="white"
+							fontWeight="500"
+							fill="rgb(216, 216, 215)"
 						>
 							{data[indicator]}%
 						</text>
@@ -68,7 +69,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 							textAnchor="middle"
 							fontSize="15px"
 							fontWeight="500"
-							fill="white"
+							fill="rgb(198, 194, 180)"
 						>
 							{data.formattedDate}
 						</text>

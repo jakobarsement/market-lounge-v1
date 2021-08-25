@@ -15,3 +15,23 @@
 		background-color: $primary-background;
 	}
 }
+
+@media (max-width: 1380px) {
+	.company-page {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		.left-column {
+			order: 2;
+			width: 49vw;
+		}
+		.middle-column {
+			order: 1;
+			width: 98vw;
+		}
+		.right-column {
+			order: 2;
+			width: 49vw;
+		}
+	}
+}

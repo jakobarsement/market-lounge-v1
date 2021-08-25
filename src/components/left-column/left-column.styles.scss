@@ -1,6 +1,9 @@
 @use "../../scss/abstracts/" as *;
 
 .left-column {
+	@media (max-width: 1380px) {
+		order: 2;
+	}
 	width: 20%;
 	padding-top: 25px;
 	display: flex;
