@@ -1,3 +1,5 @@
+@use "../../../scss/abstracts/" as *;
+
 .main {
 	width: 100%;
 	height: 100vh;
@@ -9,12 +11,11 @@
 
 	.content {
 		width: 758px;
-		// align-self: center;
 		h1.title {
 			font-family: "Hind-Light";
 			font-weight: initial;
 			text-align: center;
-			color: rgb(226, 218, 185);
+			color: $three;
 			font-size: 72px;
 			margin-bottom: -5px;
 			.the {
@@ -30,7 +31,6 @@
 		.searchbar-container {
 			position: relative;
 			display: flex;
-			// align-items: center;
 			justify-content: center;
 			width: 100%;
 			margin: 20px 0;
@@ -48,7 +48,7 @@
 				line-height: 62px;
 				border: none;
 				border-radius: 31px;
-				padding: 0 20px 0 0px;
+				padding: 0 20px 0 30px;
 				color: whitesmoke;
 				background-color: rgb(76, 76, 68);
 				&:focus {
@@ -69,11 +69,11 @@
 				&.whats-trending {
 					font-size: 20px;
 					font-weight: normal;
-					color: rgb(226, 218, 185);
+					color: $three;
 				}
 			}
 			.MuiButton-contained {
-				height: 35px;
+				height: 28px;
 				font-family: "Hind-Light";
 				font-weight: initial;
 				text-align: center;
@@ -85,6 +85,48 @@
 			}
 			.MuiButton-root {
 				text-transform: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.main {
+		.content {
+			margin-top: 40px;
+			h1.title {
+				font-size: 45px;
+				padding-bottom: 40px;
+			}
+			.searchbar-container {
+				margin: 0 0 12px -8px;
+				i.search-icon {
+					position: relative;
+					left: 10%;
+					top: 11px;
+					font-size: 23px;
+				}
+				input.searchbar {
+					height: 45px;
+					width: 80vw;
+					font-size: 1em;
+					padding-left: 50px;
+				}
+			}
+			.trending-container {
+				padding-top: 0;
+				p {
+					&.whats-trending {
+						font-size: 18px;
+					}
+				}
+				.MuiButton-contained {
+					height: 25px;
+					width: 40px;
+					border-radius: 5px;
+					margin: 5px 6px 5px 6px;
+					font-size: 13px;
+				}
 			}
 		}
 	}
