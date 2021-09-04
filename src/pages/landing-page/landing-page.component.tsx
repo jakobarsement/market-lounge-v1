@@ -6,6 +6,7 @@ import "./landing-page.styles.scss";
 const LandingPage = () => (
 	<div className="landing-page">
 		<LandingSearch></LandingSearch>
+		<div className="bg-img"></div>
 	</div>
 );
 

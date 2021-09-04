@@ -9,11 +9,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background: $primary-background
-		url(../../assets/images/landing-image-3-x2.webp) no-repeat bottom center;
-	max-height: 99vh;
 }
 
-body {
-	max-height: 20vw;
+.bg-img {
+	position: absolute;
+	bottom: 2px;
+	z-index: -1;
+	height: 190px;
+	width: 100vw;
+	background: $primary-background
+		url(../../assets/images/landing-image-3-x2.webp) no-repeat bottom center;
 }
