@@ -4,10 +4,15 @@
 	src: url("../../assets/Hind-Light.woff");
 	font-size: 10px;
 }
+
 .landing-page {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: $primary-background
 		url(../../assets/images/landing-image-3-x2.webp) no-repeat bottom center;
+}
+
+body {
+	max-height: 100vw;
 }
