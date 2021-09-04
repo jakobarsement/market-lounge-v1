@@ -42,6 +42,7 @@
 		.company-input-box {
 			border-radius: 5px;
 			width: 8vw;
+			min-width: 100px;
 			background-color: $primary-background;
 			border-color: $fifteen;
 			color: $ten;
@@ -52,6 +53,17 @@
 		.company-input-box:focus {
 			outline: none !important;
 			border: 2px solid $sixteen;
+		}
+	}
+}
+
+@media (max-width: 430px) {
+	.company-header {
+		.company-search-container {
+			margin-right: 0;
+			.company-input-box {
+				width: 30vw;
+			}
 		}
 	}
 }
