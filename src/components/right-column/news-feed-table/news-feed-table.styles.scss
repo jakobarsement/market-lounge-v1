@@ -72,3 +72,19 @@
 	box-shadow: inset 0 0 6px $fourteen;
 	background-color: $five;
 }
+
+@media (max-width: 1380px) {
+	.news-feeds-table {
+		.news-feed-title {
+			font-size: 3vw;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.news-feeds-table {
+		.news-feed-title {
+			font-size: 4.1vw;
+		}
+	}
+}

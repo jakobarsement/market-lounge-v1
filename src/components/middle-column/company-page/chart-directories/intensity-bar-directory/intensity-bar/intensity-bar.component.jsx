@@ -4,6 +4,7 @@ import * as d3 from "d3";
 const IntensityBar = ({ company, indicator, title, chartData }) => {
 	let barWidth = 96;
 	let barHeight = 8;
+	console.log(chartData);
 
 	//get window width on change
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -81,6 +82,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 						<text
 							key={data.formattedDate}
 							x={134 * index}
+							y={5}
 							textAnchor="middle"
 							fontSize={`${fontSize}px`}
 							fontWeight="500"
