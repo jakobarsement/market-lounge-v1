@@ -3,7 +3,7 @@ import * as d3 from "d3";
 
 const IntensityBar = ({ company, indicator, title, chartData }) => {
 	let barWidth = 96;
-	let barHeight = 10;
+	let barHeight = 9.5;
 	console.log(chartData);
 
 	//get window width on change
