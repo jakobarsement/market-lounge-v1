@@ -14,3 +14,9 @@
 		color: $ten;
 	}
 }
+
+@media (max-width: 550px) {
+	.table-cell {
+		font-size: 0.5rem;
+	}
+}

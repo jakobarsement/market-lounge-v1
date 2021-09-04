@@ -5,10 +5,16 @@
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border-radius: 6px;
-	padding: 10px;
 	.title {
 		color: $eight;
 		margin-bottom: -10px;
 		font-size: 1rem;
+	}
+}
+
+@media (max-width: 1000px) {
+	.intensity-bars {
+		margin: 10px 0;
+		padding: 0;
 	}
 }
