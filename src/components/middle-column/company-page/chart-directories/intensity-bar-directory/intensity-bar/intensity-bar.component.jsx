@@ -3,13 +3,12 @@ import * as d3 from "d3";
 
 const IntensityBar = ({ company, indicator, title, chartData }) => {
 	let barWidth = 96;
-	let barHeight = 8;
+	let barHeight = 10;
 	console.log(chartData);
 
 	//get window width on change
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const handleResize = () => {
-		console.log(windowWidth);
 		setWindowWidth(window.innerWidth);
 	};
 	useEffect(() => {
@@ -17,12 +16,26 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 	}, []);
 	//
 
-	// adjust font based on window size
+	// adjust style based on window size
 	const [fontSize, setFontSize] = useState("12");
+	const [barMargin, setBarMargin] = useState("50");
+	const [topTextMargin, setTopTextMargin] = useState("50");
+	const [bottomTextMargin, setBottomTextMargin] = useState("50");
 	useEffect(() => {
-		windowWidth < 1380 && setFontSize("15");
+		windowWidth < 1380 && setFontSize("11");
+		windowWidth < 1200 && setFontSize("13");
 		windowWidth < 850 && setFontSize("18");
 		windowWidth < 500 && setFontSize("23");
+
+		setBarMargin("50");
+		windowWidth > 680 && setBarMargin("28");
+
+		setTopTextMargin("0");
+		windowWidth > 680 && setTopTextMargin("30");
+		windowWidth > 840 && setTopTextMargin("40");
+		setBottomTextMargin("0");
+		windowWidth > 680 && setBottomTextMargin("30");
+		windowWidth > 840 && setBottomTextMargin("45");
 	}, [windowWidth, fontSize]);
 	//
 
@@ -37,7 +50,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 	return (
 		<>
 			<h3 className="title">{title}</h3>
-			<svg viewBox="0 0 1000 150 " preserveAspectRatio="xMidYMin">
+			<svg viewBox="0 0 1000 133 " preserveAspectRatio="xMidYMin">
 				<defs>
 					<linearGradient id={indicator}>
 						{chartData.map((data, index) => (
@@ -53,7 +66,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 
 				<rect
 					x="20"
-					y="50"
+					y={`${barMargin}`}
 					width={`${barWidth}%`}
 					height={`${barHeight}%`}
 					fill={`url(#${indicator})`}
@@ -63,11 +76,11 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 					ry="7"
 				/>
 
-				<g transform={`translate(35,100)`}>
+				<g transform={`translate(33,${100 - topTextMargin})`}>
 					{chartData.map((data, index) => (
 						<text
 							key={data.formattedDate}
-							x={134 * index}
+							x={132 * index}
 							textAnchor="middle"
 							fontSize={`${fontSize}px`}
 							fontWeight="500"
@@ -77,12 +90,12 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
 						</text>
 					))}
 				</g>
-				<g transform={`translate(35,120)`}>
+				<g transform={`translate(33,${120 - bottomTextMargin})`}>
 					{chartData.map((data, index) => (
 						<text
 							key={data.formattedDate}
-							x={134 * index}
-							y={5}
+							x={132 * index}
+							y={3}
 							textAnchor="middle"
 							fontSize={`${fontSize}px`}
 							fontWeight="500"
