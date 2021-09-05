@@ -17,7 +17,7 @@ function getInterpolatedApiUrl(companySymbol) {
 		},
 		{
 			id: 3,
-			title: "Cash",
+			title: "Cash & Eq.",
 			location: "data[0].cashAndCashEquivalents",
 			apiUrl: `${baseURL}/balance-sheet-statement/${companySymbol}?limit=120&apikey=${FIN_PREP_API_KEY}`,
 		},

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 
-// import HeaderMain from "../../header/header-main.component";
 import RightColumn from "../../right-column/right-column.component";
 import LeftColumn from "../../left-column/left-column.component";
 import CompanyHeader from "./company-header/company-header.component";
@@ -15,7 +14,7 @@ const CompanyPage = () => {
 
 	return (
 		<div className="page-container">
-			{/* <HeaderMain></HeaderMain> */}
+			{/* {window.alert("sometext")} */}
 			<div className="company-page">
 				<LeftColumn></LeftColumn>
 				<div className="middle-column">
