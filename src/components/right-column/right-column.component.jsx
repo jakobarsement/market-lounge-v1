@@ -5,7 +5,7 @@ import "./right-column.styles.scss";
 import NewsFeedTable from "./news-feed-table/news-feed-table.component";
 import Feedback from "./feedback/feedback.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
-// import BookOfTheWeek from "./books/book-of-the-week.component";
+// TODO: import BookOfTheWeek from "./books/book-of-the-week.component";
 
 const RightColumn = () => {
 	const { companySymbol } = useContext(CompanySymbolContext);

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 
 import LandingPage from "./pages/landing-page/landing-page.component";
-import CompanyPage from "./components/middle-column/company-page/companypage.component";
+import CompanyPage from "./pages/company-page/companypage.component";
 import { CompanySymbolContext } from "./lib/companyContext";
 
 import "./App.scss";
@@ -13,6 +13,7 @@ const App = () => {
 	return (
 		<BrowserRouter>
 			<div className="App">
+				{/* TODO: if apiState == loading, render loading page */}
 				<Switch>
 					<CompanySymbolContext.Provider
 						value={{ companySymbol, setCompanySymbol }}
