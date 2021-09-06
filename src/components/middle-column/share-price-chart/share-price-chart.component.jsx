@@ -8,7 +8,7 @@ const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY;
 
 const SharePriceChart = ({ companySymbol }) => {
   const url = `${baseURL}/historical-price-full/${companySymbol}?serietype=line&apikey=${FIN_PREP_API_KEY}`;
-
+  //TODo: add condlestick option
   const formatData = useCallback((data) => {
     const { historical } = data;
 
