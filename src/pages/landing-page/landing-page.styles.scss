@@ -1,30 +1,33 @@
 @use "../../scss/abstracts/" as *;
 @font-face {
-	font-family: "Hind-Light";
-	src: url("../../assets/Hind-Light.woff");
-	font-size: 10px;
+  font-family: "Hind-Light";
+  src: url("../../assets/Hind-Light.woff");
+  font-size: 10px;
 }
 
 .landing-page {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.bg-img {
-	position: absolute;
-	bottom: 2px;
-	z-index: -1;
-	height: 190px;
-	width: 100vw;
-	background: $primary-background
-		url(../../assets/images/landing-image-3-x2.webp) no-repeat bottom center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  .bg-img {
+    position: absolute;
+    bottom: 2px;
+    z-index: -1;
+    height: 190px;
+    width: 100vw;
+    background: $primary-background
+      url(../../assets/images/landing-image-3-x2.webp) no-repeat bottom center;
+  }
 }
 
 @media (max-width: 762px) {
-	.bg-img {
-		background: $primary-background
-			url(../../assets/images/sm-landing-image-3-x2.webp) no-repeat bottom
-			center;
-	}
+  .landing-page {
+    margin-top: 0px;
+    .bg-img {
+      background: $primary-background
+        url(../../assets/images/sm-landing-image-3-x2.webp) no-repeat bottom
+        center;
+    }
+  }
 }
