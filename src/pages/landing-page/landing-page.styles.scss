@@ -28,6 +28,8 @@
 }
 @media (max-width: 762px) {
   .landing-page {
+    margin-top: 0px;
+
     .bg-img {
       background: $primary-background
         url(../../assets/images/sm-landing-image-3-x2.webp) no-repeat bottom
