@@ -17,7 +17,9 @@ const CompanyPage = () => {
 		<div className="page-container">
 			{/*TODO: {window.alert("sometext")} */}
 			<div className="company-page">
-				<LeftColumn></LeftColumn>
+				<div className="left-column">
+					<LeftColumn></LeftColumn>
+				</div>
 				<div className="middle-column">
 					<CompanyHeader companySymbol={companySymbol} />
 					<SharePriceChart companySymbol={companySymbol} />

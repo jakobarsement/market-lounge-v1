@@ -11,14 +11,14 @@ const LeftColumn = () => {
 	const { companySymbol } = useContext(CompanySymbolContext);
 
 	return (
-		<div className="left-column">
+		<>
 			{/*below comment has legacy left column graph
 		reuse this styling for other graphs */}
 			{/* <div className="index graph">
 			<IndexGraph />
 		</div> */}
 			<CompanyRatiosChartDirectory companySymbol={companySymbol} />
-		</div>
+		</>
 	);
 };
 
