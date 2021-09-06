@@ -11,28 +11,28 @@ import { CompanySymbolContext } from "../../lib/companyContext";
 import "./companypage.styles.scss";
 
 const CompanyPage = () => {
-	const { companySymbol } = useContext(CompanySymbolContext);
+  const { companySymbol } = useContext(CompanySymbolContext);
 
-	return (
-		<div className="page-container">
-			{/*TODO: {window.alert("sometext")} */}
-			<div className="company-page">
-				<div className="left-column">
-					<LeftColumn></LeftColumn>
-				</div>
-				<div className="middle-column">
-					<CompanyHeader companySymbol={companySymbol} />
-					<SharePriceChart companySymbol={companySymbol} />
-					<CompanyTableDirectory companySymbol={companySymbol} />
-					<IntensityBarDirectory companySymbol={companySymbol} />
-				</div>
-				<div className="right-column">
-					<RightColumn></RightColumn>
-				</div>
-				<EmailInput></EmailInput>
-			</div>
-		</div>
-	);
+  return (
+    <div className="page-container">
+      {/*TODO: {window.alert("sometext")} */}
+      <div className="company-page">
+        <div className="left-column">
+          <LeftColumn></LeftColumn>
+        </div>
+        <div className="middle-column">
+          <CompanyHeader companySymbol={companySymbol} />
+          <SharePriceChart companySymbol={companySymbol} />
+          <CompanyTableDirectory companySymbol={companySymbol} />
+          <IntensityBarDirectory companySymbol={companySymbol} />
+        </div>
+        <div className="right-column">
+          <RightColumn></RightColumn>
+        </div>
+        {/* <EmailInput></EmailInput> */}
+      </div>
+    </div>
+  );
 };
 
 export default CompanyPage;
