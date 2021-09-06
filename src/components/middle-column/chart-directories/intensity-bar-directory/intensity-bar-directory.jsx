@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import IntensityBar from "./intensity-bar/intensity-bar.component";
-import { useFetchData } from "../../../../../lib/useFetchData";
+import { useFetchData } from "../../../../lib/useFetchData";
 
 import "./intensity-bar.styles.scss";
 

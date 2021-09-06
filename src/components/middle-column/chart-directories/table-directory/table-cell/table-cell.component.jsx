@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import {
 	convertNumberToAbbreviation,
 	appendPrefixOrSuffix,
-} from "../../../../../../lib/table-cell.utils";
+} from "../../../../../lib/table-cell.utils";
 
 import _ from "lodash";
 

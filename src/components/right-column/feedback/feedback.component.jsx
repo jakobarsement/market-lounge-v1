@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Paypal } from "./paypal.component";
+// import { Paypal } from "./paypal.component";
 import emailjs from "emailjs-com";
 import Button from "@material-ui/core/Button";
 import "./feedback.styles.scss";
 
 const Feedback = () => {
 	const [submitted, setSubmittedState] = useState("");
-	const [amount, setAmount] = useState(5);
-
 	function handleSubmit(e) {
 		e.preventDefault();
 		setSubmittedState("submitted");

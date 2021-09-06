@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState, useContext } from "react";
 import axios from "axios";
 
-import "./right-column.styles.scss";
 import NewsFeedTable from "./news-feed-table/news-feed-table.component";
 import Feedback from "./feedback/feedback.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
@@ -25,11 +24,11 @@ const RightColumn = () => {
 	}, [callNewsfeedApi]);
 
 	return (
-		<div className="right-column">
+		<>
 			{/* <BookOfTheWeek></BookOfTheWeek> */}
 			<NewsFeedTable feeds={responseState}></NewsFeedTable>
 			<Feedback />
-		</div>
+		</>
 	);
 };
 

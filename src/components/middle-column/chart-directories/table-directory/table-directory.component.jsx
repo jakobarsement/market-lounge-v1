@@ -1,7 +1,7 @@
 import React from "react";
 
 import TableCell from "./table-cell/table-cell.component";
-import getInterpolatedApiUrl from "../../../../../data/company-table-data";
+import getInterpolatedApiUrl from "../../../../data/company-table-data";
 
 import "./table-directory.styles.scss";
 

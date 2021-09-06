@@ -6,7 +6,6 @@ import React, { useContext } from "react";
 // import { MetalGraph } from "./ROHAN/metal-graph/metal-graph.component";
 import CompanyRatiosChartDirectory from "./ratio-chart-directory/ratio-chart-directory";
 import { CompanySymbolContext } from "../../lib/companyContext";
-import "./left-column.styles.scss";
 
 const LeftColumn = () => {
 	const { companySymbol } = useContext(CompanySymbolContext);

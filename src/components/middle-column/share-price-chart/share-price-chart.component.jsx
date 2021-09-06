@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import { useFetchData } from "../../../../lib/useFetchData";
+import { useFetchData } from "../../../lib/useFetchData";
 import "./share-price-chart.scss";
 
 const SharePriceChart = ({ companySymbol }) => {
