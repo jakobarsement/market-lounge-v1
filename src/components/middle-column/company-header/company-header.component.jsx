@@ -4,6 +4,8 @@ import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import _ from "lodash";
 import "./company-header.styles.scss";
+const baseURL = process.env.REACT_APP_BASE_URL;
+const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY;
 
 function CompanyHeader() {
   const inputRef = useRef(null);
@@ -11,7 +13,7 @@ function CompanyHeader() {
   const [summaryData, setSummaryData] = useState();
   const [isDescriptionShown, setIsDescriptionShown] = useState(false);
 
-  const summaryUrl = `https://financialmodelingprep.com/api/v3/profile/${companySymbol}?apikey=7fd4e8b6bf2bceea94a8f589d648c8eb`;
+  const summaryUrl = `${baseURL}/profile/${companySymbol}?apikey=${FIN_PREP_API_KEY}`;
 
   useEffect(() => {
     if (!summaryUrl) return;
@@ -34,7 +36,7 @@ function CompanyHeader() {
       <div className="company-search-container">
         <i className="fas fa-search"></i>
         <input
-          //TODO: on state change implement search -> https://financialmodelingprep.com/developer/docs#Ticker-Search
+          //TODO: on state change implement search
           className="company-input-box"
           ref={inputRef}
           onKeyPress={handleSubmit}
