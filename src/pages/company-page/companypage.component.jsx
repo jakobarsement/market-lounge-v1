@@ -6,7 +6,7 @@ import CompanyHeader from "../../components/middle-column/company-header/company
 import SharePriceChart from "../../components/middle-column/share-price-chart/share-price-chart.component";
 import CompanyTableDirectory from "../../components/middle-column/chart-directories/table-directory/table-directory.component";
 import IntensityBarDirectory from "../../components/middle-column/chart-directories/intensity-bar-directory/intensity-bar-directory";
-import EmailInput from "../../components/middle-column/email-input/email-input.component";
+import EmailForm from "../../components/middle-column/email-input/email-form.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
 import "./companypage.styles.scss";
 
@@ -15,7 +15,8 @@ const CompanyPage = () => {
 
   return (
     <div className="page-container">
-      {/*TODO: {window.alert("sometext")} */}
+      {/*TODO: {window.alert("affiliates")} */}
+      {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
       <div className="company-page">
         <div className="left-column">
           <LeftColumn></LeftColumn>
