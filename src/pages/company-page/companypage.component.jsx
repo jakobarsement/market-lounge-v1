@@ -24,6 +24,7 @@ const CompanyPage = () => {
         <div className="middle-column">
           <CompanyHeader companySymbol={companySymbol} />
           <SharePriceChart companySymbol={companySymbol} />
+          {/*TODO: export company excel */}
           <CompanyTableDirectory companySymbol={companySymbol} />
           <IntensityBarDirectory companySymbol={companySymbol} />
         </div>
