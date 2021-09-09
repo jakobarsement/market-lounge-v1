@@ -3,7 +3,6 @@
 .main {
   width: 100%;
   display: flex;
-  justify-content: center;
   .content {
     width: 758px;
     h1.title {
@@ -13,9 +12,6 @@
       color: $three;
       font-size: 72px;
       margin-bottom: -5px;
-      .the {
-        font-size: 50px;
-      }
     }
     p {
       font-family: "Hind-Light";
@@ -24,7 +20,6 @@
       font-size: 24px;
     }
     .searchbar-container {
-      position: relative;
       display: flex;
       justify-content: center;
       width: 100%;
