@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useContext } from "react";
+import { useCallback, useEffect, useState, useContext } from "react";
 import axios from "axios";
 import NewsFeedTable from "./news-feed-table/news-feed-table.component";
 import Feedback from "./feedback/feedback.component";
