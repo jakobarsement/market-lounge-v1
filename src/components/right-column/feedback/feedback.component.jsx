@@ -6,6 +6,7 @@ import "./feedback.styles.scss";
 
 const Feedback = () => {
   const [submitted, setSubmittedState] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
     setSubmittedState("submitted");
