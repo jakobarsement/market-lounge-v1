@@ -6,7 +6,7 @@ import CompanyHeader from "../../components/middle-column/company-header/company
 import SharePriceChart from "../../components/middle-column/share-price-chart/share-price-chart.component";
 import CompanyTableDirectory from "../../components/middle-column/chart-directories/table-directory/table-directory.component";
 import IntensityBarDirectory from "../../components/middle-column/chart-directories/intensity-bar-directory/intensity-bar-directory";
-import EmailForm from "../../components/middle-column/email-input/email-form.component";
+import EmailForm from "../../components/middle-column/email-form/email-form.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
 import "./companypage.styles.scss";
 
@@ -19,7 +19,7 @@ const CompanyPage = () => {
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
       <div className="company-page">
         <div className="left-column">
-          <LeftColumn></LeftColumn>
+          <LeftColumn />
         </div>
         <div className="middle-column">
           <CompanyHeader companySymbol={companySymbol} />
@@ -27,11 +27,11 @@ const CompanyPage = () => {
           {/*TODO: export company excel */}
           <CompanyTableDirectory companySymbol={companySymbol} />
           <IntensityBarDirectory companySymbol={companySymbol} />
+          <EmailForm />
         </div>
         <div className="right-column">
-          <RightColumn></RightColumn>
+          <RightColumn />
         </div>
-        {/* <EmailInput></EmailInput> */}
       </div>
     </div>
   );

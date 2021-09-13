@@ -1,97 +1,97 @@
 @use "../../../scss/abstracts" as *;
 
 .news-feeds-table {
-	margin: 20px 0px 0px 3px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	background-color: $secondary-background;
-	margin-top: 0px;
-	border-radius: 6px;
-	width: 90%;
-	height: 550px;
-	overflow: auto;
+  margin: 20px 0px 0px 3px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: $secondary-background;
+  margin-top: 0px;
+  border-radius: 6px;
+  width: 90%;
+  height: 495px;
+  overflow: auto;
 
-	.news-feed-title {
-		border-bottom: 0.1em solid $one;
-		width: 95%;
-		margin-top: 10px;
-		padding-bottom: 10px;
-		margin-bottom: 8px;
-		text-align: left;
-		font-size: 1.5vw;
-		color: $three;
-		h3 {
-			.fa-newspaper {
-				margin-right: 6px;
-				margin-left: 7px;
-			}
+  .news-feed-title {
+    border-bottom: 0.1em solid $one;
+    width: 95%;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    text-align: left;
+    font-size: 1.5vw;
+    color: $three;
+    h3 {
+      .fa-newspaper {
+        margin-right: 6px;
+        margin-left: 7px;
+      }
 
-			i {
-				margin-right: 8px;
-			}
-		}
-	}
-	table {
-		height: 100px;
-		border-collapse: separate;
-		border-spacing: 4px 5px;
-		.table-item {
-			.feed-image {
-				margin-top: -5px;
-				margin-left: 6px;
-				width: 30px;
-				height: 30px;
-				border-radius: 100px;
-				object-fit: cover;
-			}
-			a {
-				color: $eight;
-				font-weight: bold;
-				font-size: 13px;
-			}
-			.date-tag {
-				color: $four;
-				font-weight: lighter;
-				font-size: 0.9vw;
-			}
-		}
-	}
+      i {
+        margin-right: 8px;
+      }
+    }
+  }
+  table {
+    height: 100px;
+    border-collapse: separate;
+    border-spacing: 4px 5px;
+    .table-item {
+      .feed-image {
+        margin-top: -5px;
+        margin-left: 6px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        object-fit: cover;
+      }
+      a {
+        color: $eight;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      .date-tag {
+        color: $four;
+        font-weight: lighter;
+        font-size: 0.9vw;
+      }
+    }
+  }
 }
 
 .news-feeds-table::-webkit-scrollbar {
-	width: 8px;
+  width: 8px;
 }
 
 .news-feeds-table::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 6px $twelve;
-	background-color: $thirteen;
+  box-shadow: inset 0 0 6px $twelve;
+  background-color: $thirteen;
 }
 
 .news-feeds-table::-webkit-scrollbar-thumb {
-	box-shadow: inset 0 0 6px $fourteen;
-	background-color: $five;
+  box-shadow: inset 0 0 6px $fourteen;
+  background-color: $five;
 }
 
 @media (max-width: 1380px) {
-	.news-feeds-table {
-		.news-feed-title {
-			font-size: 3vw;
-		}
-	}
+  .news-feeds-table {
+    .news-feed-title {
+      font-size: 3vw;
+    }
+  }
 }
 
 @media (max-width: 900px) {
-	.news-feeds-table {
-		.news-feed-title {
-			font-size: 4.1vw;
-		}
-		table {
-			.table-item {
-				.date-tag {
-					font-size: 10px;
-				}
-			}
-		}
-	}
+  .news-feeds-table {
+    .news-feed-title {
+      font-size: 4.1vw;
+    }
+    table {
+      .table-item {
+        .date-tag {
+          font-size: 10px;
+        }
+      }
+    }
+  }
 }

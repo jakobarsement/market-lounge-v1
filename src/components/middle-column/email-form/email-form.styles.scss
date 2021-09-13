@@ -1,0 +1,26 @@
+.email-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+  margin: 0 5px 10px 5px;
+
+  .title {
+    color: whitesmoke;
+  }
+  .fa-arrow {
+    color: whitesmoke;
+    margin: 0 10px;
+  }
+  input {
+    width: 300px;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 620px) {
+  .email-form {
+    font-size: 20px;
+  }
+}
