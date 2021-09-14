@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 import RightColumn from "../../components/right-column/right-column.component";
 import LeftColumn from "../../components/left-column/left-column.component";
@@ -14,6 +14,7 @@ const CompanyPage = () => {
   const { companySymbol } = useContext(CompanySymbolContext);
 
   return (
+    //TODO: make component fill % height to fit screen of all monitors
     <div className="page-container">
       {/*TODO: {window.alert("affiliates")} */}
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}

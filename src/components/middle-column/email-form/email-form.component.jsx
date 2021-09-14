@@ -8,6 +8,7 @@ const EmailForm = () => {
 
   const handleEmailChange = (email) => {
     setUserEmail(email);
+    console.log(email);
   };
 
   return (
@@ -20,7 +21,10 @@ const EmailForm = () => {
       <input
         placeholder="youremail@example.com"
         value={userEmail}
-        onChange={({ target }) => handleEmailChange(target.value)}
+        onChange={({ target }) => {
+          handleEmailChange(target.value);
+          console.log(target);
+        }}
       />
     </div>
   );
