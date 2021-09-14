@@ -10,6 +10,13 @@
   justify-content: center;
   align-items: center;
   height: 80vh;
+  .logo {
+    height: 65px;
+    width: 85px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
   .bg-img {
     position: absolute;
     bottom: 2px;

@@ -8,6 +8,7 @@ import CompanyTableDirectory from "../../components/middle-column/chart-director
 import IntensityBarDirectory from "../../components/middle-column/chart-directories/intensity-bar-directory/intensity-bar-directory";
 import EmailForm from "../../components/middle-column/email-form/email-form.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
+// import logo from "../../assets/images/image2.webp";
 import "./companypage.styles.scss";
 
 const CompanyPage = () => {
@@ -16,6 +17,8 @@ const CompanyPage = () => {
   return (
     //TODO: make component fill % height to fit screen of all monitors
     <div className="page-container">
+      {/* <img src={logo} alt="img" className="logo" /> */}
+
       {/*TODO: {window.alert("affiliates")} */}
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
       <div className="company-page">
