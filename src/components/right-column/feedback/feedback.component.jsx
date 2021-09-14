@@ -5,49 +5,49 @@ import Button from "@material-ui/core/Button";
 import "./feedback.styles.scss";
 
 const Feedback = () => {
-	const [submitted, setSubmittedState] = useState("");
-	function handleSubmit(e) {
-		e.preventDefault();
-		setSubmittedState("submitted");
-		if (submitted !== "submitted") {
-			emailjs
-				.sendForm(
-					"service_ne3ovm2",
-					"template_c36wzwo",
-					e.target,
-					"user_uLYAClKNSo75N0nWaLUmN"
-				)
-				.then(
-					(result) => {
-						console.log(result.text);
-					},
-					(error) => {
-						console.log(error.text);
-					}
-				);
-		}
-	}
+  const [submitted, setSubmittedState] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+    setSubmittedState("submitted");
+    if (submitted !== "submitted") {
+      emailjs
+        .sendForm(
+          "service_nyfzzuc",
+          "template_gggnm5d",
+          e.target,
+          "user_uLYAClKNSo75N0nWaLUmN"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
+  }
 
-	return (
-		<>
-			<form className="contact-form" onSubmit={handleSubmit}>
-				<h3 className="feedback-title">Feedback</h3>
-				<textarea
-					className="feedback-box message"
-					name="feedback"
-					placeholder="Instant feedback... you will not be redirected."
-				/>
-				<div className="send-button">
-					<Button
-						variant="contained"
-						className="contact-submit-button"
-						type="submit"
-						value="Send"
-					>
-						Send
-					</Button>
-				</div>
-				{/* <input
+  return (
+    <>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <h3 className="feedback-title">Feedback</h3>
+        <textarea
+          className="feedback-box message"
+          name="feedback"
+          placeholder="Instant feedback... you will not be redirected."
+        />
+        <div className="send-button">
+          <Button
+            variant="contained"
+            className="contact-submit-button"
+            type="submit"
+            value="Send"
+          >
+            Send
+          </Button>
+        </div>
+        {/* <input
 					className="donate-box name"
 					placeholder="Donate"
 					pattern="[0-9]*"
@@ -55,7 +55,7 @@ const Feedback = () => {
 					onChange={(e) => setAmount(e.target.value)}
 				/>
 				<Paypal amount={amount} /> */}
-				{/* <form
+        {/* <form
 					action="https://www.paypal.com/donate"
 					method="post"
 					target="_blank"
@@ -63,14 +63,14 @@ const Feedback = () => {
 					<input type="hidden" name="business" value="BHM6A6NVZBNC6" />
 					<input type="hidden" name="currency_code" value="USD" />
 				</form> */}
-				{submitted && (
-					<div className="success-message">
-						<div className="sub-success-message">Success.</div>
-					</div>
-				)}
-			</form>
-		</>
-	);
+        {submitted && (
+          <div className="success-message">
+            <div className="sub-success-message">Success.</div>
+          </div>
+        )}
+      </form>
+    </>
+  );
 };
 
 export default Feedback;
