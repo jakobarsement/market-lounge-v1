@@ -35,7 +35,7 @@ const Feedback = () => {
         <textarea
           className="feedback-box message"
           name="feedback"
-          placeholder="Instant feedback... you will not be redirected."
+          placeholder="Help us help you."
         />
         <div className="send-button">
           <Button
