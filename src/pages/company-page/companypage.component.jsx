@@ -12,7 +12,7 @@ import "./companypage.styles.scss";
 
 const CompanyPage = () => {
   const { companySymbol } = useContext(CompanySymbolContext);
-
+  //  !companySymbol &&
   return (
     <div className="page-container">
       {/*TODO: {window.alert("affiliates")} */}
