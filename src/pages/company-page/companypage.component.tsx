@@ -30,7 +30,7 @@ const CompanyPage = () => {
             <LeftColumn></LeftColumn>
           </div>
           <div className="middle-column">
-            <CompanyHeader companySymbol={companySymbol} />
+            <CompanyHeader />
             <SharePriceChart companySymbol={companySymbol} />
             <CompanyExport companySymbol={companySymbol} />
             <CompanyTableDirectory companySymbol={companySymbol} />
