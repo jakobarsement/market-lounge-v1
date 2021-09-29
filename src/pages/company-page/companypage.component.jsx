@@ -7,21 +7,13 @@ import SharePriceChart from "../../components/middle-column/share-price-chart/sh
 import CompanyTableDirectory from "../../components/middle-column/chart-directories/table-directory/table-directory.component";
 import IntensityBarDirectory from "../../components/middle-column/chart-directories/intensity-bar-directory/intensity-bar-directory";
 import EmailForm from "../../components/middle-column/email-input/email-form.component";
-import CompanyExport from "../../components/company-export/company-export.component";
-import { ErrorBoundary } from "react-error-boundary";
-import EntityNotFound from "../entity-not-found/entity-not-found.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
 import "./companypage.styles.scss";
 
 const CompanyPage = () => {
-  const companySymbol = useContext(CompanySymbolContext);
+  const { companySymbol } = useContext(CompanySymbolContext);
+
   return (
-    // <ErrorBoundary
-    //   FallbackComponent={EntityNotFound}
-    //   onReset={() => {
-    //     // reset the state of your app so the error doesn't happen again
-    //   }}
-    // >
     <div className="page-container">
       {/*TODO: {window.alert("affiliates")} */}
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
@@ -30,9 +22,9 @@ const CompanyPage = () => {
           <LeftColumn></LeftColumn>
         </div>
         <div className="middle-column">
-          <CompanyHeader />
+          <CompanyHeader companySymbol={companySymbol} />
           <SharePriceChart companySymbol={companySymbol} />
-          <CompanyExport companySymbol={companySymbol} />
+          {/*TODO: export company excel */}
           <CompanyTableDirectory companySymbol={companySymbol} />
           <IntensityBarDirectory companySymbol={companySymbol} />
         </div>
@@ -42,7 +34,6 @@ const CompanyPage = () => {
         {/* <EmailInput></EmailInput> */}
       </div>
     </div>
-    // </ErrorBoundary>
   );
 };
 
