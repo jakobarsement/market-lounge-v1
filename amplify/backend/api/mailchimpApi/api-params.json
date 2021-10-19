@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/mailchimpApi",
+      "lambdaFunction": "mailchimpLambdaFunction",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/mailchimpApi"
+    }
+  ],
+  "resourceName": "mailchimpApi",
+  "apiName": "mailchimpApi",
+  "functionArns": [
+    {
+      "lambdaFunction": "mailchimpLambdaFunction"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-simplemarketsreact-dev-210734-authRole",
+    "unAuthRoleName": "amplify-simplemarketsreact-dev-210734-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "mailchimpLambdaFunction",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

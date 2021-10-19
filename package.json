@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@aws-amplify/ui-react": "^1.2.20",
 		"@fortawesome/fontawesome-free": "^5.15.3",
 		"@fortawesome/fontawesome-svg-core": "^1.2.35",
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
@@ -13,6 +14,7 @@
 		"@testing-library/react": "^11.2.7",
 		"@testing-library/user-event": "^12.8.3",
 		"@types/react-router": "^5.1.13",
+		"aws-amplify": "^4.3.2",
 		"axios": "^0.21.1",
 		"d3": "^6.7.0",
 		"emailjs": "^3.4.0",
