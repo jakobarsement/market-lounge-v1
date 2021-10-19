@@ -19,10 +19,10 @@ const Feedback = () => {
         )
         .then(
           (result) => {
-            console.log(result.text);
+            console.log("feedback submission success: ", result.text);
           },
           (error) => {
-            console.log(error.text);
+            console.log("feedback submission success: ", error.text);
           }
         );
     }
