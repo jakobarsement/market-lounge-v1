@@ -10,6 +10,14 @@
       "StackName": "amplify-simplemarketsreact-dev-210734",
       "StackId": "arn:aws:cloudformation:us-east-1:286333706896:stack/amplify-simplemarketsreact-dev-210734/1818ce00-3092-11ec-a0be-0a5d26e17ecd",
       "AmplifyAppId": "d2owx7yt3u4o7z"
+    },
+    "categories": {
+      "function": {
+        "mailchimpLambdaFunction": {
+          "deploymentBucketName": "amplify-simplemarketsreact-dev-210734-deployment",
+          "s3Key": "amplify-builds/mailchimpLambdaFunction-43363667346a6b556b6f-build.zip"
+        }
+      }
     }
   }
 }
