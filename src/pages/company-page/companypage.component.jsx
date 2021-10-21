@@ -34,7 +34,7 @@ const CompanyPage = () => {
 
   return (
     <div className="page-container">
-      <h1 style={{ backgroundColor: "blue" }}>{userEmail}</h1>
+      <h1 style={{ backgroundColor: "lightblue" }}>{userEmail}</h1>
 
       {/*TODO: {window.alert("affiliates")} */}
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import LandingPage from "./pages/landing-page/landing-page.component";
 import CompanyPage from "./pages/company-page/companypage.component";
 import { CompanySymbolContext } from "./lib/companyContext";
-import { API } from "aws-amplify";
 import "./App.scss";
 
 const App = () => {
