@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 
 import RightColumn from "../../components/right-column/right-column.component";
 import LeftColumn from "../../components/left-column/left-column.component";
@@ -8,34 +8,13 @@ import CompanyTableDirectory from "../../components/middle-column/chart-director
 import IntensityBarDirectory from "../../components/middle-column/chart-directories/intensity-bar-directory/intensity-bar-directory";
 import EmailForm from "../../components/middle-column/email-input/email-form.component";
 import { CompanySymbolContext } from "../../lib/companyContext";
-import { API } from "aws-amplify";
 import "./companypage.styles.scss";
 
 const CompanyPage = () => {
   const { companySymbol } = useContext(CompanySymbolContext);
 
-  //begin amplify
-  useEffect(() => {
-    postUserEmailToMailchimp();
-  }, []);
-
-  const [userEmail, setUserEmail] = useState("");
-
-  async function postUserEmailToMailchimp() {
-    API.get("mailchimpApi", "/mailchimpApi", { email: userEmail })
-      .then((response) => {
-        setUserEmail(response.success);
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error.response);
-      });
-  }
-
   return (
     <div className="page-container">
-      <h1 style={{ backgroundColor: "lightblue" }}>{userEmail}</h1>
-
       {/*TODO: {window.alert("affiliates")} */}
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
       <div className="company-page">
@@ -52,7 +31,7 @@ const CompanyPage = () => {
         <div className="right-column">
           <RightColumn></RightColumn>
         </div>
-        {/* <EmailInput></EmailInput> */}
+        <EmailForm></EmailForm>
       </div>
     </div>
   );

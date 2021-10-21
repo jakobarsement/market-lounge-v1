@@ -10,7 +10,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
 
-// declare a new express app
 var app = express();
 app.use(bodyParser.json());
 app.use(awsServerlessExpressMiddleware.eventContext());
@@ -22,59 +21,23 @@ app.use(function (req, res, next) {
   next();
 });
 
-/**********************
- * Example get method *
- **********************/
-
+//GET
 app.get("/mailchimpApi", function (req, res) {
-  // Add your code here
   res.json({ success: "get call succeed!", url: req.url });
 });
 
-app.get("/mailchimpApi/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "get call succeed!", url: req.url });
-});
-
-/****************************
- * Example post method *
- ****************************/
-
+//POST - used
 app.post("/mailchimpApi", function (req, res) {
-  // Add your code here
   res.json({ success: "post call succeed!", url: req.url, body: req.body });
 });
 
-app.post("/mailchimpApi/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "post call succeed!", url: req.url, body: req.body });
-});
-
-/****************************
- * Example put method *
- ****************************/
-
+//PUT
 app.put("/mailchimpApi", function (req, res) {
-  // Add your code here
   res.json({ success: "put call succeed!", url: req.url, body: req.body });
 });
 
-app.put("/mailchimpApi/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "put call succeed!", url: req.url, body: req.body });
-});
-
-/****************************
- * Example delete method *
- ****************************/
-
+//DELETE
 app.delete("/mailchimpApi", function (req, res) {
-  // Add your code here
-  res.json({ success: "delete call succeed!", url: req.url });
-});
-
-app.delete("/mailchimpApi/*", function (req, res) {
-  // Add your code here
   res.json({ success: "delete call succeed!", url: req.url });
 });
 
