@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { API } from "aws-amplify";
 import Button from "@material-ui/core/Button";
+import { API } from "aws-amplify";
 import "./email-form.styles.scss";
 
 const EmailForm = () => {
   //begin amplify
   const [userEmail, setUserEmail] = useState("bing@bong.com");
+  const [userFName, setUserFName] = useState("Jim");
+  const [userLName, setUserLName] = useState("Bo");
   const [apiMsg, setApiMsg] = useState("xxx");
   const [submitted, setSubmittedState] = useState(false);
 

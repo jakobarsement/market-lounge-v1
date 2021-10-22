@@ -8,6 +8,8 @@ See the License for the specific language governing permissions and limitations 
 
 var express = require("express");
 var bodyParser = require("body-parser");
+const path = require("path");
+const mailchimp = require("@mailchimp/mailchimp_marketing");
 var awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
 
 var app = express();
@@ -21,28 +23,61 @@ app.use(function (req, res, next) {
   next();
 });
 
-//GET
-app.get("/mailchimpApi", function (req, res) {
-  res.json({ success: "get call succeed!", url: req.url });
+//BEGIN MAILCHIMP
+mailchimp.setConfig({
+  apiKey: "418cab9a056798621dba231cca696763-us5",
+  server: "us5",
 });
 
-//POST - used
+const listId = "a27d6572df";
+
+const subscribingUser = {
+  firstName: "Jim",
+  lastName: "Bob",
+  email: "jim@bong.com",
+};
+
+async function run() {
+  const response = await mailchimp.lists.addListMember(listId, {
+    email_address: subscribingUser.email,
+    status: "subscribed",
+    merge_fields: {
+      FNAME: subscribingUser.firstName,
+      LNAME: subscribingUser.lastName,
+    },
+  });
+
+  console.log(
+    `Successfully added contact as an audience member. The contact's id is ${response.id}.`
+  );
+}
+
+run();
+
+//Bodyparser middleware
+// app.use(bodyParser.urlencoded({ extended: true }));
+
+// // Static folder
+// app.use(express.static(path.join(__dirname, "public")));
+
+//POST - Signup Route
 app.post("/mailchimpApi", function (req, res) {
+  const { email } = req.body;
+  console.info(req);
+  console.info(res);
+
+  //Ensure fields are filled
+  if (!email) {
+    res.redirect("/failed.html");
+    return;
+  }
   res.json({ success: "post call succeed!", url: req.url, body: req.body });
 });
 
-//PUT
-app.put("/mailchimpApi", function (req, res) {
-  res.json({ success: "put call succeed!", url: req.url, body: req.body });
-});
+const PORT = process.env.PORT || 5000;
 
-//DELETE
-app.delete("/mailchimpApi", function (req, res) {
-  res.json({ success: "delete call succeed!", url: req.url });
-});
-
-app.listen(3000, function () {
-  console.log("App started");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 // Export the app object. When executing the application local this does nothing. However,
