@@ -15,7 +15,7 @@
       "function": {
         "mailchimpLambdaFunction": {
           "deploymentBucketName": "amplify-simplemarketsreact-dev-210734-deployment",
-          "s3Key": "amplify-builds/mailchimpLambdaFunction-2b684a6e563371586a73-build.zip"
+          "s3Key": "amplify-builds/mailchimpLambdaFunction-6e4d447a6d564c70634a-build.zip"
         }
       }
     }

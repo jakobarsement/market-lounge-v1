@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { API } from "aws-amplify";
 import Button from "@material-ui/core/Button";
 import "./email-form.styles.scss";
