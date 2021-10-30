@@ -14,10 +14,10 @@ const CompanyPage = () => {
   const { companySymbol } = useContext(CompanySymbolContext);
 
   return (
-    <div className="page-container">
+    <>
       {/*TODO: {window.alert("affiliates")} */}
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
-      <div className="company-page">
+      <div className="top-three-columns">
         <div className="left-column">
           <LeftColumn></LeftColumn>
         </div>
@@ -31,9 +31,11 @@ const CompanyPage = () => {
         <div className="right-column">
           <RightColumn></RightColumn>
         </div>
+      </div>
+      <div className="email-form">
         <EmailForm></EmailForm>
       </div>
-    </div>
+    </>
   );
 };
 

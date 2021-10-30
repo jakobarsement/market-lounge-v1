@@ -1,0 +1,27 @@
+@use "../../../scss/abstracts/" as *;
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8em;
+  .MuiButton-contained {
+    height: 37px;
+    background-color: $intensity-bar;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: bold;
+  }
+  .email-input {
+    input {
+      position: relative;
+      bottom: 8px;
+      padding: 10px;
+      height: 37px;
+      background-color: whitesmoke;
+      border-radius: 10px 0px 0px 10px;
+      font-size: 0.3em;
+      font-weight: normal;
+      border: none;
+      outline: none;
+    }
+  }
+}

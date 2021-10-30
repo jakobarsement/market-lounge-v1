@@ -8,7 +8,6 @@ See the License for the specific language governing permissions and limitations 
 
 var express = require("express");
 var bodyParser = require("body-parser");
-const path = require("path");
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 var awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
 
@@ -31,47 +30,22 @@ mailchimp.setConfig({
 
 const listId = "a27d6572df";
 
-const subscribingUser = {
-  firstName: "Jim",
-  lastName: "Bob",
-  email: "jim@bong.com",
-};
-
-async function run() {
-  const response = await mailchimp.lists.addListMember(listId, {
-    email_address: subscribingUser.email,
-    status: "subscribed",
-    merge_fields: {
-      FNAME: subscribingUser.firstName,
-      LNAME: subscribingUser.lastName,
-    },
-  });
-
-  console.log(
-    `Successfully added contact as an audience member. The contact's id is ${response.id}.`
-  );
-}
-
-run();
-
-//Bodyparser middleware
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// // Static folder
-// app.use(express.static(path.join(__dirname, "public")));
-
 //POST - Signup Route
-app.post("/mailchimpApi", function (req, res) {
-  const { email } = req.body;
-  console.info(req);
-  console.info(res);
-
-  //Ensure fields are filled
-  if (!email) {
+app.post("/mailchimpApi", async function (req, res) {
+  if (!req.body) {
     res.redirect("/failed.html");
     return;
   }
-  res.json({ success: "post call succeed!", url: req.url, body: req.body });
+  const mailchimpResponse = await mailchimp.lists.addListMember(listId, {
+    email_address: req.body.email,
+    status: "subscribed",
+  });
+
+  res.json({
+    email: req.body.email,
+    success: "post call succeed!",
+    url: mailchimpResponse,
+  });
 });
 
 const PORT = process.env.PORT || 5000;
