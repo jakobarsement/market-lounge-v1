@@ -1,71 +1,71 @@
 {
-	"name": "v0.2-simple-markets",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@aws-amplify/ui-react": "^1.2.20",
-		"@fortawesome/fontawesome-free": "^5.15.3",
-		"@fortawesome/fontawesome-svg-core": "^1.2.35",
-		"@fortawesome/free-brands-svg-icons": "^5.15.3",
-		"@fortawesome/free-solid-svg-icons": "^5.15.3",
-		"@fortawesome/react-fontawesome": "^0.1.14",
-		"@material-ui/core": "^4.11.4",
-		"@testing-library/jest-dom": "^5.12.0",
-		"@testing-library/react": "^11.2.7",
-		"@testing-library/user-event": "^12.8.3",
-		"@types/react-router": "^5.1.13",
-		"aws-amplify": "^4.3.2",
-		"axios": "^0.21.1",
-		"d3": "^6.7.0",
-		"emailjs": "^3.4.0",
-		"emailjs-com": "^2.6.4",
-		"highcharts": "^9.0.1",
-		"highcharts-react-official": "^3.0.0",
-		"lodash": "^4.17.21",
-		"node-sass": "^5.0.0",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-error-boundary": "^3.1.3",
-		"react-paypal-express-checkout": "^1.0.5",
-		"react-router-dom": "^5.2.0",
-		"react-scripts": "4.0.2",
-		"react-virtualized": "^9.22.3",
-		"react-virtualized-auto-sizer": "^1.0.5",
-		"sass": "^1.32.12",
-		"web-vitals": "^1.1.1"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app",
-			"react-app/jest"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@types/jest": "^26.0.23",
-		"@types/lodash": "^4.14.174",
-		"@types/node": "^14.14.43",
-		"@types/react": "^17.0.4",
-		"@types/react-dom": "^17.0.3",
-		"@types/react-router-dom": "^5.1.7",
-		"prettier": "2.2.1",
-		"typescript": "^4.2.4"
-	}
+  "name": "v0.2-simple-markets",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@aws-amplify/ui-react": "^1.2.20",
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@material-ui/core": "^4.11.4",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/react-router": "^5.1.13",
+    "aws-amplify": "^4.3.2",
+    "axios": "^0.21.1",
+    "d3": "^6.7.0",
+    "emailjs": "^3.4.0",
+    "emailjs-com": "^2.6.4",
+    "highcharts": "^9.0.1",
+    "highcharts-react-official": "^3.0.0",
+    "lodash": "^4.17.21",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-error-boundary": "^3.1.3",
+    "react-paypal-express-checkout": "^1.0.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "react-virtualized": "^9.22.3",
+    "react-virtualized-auto-sizer": "^1.0.5",
+    "sass": "^1.32.12",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "amplify init && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.174",
+    "@types/node": "^14.14.43",
+    "@types/react": "^17.0.4",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-router-dom": "^5.1.7",
+    "prettier": "2.2.1",
+    "typescript": "^4.2.4"
+  }
 }
