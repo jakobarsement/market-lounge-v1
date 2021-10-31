@@ -36,9 +36,10 @@
     align-items: center;
     align-self: flex-start;
   }
-  .email-form {
-    width: 100vw;
-  }
+}
+
+.email-form {
+  margin-bottom: 5px;
 }
 
 @media (max-width: 1380px) {
