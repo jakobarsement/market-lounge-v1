@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import LandingPage from "./pages/landing-page/landing-page.component";
-import CompanyPage from "./pages/company-page/companypage.component";
-import { CompanySymbolContext } from "./lib/companyContext";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import CompanyPage from "./pages/CompanyPage/CompanyPage";
+import { CompanySymbolContext } from "./utils/companyContext";
 import "./App.scss";
 
 const App = () => {
