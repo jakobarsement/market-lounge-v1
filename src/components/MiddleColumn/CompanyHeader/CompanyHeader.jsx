@@ -1,8 +1,8 @@
-import React, { useContext, useRef, useState, useEffect } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 import { CompanySymbolContext } from "../../../utils/companyContext";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import _ from "lodash";
+import { upperCase } from "lodash";
 import "./CompanyHeader.scss";
 const baseURL = process.env.REACT_APP_BASE_URL;
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY;
@@ -27,7 +27,7 @@ function CompanyHeader() {
 
   const handleSubmit = (e) => {
     if (e.key === "Enter" && inputRef.current.value) {
-      const uppercaseCompanySymbol = _.upperCase(inputRef.current.value);
+      const uppercaseCompanySymbol = upperCase(inputRef.current.value);
       setCompanySymbol(uppercaseCompanySymbol);
     }
   };

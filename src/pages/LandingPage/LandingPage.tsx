@@ -1,4 +1,3 @@
-import React from "react";
 import LandingSearch from "./LandingSearch/LandingSearch";
 
 import "./LandingPage.scss";

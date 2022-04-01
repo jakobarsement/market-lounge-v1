@@ -1,7 +1,7 @@
 import { useCallback, useState, useEffect } from "react";
 import { convertNumberToAbbreviation, appendPrefixOrSuffix } from "utils";
 
-import _ from "lodash";
+import { get } from "lodash";
 import axios from "axios";
 
 import "./TableCell.scss";
@@ -14,7 +14,7 @@ const TableCell = ({ title, location, apiUrl }) => {
     try {
       const response = await axios.get(apiUrl);
 
-      var dataPoint = _.get(response, location, null);
+      var dataPoint = get(response, location, null);
       if (dataPoint) {
         if (dataPoint > 1000) {
           dataPoint = Number.parseFloat(dataPoint).toFixed(0);

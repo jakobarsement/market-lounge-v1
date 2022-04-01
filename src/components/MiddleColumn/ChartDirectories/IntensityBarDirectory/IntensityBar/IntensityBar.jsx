@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import * as d3 from "d3";
 
 const IntensityBar = ({ company, indicator, title, chartData }) => {

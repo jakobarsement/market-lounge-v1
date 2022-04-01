@@ -1,8 +1,8 @@
-import React, { useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import { CompanySymbolContext } from "../../../utils/companyContext";
-import _ from "lodash";
+import { upperCase } from "lodash";
 
 import "./LandingSearch.scss";
 
@@ -18,7 +18,7 @@ const LandingSearch = () => {
   const handleSubmit = (e) => {
     console.log(e);
     if (e.key === "Enter" && inputRef.current.value) {
-      const uppercaseCompanySymbol = _.upperCase(inputRef.current.value);
+      const uppercaseCompanySymbol = upperCase(inputRef.current.value);
       setCompanySymbol(uppercaseCompanySymbol);
       history.push("/companypage");
     }
