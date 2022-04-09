@@ -1,10 +1,12 @@
-import "./EntityNotFound.scss";
+import './EntityNotFound.scss'
 
-export default function EntityNotFound() {
+function EntityNotFound() {
+  console.log('rendered')
   return (
-    <div className="container ">
+    <div className="entity-not-found">
       <div className="title">This entity cannot be found. </div>
-      <div className="sub-title">Be sure to leave feedback.</div>
     </div>
-  );
+  )
 }
+
+export default EntityNotFound

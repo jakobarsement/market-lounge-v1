@@ -1,19 +1,19 @@
-import { useContext } from "react";
+import { useContext } from 'react'
 
-import RightColumn from "../../components/RightColumn/RightColumn";
-import LeftColumn from "../../components/LeftColumn/LeftColum";
-import CompanyHeader from "../../components/MiddleColumn/CompanyHeader/CompanyHeader";
-import SharePriceChart from "../../components/MiddleColumn/SharePriceChart/SharePriceChart";
-import CompanyTableDirectory from "../../components/MiddleColumn/ChartDirectories/TableCellDirectory/TableCellDirectory";
-import IntensityBarDirectory from "../../components/MiddleColumn/ChartDirectories/IntensityBarDirectory/IntensityBarDirectory";
-import EmailForm from "../../components/MiddleColumn/EmailForm/EmailForm";
+import RightColumn from '../../components/RightColumn/RightColumn'
+import LeftColumn from '../../components/LeftColumn/LeftColum'
+import CompanyHeader from '../../components/MiddleColumn/CompanyHeader/CompanyHeader'
+import SharePriceChart from '../../components/MiddleColumn/SharePriceChart/SharePriceChart'
+import CompanyTableDirectory from '../../components/MiddleColumn/ChartDirectories/TableCellDirectory/TableCellDirectory'
+import IntensityBarDirectory from '../../components/MiddleColumn/ChartDirectories/IntensityBarDirectory/IntensityBarDirectory'
+import EmailForm from '../../components/MiddleColumn/EmailForm/EmailForm'
 
-import { CompanySymbolContext } from "../../utils/companyContext";
+import { CompanySymbolContext } from '../../state/companyContext'
 
-import "./CompanyPage.scss";
+import './CompanyPage.scss'
 
 const CompanyPage = () => {
-  const { companySymbol } = useContext(CompanySymbolContext);
+  const { companySymbol } = useContext(CompanySymbolContext)
 
   return (
     <>
@@ -38,7 +38,7 @@ const CompanyPage = () => {
         <EmailForm></EmailForm>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default CompanyPage;
+export default CompanyPage
