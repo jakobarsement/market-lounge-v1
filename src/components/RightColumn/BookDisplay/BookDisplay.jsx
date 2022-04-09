@@ -1,4 +1,4 @@
-import "./BookDisplay.scss";
+import './BookDisplay.scss'
 
 const BookDisplay = () => (
   <div className="book-display">
@@ -6,6 +6,6 @@ const BookDisplay = () => (
       <div className="book"></div>
     </div>
   </div>
-);
+)
 
-export default BookDisplay;
+export default BookDisplay

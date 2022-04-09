@@ -1,12 +1,12 @@
-import LandingSearch from "./LandingSearch/LandingSearch";
+import LandingSearch from './LandingSearch/LandingSearch'
 
-import "./LandingPage.scss";
+import './LandingPage.scss'
 
 const LandingPage = () => (
   <div className="landing-page">
     <LandingSearch />
     <div className="bg-img"></div>
   </div>
-);
+)
 
-export default LandingPage;
+export default LandingPage

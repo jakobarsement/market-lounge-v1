@@ -1,50 +1,50 @@
-import { useEffect, useState } from "react";
-import * as d3 from "d3";
+import { useEffect, useState } from 'react'
+import * as d3 from 'd3'
 
 const IntensityBar = ({ company, indicator, title, chartData }) => {
-  let barWidth = 96;
-  let barHeight = 9.5;
+  let barWidth = 96
+  let barHeight = 9.5
 
   //get window width on change
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const handleResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
+    setWindowWidth(window.innerWidth)
+  }
   useEffect(() => {
-    window.addEventListener("resize", handleResize, false);
-  }, []);
+    window.addEventListener('resize', handleResize, false)
+  }, [])
   //
 
   // adjust style based on window size
-  const [fontSize, setFontSize] = useState("12");
-  const [barMargin, setBarMargin] = useState("50");
-  const [topTextMargin, setTopTextMargin] = useState("50");
-  const [bottomTextMargin, setBottomTextMargin] = useState("50");
+  const [fontSize, setFontSize] = useState('12')
+  const [barMargin, setBarMargin] = useState('50')
+  const [topTextMargin, setTopTextMargin] = useState('50')
+  const [bottomTextMargin, setBottomTextMargin] = useState('50')
   useEffect(() => {
-    windowWidth < 1380 && setFontSize("11");
-    windowWidth < 1200 && setFontSize("13");
-    windowWidth < 850 && setFontSize("18");
-    windowWidth < 500 && setFontSize("23");
+    windowWidth < 1380 && setFontSize('11')
+    windowWidth < 1200 && setFontSize('13')
+    windowWidth < 850 && setFontSize('18')
+    windowWidth < 500 && setFontSize('23')
 
-    setBarMargin("50");
-    windowWidth > 680 && setBarMargin("28");
+    setBarMargin('50')
+    windowWidth > 680 && setBarMargin('28')
 
-    setTopTextMargin("0");
-    windowWidth > 680 && setTopTextMargin("30");
-    windowWidth > 840 && setTopTextMargin("40");
-    setBottomTextMargin("0");
-    windowWidth > 680 && setBottomTextMargin("30");
-    windowWidth > 840 && setBottomTextMargin("45");
-  }, [windowWidth, fontSize]);
+    setTopTextMargin('0')
+    windowWidth > 680 && setTopTextMargin('30')
+    windowWidth > 840 && setTopTextMargin('40')
+    setBottomTextMargin('0')
+    windowWidth > 680 && setBottomTextMargin('30')
+    windowWidth > 840 && setBottomTextMargin('45')
+  }, [windowWidth, fontSize])
   //
 
-  if (!chartData) return null;
+  if (!chartData) return null
 
-  const domainValues = chartData.map((data) => data[indicator]);
+  const domainValues = chartData.map((data) => data[indicator])
   const opacityScale = d3
     .scaleLinear()
     .domain([d3.min(domainValues), d3.max(domainValues)])
-    .range([-200, 60]);
+    .range([-200, 60])
 
   return (
     <>
@@ -106,7 +106,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
         </g>
       </svg>
     </>
-  );
-};
+  )
+}
 
-export default IntensityBar;
+export default IntensityBar

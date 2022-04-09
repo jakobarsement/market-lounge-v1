@@ -1,35 +1,35 @@
-import { useEffect, useState } from "react";
-import Highcharts from "highcharts/highstock";
-import HighchartsReact from "highcharts-react-official";
-import axios from "axios";
+import { useEffect, useState } from 'react'
+import Highcharts from 'highcharts/highstock'
+import HighchartsReact from 'highcharts-react-official'
+import axios from 'axios'
 
 export const VixGraph = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(null)
 
-  const url = `https://www.quandl.com/api/v3/datasets/CHRIS/CBOE_VX1/data.json?api_key=Ni7z-8cyBF-HzGcBgYdq`;
+  const url = `https://www.quandl.com/api/v3/datasets/CHRIS/CBOE_VX1/data.json?api_key=Ni7z-8cyBF-HzGcBgYdq`
 
   useEffect(() => {
     const formatData = async () => {
-      const response = await axios.get(url);
-      const dataset_data = await response.data.dataset_data;
-      const { data } = dataset_data;
-      let graph_data = [];
+      const response = await axios.get(url)
+      const dataset_data = await response.data.dataset_data
+      const { data } = dataset_data
+      let graph_data = []
       data.forEach((element) => {
         graph_data.push({
           date: new Date(element[0]).getTime(),
           low: element[3],
           high: element[2],
-        });
-      });
-      setData(data.reverse().map((d) => [new Date(d[0]).getTime(), d[6]]));
-    };
-    formatData();
-  }, [url]);
+        })
+      })
+      setData(data.reverse().map((d) => [new Date(d[0]).getTime(), d[6]]))
+    }
+    formatData()
+  }, [url])
 
   const stockOptions = {
     series: data,
     chart: {
-      backgroundColor: "rgb(47, 47, 42)",
+      backgroundColor: 'rgb(47, 47, 42)',
       animation: false,
       height: 250,
     },
@@ -43,21 +43,21 @@ export const VixGraph = () => {
     },
     yAxis: {
       min: 0,
-      gridLineColor: "rgb(199, 195, 181)",
+      gridLineColor: 'rgb(199, 195, 181)',
       gridLineWidth: 0.1,
       tickAmount: 7,
       labels: {
-        align: "left",
+        align: 'left',
         x: 2,
         style: {
-          color: "rgb(226, 218, 185)",
+          color: 'rgb(226, 218, 185)',
         },
       },
     },
     xAxis: {
       labels: {
         style: {
-          color: "rgb(226, 218, 185)",
+          color: 'rgb(226, 218, 185)',
         },
       },
     },
@@ -70,15 +70,11 @@ export const VixGraph = () => {
     boost: {
       useGPUTranslations: true,
     },
-  };
+  }
 
   return (
-    <div style={{ maxWidth: "100%", padding: "16px" }}>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={stockOptions}
-        constructorType="stockChart"
-      />
+    <div style={{ maxWidth: '100%', padding: '16px' }}>
+      <HighchartsReact highcharts={Highcharts} options={stockOptions} constructorType="stockChart" />
     </div>
-  );
-};
+  )
+}

@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-import "./header-main.styles.scss";
+import './header-main.styles.scss'
 const PrimaryNavbar = (props) => {
   return (
     <div
       className="header-main"
       style={{
-        backgroundColor:
-          window.location.pathname === "/"
-            ? "rgba(0,0,0, 0)"
-            : "rgb(47, 47, 42)",
+        backgroundColor: window.location.pathname === '/' ? 'rgba(0,0,0, 0)' : 'rgb(47, 47, 42)',
       }}
     >
       <div className="logo-left">
@@ -32,6 +29,6 @@ const PrimaryNavbar = (props) => {
         </Link>
       </div>
     </div>
-  );
-};
-export default PrimaryNavbar;
+  )
+}
+export default PrimaryNavbar

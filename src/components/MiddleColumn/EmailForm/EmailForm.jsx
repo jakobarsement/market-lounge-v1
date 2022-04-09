@@ -1,33 +1,33 @@
-import { useState } from "react";
-import Button from "@material-ui/core/Button";
-import { API } from "aws-amplify";
-import "./EmailForm.scss";
+import { useState } from 'react'
+import Button from '@material-ui/core/Button'
+import { API } from 'aws-amplify'
+import './EmailForm.scss'
 
 const EmailForm = () => {
   //begin amplify
-  const [userEmail, setUserEmail] = useState("bing@bong.com");
-  const [submitted, setSubmittedState] = useState(false);
+  const [userEmail, setUserEmail] = useState('bing@bong.com')
+  const [submitted, setSubmittedState] = useState(false)
 
   function handleUserEmailInputChange(e) {
-    setUserEmail(e.target.value);
+    setUserEmail(e.target.value)
   }
 
   function submitEmailToMailchimpApi(e) {
-    e.preventDefault();
+    e.preventDefault()
     if (submitted === false) {
       const customArguments = {
         body: { email: userEmail },
         headers: {}, //optional
-      };
+      }
 
-      API.post("mailchimpApi", "/mailchimpApi", customArguments)
+      API.post('mailchimpApi', '/mailchimpApi', customArguments)
         .then((response) => {
-          console.log(response);
-          setSubmittedState(true);
+          console.log(response)
+          setSubmittedState(true)
         })
         .catch((error) => {
-          console.error(error.response);
-        });
+          console.error(error.response)
+        })
     }
   }
   return (
@@ -39,7 +39,7 @@ const EmailForm = () => {
         </Button>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default EmailForm;
+export default EmailForm

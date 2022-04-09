@@ -1,4 +1,4 @@
-import appendPrefixOrSuffix from "./appendPrefixOrSuffix";
-import convertNumberToAbbreviation from "./convertNumberToAbbreviation";
+import appendPrefixOrSuffix from './appendPrefixOrSuffix'
+import convertNumberToAbbreviation from './convertNumberToAbbreviation'
 
-export { appendPrefixOrSuffix, convertNumberToAbbreviation };
+export { appendPrefixOrSuffix, convertNumberToAbbreviation }

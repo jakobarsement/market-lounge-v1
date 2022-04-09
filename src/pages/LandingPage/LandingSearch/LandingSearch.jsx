@@ -1,27 +1,27 @@
-import { useContext, useRef } from "react";
-import { CompanyContext } from "state/companyContext";
-import { useHistory } from "react-router-dom";
-import Button from "@material-ui/core/Button";
-import { upperCase } from "lodash";
+import { useContext, useRef } from 'react'
+import { CompanyContext } from 'state/companyContext'
+import { useHistory } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
+import { upperCase } from 'lodash'
 
-import "./LandingSearch.scss";
+import './LandingSearch.scss'
 
 const LandingSearch = () => {
-  const inputRef = useRef(null);
+  const inputRef = useRef(null)
 
-  const { setCompanySymbol } = useContext(CompanyContext);
+  const { setCompanySymbol } = useContext(CompanyContext)
 
-  let history = useHistory();
+  let history = useHistory()
   const routeChange = () => {
-    history.push("/company");
-  };
+    history.push('/company')
+  }
 
   const handleSubmit = (e) => {
-    if (e.key === "Enter" && inputRef.current.value) {
-      setCompanySymbol(upperCase(inputRef.current.value));
-      history.push("/company");
+    if (e.key === 'Enter' && inputRef.current.value) {
+      setCompanySymbol(upperCase(inputRef.current.value))
+      history.push('/company')
     }
-  };
+  }
 
   return (
     <div className="main">
@@ -45,8 +45,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("MSFT");
-              routeChange();
+              setCompanySymbol('MSFT')
+              routeChange()
             }}
           >
             MSFT
@@ -55,8 +55,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("GOOG");
-              routeChange();
+              setCompanySymbol('GOOG')
+              routeChange()
             }}
           >
             GOOG
@@ -65,8 +65,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("AMZN");
-              routeChange();
+              setCompanySymbol('AMZN')
+              routeChange()
             }}
           >
             AMZN
@@ -75,8 +75,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("UPWK");
-              routeChange();
+              setCompanySymbol('UPWK')
+              routeChange()
             }}
           >
             UPWK
@@ -85,8 +85,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("BABA");
-              routeChange();
+              setCompanySymbol('BABA')
+              routeChange()
             }}
           >
             BABA
@@ -95,8 +95,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("FVRR");
-              routeChange();
+              setCompanySymbol('FVRR')
+              routeChange()
             }}
           >
             FVRR
@@ -105,8 +105,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("BYND");
-              routeChange();
+              setCompanySymbol('BYND')
+              routeChange()
             }}
           >
             BYND
@@ -115,8 +115,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("TCEHY");
-              routeChange();
+              setCompanySymbol('TCEHY')
+              routeChange()
             }}
           >
             TCEHY
@@ -125,8 +125,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("ETSY");
-              routeChange();
+              setCompanySymbol('ETSY')
+              routeChange()
             }}
           >
             ETSY
@@ -135,8 +135,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("DIS");
-              routeChange();
+              setCompanySymbol('DIS')
+              routeChange()
             }}
           >
             DIS
@@ -145,8 +145,8 @@ const LandingSearch = () => {
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
-              setCompanySymbol("PM");
-              routeChange();
+              setCompanySymbol('PM')
+              routeChange()
             }}
           >
             PM
@@ -154,7 +154,7 @@ const LandingSearch = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LandingSearch;
+export default LandingSearch

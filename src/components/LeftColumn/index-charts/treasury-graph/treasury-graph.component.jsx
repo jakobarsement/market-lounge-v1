@@ -1,35 +1,35 @@
-import { useEffect, useState } from "react";
-import Highcharts from "highcharts/highstock";
-import HighchartsReact from "highcharts-react-official";
-import Axios from "axios";
+import { useEffect, useState } from 'react'
+import Highcharts from 'highcharts/highstock'
+import HighchartsReact from 'highcharts-react-official'
+import Axios from 'axios'
 
 export const TreasuryGraph = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(null)
 
-  const url = `https://www.quandl.com/api/v3/datasets/USTREASURY/YIELD/data.json?api_key=Ni7z-8cyBF-HzGcBgYdq`;
+  const url = `https://www.quandl.com/api/v3/datasets/USTREASURY/YIELD/data.json?api_key=Ni7z-8cyBF-HzGcBgYdq`
 
   useEffect(() => {
     const formatData = async () => {
-      const response = await Axios.get(url);
-      const dataset_data = await response.data.dataset_data;
-      const { data } = dataset_data;
-      let graph_data = [];
+      const response = await Axios.get(url)
+      const dataset_data = await response.data.dataset_data
+      const { data } = dataset_data
+      let graph_data = []
       data.forEach((element) => {
         graph_data.push({
           date: new Date(element[0]).getTime(),
           low: element[3],
           high: element[2],
-        });
-      });
-      setData(data.reverse().map((d) => [new Date(d[0]).getTime(), d[9]]));
-    };
-    formatData();
-  }, []);
+        })
+      })
+      setData(data.reverse().map((d) => [new Date(d[0]).getTime(), d[9]]))
+    }
+    formatData()
+  }, [])
 
   const stockOptions = {
     series: data,
     chart: {
-      backgroundColor: "rgb(47, 47, 42)",
+      backgroundColor: 'rgb(47, 47, 42)',
       animation: false,
       height: 250,
     },
@@ -42,21 +42,21 @@ export const TreasuryGraph = () => {
       height: 15,
     },
     yAxis: {
-      gridLineColor: "rgb(199, 195, 181)",
+      gridLineColor: 'rgb(199, 195, 181)',
       gridLineWidth: 0.1,
       tickAmount: 7,
       labels: {
-        align: "left",
+        align: 'left',
         x: 2,
         style: {
-          color: "rgb(226, 218, 185)",
+          color: 'rgb(226, 218, 185)',
         },
       },
     },
     xAxis: {
       labels: {
         style: {
-          color: "rgb(226, 218, 185)",
+          color: 'rgb(226, 218, 185)',
         },
       },
     },
@@ -66,15 +66,11 @@ export const TreasuryGraph = () => {
     scrollbar: {
       enabled: false,
     },
-  };
+  }
 
   return (
-    <div style={{ maxWidth: "100%", padding: "16px" }}>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={stockOptions}
-        constructorType="stockChart"
-      />
+    <div style={{ maxWidth: '100%', padding: '16px' }}>
+      <HighchartsReact highcharts={Highcharts} options={stockOptions} constructorType="stockChart" />
     </div>
-  );
-};
+  )
+}

@@ -1,18 +1,18 @@
-import { useContext } from "react";
-import { CompanyContext } from "state/companyContext";
+import { useContext } from 'react'
+import { CompanyContext } from 'state/companyContext'
 
-import RightColumn from "../../components/RightColumn/RightColumn";
-import LeftColumn from "../../components/LeftColumn/LeftColum";
-import CompanyHeader from "../../components/MiddleColumn/CompanyHeader/CompanyHeader";
-import SharePriceChart from "../../components/MiddleColumn/SharePriceChart/SharePriceChart";
-import CompanyTableDirectory from "../../components/MiddleColumn/ChartDirectories/TableCellDirectory/TableCellDirectory";
-import IntensityBarDirectory from "../../components/MiddleColumn/ChartDirectories/IntensityBarDirectory/IntensityBarDirectory";
-import EmailForm from "../../components/MiddleColumn/EmailForm/EmailForm";
+import RightColumn from '../../components/RightColumn/RightColumn'
+import LeftColumn from '../../components/LeftColumn/LeftColum'
+import CompanyHeader from '../../components/MiddleColumn/CompanyHeader/CompanyHeader'
+import SharePriceChart from '../../components/MiddleColumn/SharePriceChart/SharePriceChart'
+import CompanyTableDirectory from '../../components/MiddleColumn/ChartDirectories/TableCellDirectory/TableCellDirectory'
+import IntensityBarDirectory from '../../components/MiddleColumn/ChartDirectories/IntensityBarDirectory/IntensityBarDirectory'
+import EmailForm from '../../components/MiddleColumn/EmailForm/EmailForm'
 
-import "./CompanyPage.scss";
+import './CompanyPage.scss'
 
 const CompanyPage = () => {
-  const { getCompanySymbol } = useContext(CompanyContext);
+  const { getCompanySymbol } = useContext(CompanyContext)
 
   return (
     <>
@@ -37,7 +37,7 @@ const CompanyPage = () => {
         <EmailForm />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default CompanyPage;
+export default CompanyPage

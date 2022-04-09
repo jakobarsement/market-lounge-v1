@@ -10,21 +10,14 @@ const FeedbackForm = () => {
     e.preventDefault()
     setSubmittedState('submitted')
     if (submitted !== 'submitted') {
-      emailjs
-        .sendForm(
-          'service_nyfzzuc',
-          'template_gggnm5d',
-          e.target,
-          'user_uLYAClKNSo75N0nWaLUmN'
-        )
-        .then(
-          (result) => {
-            console.info('feedback submission success: ', result.text)
-          },
-          (error) => {
-            console.error('feedback submission error: ', error.text)
-          }
-        )
+      emailjs.sendForm('service_nyfzzuc', 'template_gggnm5d', e.target, 'user_uLYAClKNSo75N0nWaLUmN').then(
+        (result) => {
+          console.info('feedback submission success: ', result.text)
+        },
+        (error) => {
+          console.error('feedback submission error: ', error.text)
+        }
+      )
     }
   }
 
@@ -32,18 +25,9 @@ const FeedbackForm = () => {
     <>
       <form className="contact-form" onSubmit={handleSubmit}>
         <h3 className="feedback-title">Feedback</h3>
-        <textarea
-          className="feedback-box message"
-          name="feedback"
-          placeholder="Help us help you."
-        />
+        <textarea className="feedback-box message" name="feedback" placeholder="Help us help you." />
         <div className="send-button">
-          <Button
-            variant="contained"
-            className="contact-submit-button"
-            type="submit"
-            value="Send"
-          >
+          <Button variant="contained" className="contact-submit-button" type="submit" value="Send">
             Send
           </Button>
         </div>
