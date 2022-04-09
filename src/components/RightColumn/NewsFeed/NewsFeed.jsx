@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { formatPublishedDateTime } from "./NewsFeed.utils";
-import { CompanySymbolContext } from "../../../state/companyContext";
 import "./NewsFeed.scss";
+import { CompanyContext } from "state/companyContext";
 
 const NewsFeed = ({ feeds }) => {
-  const { companySymbol } = useContext(CompanySymbolContext);
+  const { getCompanySymbol } = useContext(CompanyContext);
 
   const renderNewsFeeds = () => {
     if (feeds.length) {
@@ -50,7 +50,7 @@ const NewsFeed = ({ feeds }) => {
     <div className="news-feeds-table">
       <div className="news-feed-title">
         <h3>
-          <i className="fas fa-newspaper fa-1x"></i> {companySymbol} News
+          <i className="fas fa-newspaper fa-1x"></i> {getCompanySymbol} News
         </h3>
       </div>
       {renderNewsFeeds()}

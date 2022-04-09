@@ -1,5 +1,5 @@
 import { useContext, useRef, useState, useEffect } from "react";
-import { CompanySymbolContext } from "../../../state/companyContext";
+import { CompanyContext } from "state/companyContext";
 import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { upperCase } from "lodash";
@@ -9,11 +9,13 @@ const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY;
 
 function CompanyHeader() {
   const inputRef = useRef(null);
-  const { companySymbol, setCompanySymbol } = useContext(CompanySymbolContext);
+
+  const { setCompanySymbol, getCompanySymbol } = useContext(CompanyContext);
+
   const [summaryData, setSummaryData] = useState();
   const [isDescriptionShown, setIsDescriptionShown] = useState(false);
 
-  const summaryUrl = `${baseURL}/profile/${companySymbol}?apikey=${FIN_PREP_API_KEY}`;
+  const summaryUrl = `${baseURL}/profile/${getCompanySymbol()}?apikey=${FIN_PREP_API_KEY}`;
 
   useEffect(() => {
     if (!summaryUrl) return;
@@ -44,7 +46,7 @@ function CompanyHeader() {
       </div>
       <div className="company-details">
         <h2>
-          {companySymbol}
+          {getCompanySymbol()}
           <span className="description-icon">
             <FontAwesomeIcon
               onMouseEnter={() => setIsDescriptionShown(true)}

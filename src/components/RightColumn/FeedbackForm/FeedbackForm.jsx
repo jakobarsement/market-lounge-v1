@@ -1,30 +1,30 @@
-import { useState } from "react";
+import { useState } from 'react'
 // import { Paypal } from "./paypal.component";
-import emailjs from "emailjs-com";
-import Button from "@material-ui/core/Button";
-import "./FeedbackForm.scss";
+import emailjs from 'emailjs-com'
+import Button from '@material-ui/core/Button'
+import './FeedbackForm.scss'
 
 const FeedbackForm = () => {
-  const [submitted, setSubmittedState] = useState("");
+  const [submitted, setSubmittedState] = useState('')
   function handleSubmit(e) {
-    e.preventDefault();
-    setSubmittedState("submitted");
-    if (submitted !== "submitted") {
+    e.preventDefault()
+    setSubmittedState('submitted')
+    if (submitted !== 'submitted') {
       emailjs
         .sendForm(
-          "service_nyfzzuc",
-          "template_gggnm5d",
+          'service_nyfzzuc',
+          'template_gggnm5d',
           e.target,
-          "user_uLYAClKNSo75N0nWaLUmN"
+          'user_uLYAClKNSo75N0nWaLUmN'
         )
         .then(
           (result) => {
-            console.log("feedback submission success: ", result.text);
+            console.info('feedback submission success: ', result.text)
           },
           (error) => {
-            console.log("feedback submission success: ", error.text);
+            console.error('feedback submission error: ', error.text)
           }
-        );
+        )
     }
   }
 
@@ -70,7 +70,7 @@ const FeedbackForm = () => {
         )}
       </form>
     </>
-  );
-};
+  )
+}
 
-export default FeedbackForm;
+export default FeedbackForm

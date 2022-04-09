@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { CompanyContext } from "state/companyContext";
 
 import RightColumn from "../../components/RightColumn/RightColumn";
 import LeftColumn from "../../components/LeftColumn/LeftColum";
@@ -8,12 +9,10 @@ import CompanyTableDirectory from "../../components/MiddleColumn/ChartDirectorie
 import IntensityBarDirectory from "../../components/MiddleColumn/ChartDirectories/IntensityBarDirectory/IntensityBarDirectory";
 import EmailForm from "../../components/MiddleColumn/EmailForm/EmailForm";
 
-import { CompanySymbolContext } from "../../state/companyContext";
-
 import "./CompanyPage.scss";
 
 const CompanyPage = () => {
-  const { companySymbol } = useContext(CompanySymbolContext);
+  const { getCompanySymbol } = useContext(CompanyContext);
 
   return (
     <>
@@ -21,21 +20,21 @@ const CompanyPage = () => {
       {/*TODO: Sidebars that show initially, but collapse and bounce againsts window*/}
       <div className="top-three-columns">
         <div className="left-column">
-          <LeftColumn></LeftColumn>
+          <LeftColumn />
         </div>
         <div className="middle-column">
-          <CompanyHeader companySymbol={companySymbol} />
-          <SharePriceChart companySymbol={companySymbol} />
+          <CompanyHeader />
+          <SharePriceChart companySymbol={getCompanySymbol()} />
           {/*TODO: export company excel */}
-          <CompanyTableDirectory companySymbol={companySymbol} />
-          <IntensityBarDirectory companySymbol={companySymbol} />
+          <CompanyTableDirectory companySymbol={getCompanySymbol()} />
+          <IntensityBarDirectory companySymbol={getCompanySymbol()} />
         </div>
         <div className="right-column">
-          <RightColumn></RightColumn>
+          <RightColumn />
         </div>
       </div>
       <div className="email-form">
-        <EmailForm></EmailForm>
+        <EmailForm />
       </div>
     </>
   );
