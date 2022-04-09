@@ -1,70 +1,70 @@
 @use "../../../scss/abstracts/" as *;
 
 .company-header {
-	padding: 1px 10px 10px 0;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	.company-details {
-		margin-left: 8px;
-		color: $ten;
-		h2 {
-			margin-bottom: 5px;
-		}
-		.fa-info-circle {
-			margin-left: 8px;
-			width: 18px;
-			color: $line-1;
-		}
-		.company-description {
-			position: absolute;
-			padding: 10px;
-			background-color: $eleven;
-			z-index: 1;
-			width: 40vw;
-			font-size: 0.8em;
-			border-radius: 8px;
-		}
-	}
-	.company-search-container {
-		position: relative;
-		top: 26px;
-		margin-right: 32px;
-		align-self: flex-end;
+  padding: 1px 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .company-details {
+    margin-left: 8px;
+    color: $ten;
+    h2 {
+      margin-bottom: 5px;
+    }
+    .fa-info-circle {
+      margin-left: 8px;
+      width: 18px;
+      color: $line-1;
+    }
+    .company-description {
+      position: absolute;
+      padding: 10px;
+      background-color: $eleven;
+      z-index: 1;
+      width: 40vw;
+      font-size: 0.8em;
+      border-radius: 8px;
+    }
+  }
+  .company-search-container {
+    position: relative;
+    top: 26px;
+    margin-right: 32px;
+    align-self: flex-end;
 
-		.fa-search {
-			position: relative;
-			color: $ten;
-			left: 20px;
-			bottom: -1px;
-		}
+    .fa-search {
+      position: relative;
+      color: $ten;
+      left: 20px;
+      bottom: -1px;
+    }
 
-		.company-input-box {
-			border-radius: 5px;
-			width: 8vw;
-			min-width: 100px;
-			background-color: $primary-background;
-			border-color: $fifteen;
-			color: $ten;
-			font-size: 13px;
-			font-weight: bold;
-			padding-left: 26px;
-		}
-		.company-input-box:focus {
-			outline: none !important;
-			border: 2px solid $sixteen;
-		}
-	}
+    .company-input-box {
+      border-radius: 5px;
+      width: 8vw;
+      min-width: 100px;
+      background-color: $primary-background;
+      border-color: $fifteen;
+      color: $ten;
+      font-size: 13px;
+      font-weight: bold;
+      padding-left: 26px;
+    }
+    .company-input-box:focus {
+      outline: none !important;
+      border: 2px solid $sixteen;
+    }
+  }
 }
 
 @media (max-width: 430px) {
-	.company-header {
-		.company-search-container {
-			margin-right: 0;
-			.company-input-box {
-				width: 30vw;
-				font-size: 16px;
-			}
-		}
-	}
+  .company-header {
+    .company-search-container {
+      margin-right: 0;
+      .company-input-box {
+        width: 30vw;
+        font-size: 16px;
+      }
+    }
+  }
 }

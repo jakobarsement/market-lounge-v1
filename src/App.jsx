@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
-import LandingPage from './pages/LandingPage/LandingPage'
-import CompanyPage from './pages/CompanyPage/CompanyPage'
-import EntityNotFound from 'pages/EntityNotFound/EntityNotFound'
-import { CompanySymbolContext } from './state/companyContext'
-import './App.scss'
+import { useState } from "react";
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import CompanyPage from "./pages/CompanyPage/CompanyPage";
+import EntityNotFound from "pages/EntityNotFound/EntityNotFound";
+import { CompanySymbolContext } from "./state/companyContext";
+import "./App.scss";
 
 const App = () => {
-  const [companySymbol, setCompanySymbol] = useState('AAPL')
+  const [companySymbol, setCompanySymbol] = useState("AAPL");
   return (
     <BrowserRouter>
       <div className="App">
@@ -24,7 +24,7 @@ const App = () => {
         </Switch>
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

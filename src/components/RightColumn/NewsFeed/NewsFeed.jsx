@@ -1,26 +1,26 @@
-import { useContext } from 'react'
-import { formatPublishedDateTime } from './NewsFeed.utils'
-import { CompanySymbolContext } from '../../../state/companyContext'
-import './NewsFeed.scss'
+import { useContext } from "react";
+import { formatPublishedDateTime } from "./NewsFeed.utils";
+import { CompanySymbolContext } from "../../../state/companyContext";
+import "./NewsFeed.scss";
 
 const NewsFeed = ({ feeds }) => {
-  const { companySymbol } = useContext(CompanySymbolContext)
+  const { companySymbol } = useContext(CompanySymbolContext);
 
   const renderNewsFeeds = () => {
     if (feeds.length) {
       return (
         <table>
           {feeds.map((item, index) => {
-            const { image, publishedDate, title, url } = item
+            const { image, publishedDate, title, url } = item;
             return (
-              <tbody key={'head' + index} className="table-item">
-                <tr key={'row' + index}>
-                  <td key={'image' + index}>
+              <tbody key={"head" + index} className="table-item">
+                <tr key={"row" + index}>
+                  <td key={"image" + index}>
                     {image && (
                       <img src={image} alt="img" className="feed-image" />
                     )}
                   </td>
-                  <td key={'title' + index} className="link-tag">
+                  <td key={"title" + index} className="link-tag">
                     {url && (
                       <div>
                         <a href={url} target="_blank" rel="noreferrer">
@@ -30,21 +30,21 @@ const NewsFeed = ({ feeds }) => {
                     )}
                   </td>
                 </tr>
-                <tr key={'publishDate' + index}>
+                <tr key={"publishDate" + index}>
                   <td> </td>
                   <td className="date-tag">
                     {publishedDate && formatPublishedDateTime(publishedDate)}
                   </td>
                 </tr>
               </tbody>
-            )
+            );
           })}
         </table>
-      )
+      );
     } else {
-      return <>No news feed available.</>
+      return <>No news feed available.</>;
     }
-  }
+  };
 
   return (
     <div className="news-feeds-table">
@@ -55,7 +55,7 @@ const NewsFeed = ({ feeds }) => {
       </div>
       {renderNewsFeeds()}
     </div>
-  )
-}
+  );
+};
 
-export default NewsFeed
+export default NewsFeed;

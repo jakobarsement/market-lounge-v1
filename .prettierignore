@@ -1,3 +1,20 @@
 # Ignore artifacts:
 build
 coverage
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+#other
+/amplify
+amplify
+package-lock.json
+package.json

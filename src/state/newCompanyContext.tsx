@@ -1,15 +1,15 @@
-import { createContext, useState } from 'react'
+import { createContext, useState } from "react";
 
 // import { ModalContextType, ModalData } from 'types/Modal'
 
 const initialContext = {
-  companyState: { symbol: '' },
+  companyState: { symbol: "" },
   setCompanyState: (companyState: { symbol: string }) => {},
-}
-export const CompanyContext = createContext(initialContext)
+};
+export const CompanyContext = createContext(initialContext);
 
 const CompanyProvider = ({ children }: { children: JSX.Element }) => {
-  const [companyState, setCompanyState] = useState({ symbol: '' })
+  const [companyState, setCompanyState] = useState({ symbol: "" });
 
   // can define setters and getters here, then give access to them
   // in the 'value' prop below
@@ -18,7 +18,7 @@ const CompanyProvider = ({ children }: { children: JSX.Element }) => {
     <CompanyContext.Provider value={{ companyState, setCompanyState }}>
       {children}
     </CompanyContext.Provider>
-  )
-}
+  );
+};
 
-export default CompanyProvider
+export default CompanyProvider;

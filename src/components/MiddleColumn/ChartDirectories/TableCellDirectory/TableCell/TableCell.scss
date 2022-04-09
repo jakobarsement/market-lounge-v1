@@ -1,28 +1,28 @@
 @use "../../../../../scss/abstracts/" as *;
 
 .table-cell {
-	background-color: $secondary-background;
-	padding: 8px;
-	width: 20%;
-	font-weight: bold;
-	font-size: 0.8rem;
-	.cell-title {
-		color: $eight;
-	}
-	.cell-content {
-		margin-left: 5px;
-		color: $ten;
-	}
+  background-color: $secondary-background;
+  padding: 8px;
+  width: 20%;
+  font-weight: bold;
+  font-size: 0.8rem;
+  .cell-title {
+    color: $eight;
+  }
+  .cell-content {
+    margin-left: 5px;
+    color: $ten;
+  }
 }
 
 @media (max-width: 700px) {
-	.table-cell {
-		font-size: 1.5vw;
-	}
+  .table-cell {
+    font-size: 1.5vw;
+  }
 }
 
 @media (max-width: 550px) {
-	.table-cell {
-		font-size: 0.4rem;
-	}
+  .table-cell {
+    font-size: 0.4rem;
+  }
 }

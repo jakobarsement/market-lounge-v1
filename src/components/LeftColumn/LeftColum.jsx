@@ -1,9 +1,9 @@
-import { useContext } from 'react'
-import CompanyRatiosChartDirectory from './RatioChartDirectory/RatioChartDirectory'
-import { CompanySymbolContext } from '../../state/companyContext'
+import { useContext } from "react";
+import CompanyRatiosChartDirectory from "./RatioChartDirectory/RatioChartDirectory";
+import { CompanySymbolContext } from "../../state/companyContext";
 
 const LeftColumn = () => {
-  const { companySymbol } = useContext(CompanySymbolContext)
+  const { companySymbol } = useContext(CompanySymbolContext);
 
   return (
     <>
@@ -14,7 +14,7 @@ const LeftColumn = () => {
 		</div> */}
       <CompanyRatiosChartDirectory companySymbol={companySymbol} />
     </>
-  )
-}
+  );
+};
 
-export default LeftColumn
+export default LeftColumn;
