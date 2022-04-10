@@ -1,6 +1,6 @@
 import { useContext, useRef } from 'react'
 import { CompanyContext } from 'state/companyContext'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import { upperCase } from 'lodash'
 
@@ -40,13 +40,12 @@ const LandingSearch = () => {
         </div>
         <div className="trending-container">
           <p className="whats-trending">What's trending:</p>
-
           <Button
             variant="contained"
             className="contact-submit-button"
             onClick={() => {
               setCompanySymbol('MSFT')
-              routeChange()
+              history.push('/company')
             }}
           >
             MSFT
