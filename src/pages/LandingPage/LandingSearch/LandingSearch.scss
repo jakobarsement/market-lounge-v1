@@ -8,7 +8,7 @@
   .content {
     width: 758px;
     h1.title {
-      font-family: "Hind-Light";
+      font-family: 'Hind-Light';
       font-weight: initial;
       text-align: center;
       color: $three;
@@ -16,7 +16,7 @@
       margin-bottom: -5px;
     }
     p {
-      font-family: "Hind-Light";
+      font-family: 'Hind-Light';
       text-align: center;
       color: whitesmoke;
       font-size: 24px;
@@ -29,9 +29,10 @@
       margin-left: -8px;
       i.search-icon {
         position: relative;
-        left: 7%;
+        left: 50px;
         top: 16px;
         color: whitesmoke;
+        cursor: pointer;
       }
       input.searchbar {
         width: 60vw;
@@ -66,7 +67,7 @@
       }
       .MuiButton-contained {
         height: 28px;
-        font-family: "Hind-Light";
+        font-family: 'Hind-Light';
         font-weight: initial;
         text-align: center;
         color: whitesmoke;
@@ -91,7 +92,7 @@
       .searchbar-container {
         i.search-icon {
           position: relative;
-          left: 10%;
+          left: 35px;
           top: 11px;
           font-size: 23px;
         }

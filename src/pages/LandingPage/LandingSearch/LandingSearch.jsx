@@ -1,4 +1,4 @@
-import { useContext, useRef } from 'react'
+import { useContext, useState } from 'react'
 import { CompanyContext } from 'state/companyContext'
 import { useHistory } from 'react-router-dom'
 import Button from '@material-ui/core/Button'
@@ -7,16 +7,14 @@ import { upperCase } from 'lodash'
 import './LandingSearch.scss'
 
 const LandingSearch = () => {
-  const inputRef = useRef(null)
-
+  const [searchTerm, setSearchTerm] = useState('')
   const { setCompanySymbol } = useContext(CompanyContext)
-
   let history = useHistory()
 
   const handleSubmit = (e) => {
-    if (e.key === 'Enter' && inputRef.current.value) {
-      setCompanySymbol(upperCase(inputRef.current.value))
-      history.push('/company')
+    if ((e.key === 'Enter' || e.type === 'click') && !!searchTerm) {
+      setCompanySymbol(searchTerm)
+      history.push(`/company/${upperCase(searchTerm)}`)
     }
   }
 
@@ -26,12 +24,14 @@ const LandingSearch = () => {
         <h1 className="title">market lounge</h1>
 
         <div className="searchbar-container">
-          <i className="fas fa-search fa-2x search-icon"></i>
+          <span onClick={handleSubmit}>
+            <i className="fas fa-search fa-2x search-icon" />
+          </span>
           <input
             type="text"
             placeholder="search company ticker"
             className="searchbar"
-            ref={inputRef}
+            onChange={(e) => setSearchTerm(e.target.value)}
             onKeyPress={handleSubmit}
           />
         </div>

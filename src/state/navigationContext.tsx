@@ -1,5 +1,5 @@
 import { upperCase } from 'lodash'
-import { createContext, useEffect, useState, useContext } from 'react'
+import { createContext, useEffect, useContext } from 'react'
 import { useLocation, useHistory } from 'react-router'
 import { CompanyContext } from './companyContext'
 
@@ -10,27 +10,20 @@ export const NavigationProvider = ({ children }: { children: JSX.Element | JSX.E
   const history = useHistory()
   const { setCompanySymbol, getCompanySymbol } = useContext(CompanyContext) as any
 
-  const [navigation, setNavigation] = useState({ currentPath: location.pathname })
-
   console.log('companysymbol', getCompanySymbol())
+
   // sync app with current path
   useEffect(() => {
-    const paths = navigation.currentPath.split('/').filter((x) => x !== '')
-    if (paths[0] === 'company' && !!paths[1]) setCompanySymbol(upperCase(paths[1]))
-    if (paths[0] === 'company' && !paths[1]) {
-      // keep url and navigation state in sync
-      history.push(`/company/${upperCase(getCompanySymbol())}`)
-      // TODO: experiment with removing current path from state, since we can always access it
-      // using useLocation()
-      setNavigation({ ...navigation, currentPath: location.pathname })
-    }
+    const paths = location.pathname.split('/').filter((x) => x !== '')
+    if (paths[0] === 'company' && !!paths[1]) setCompanySymbol(paths[1])
+    if (paths[0] === 'company' && !paths[1]) history.push(`/company/${upperCase(getCompanySymbol())}`)
 
     // eslint-disable-next-line
   }, [location])
 
   const navigationContext = {
-    getCurrentPath: () => navigation.currentPath,
-    getCurrentPaths: () => navigation.currentPath.split('/').filter((x) => x !== ''),
+    //not used yet
+    userId: '',
   }
 
   return <NavigationContext.Provider value={navigationContext}>{children}</NavigationContext.Provider>

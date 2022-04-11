@@ -2,15 +2,15 @@ import PaypalExpressBtn from 'react-paypal-express-checkout'
 
 export const PaypalForm = ({ amount }) => {
   const onSuccess = (payment) => {
-    console.log('The payment succeeded', payment)
+    console.info('The payment succeeded', payment)
   }
 
   const onCancel = (data) => {
-    console.log('The payment was cancelled', data)
+    console.info('The payment was cancelled', data)
   }
 
   const onError = (err) => {
-    console.log('Error:', err)
+    console.info('Error:', err)
   }
 
   const currency = 'USD'

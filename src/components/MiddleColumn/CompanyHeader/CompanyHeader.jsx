@@ -1,4 +1,5 @@
-import { useContext, useRef, useState, useEffect } from 'react'
+import { useContext, useState, useEffect } from 'react'
+import { useHistory } from 'react-router'
 import { CompanyContext } from 'state/companyContext'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,12 +9,11 @@ const baseURL = process.env.REACT_APP_BASE_URL
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY
 
 function CompanyHeader() {
-  const inputRef = useRef(null)
-
-  const { setCompanySymbol, getCompanySymbol } = useContext(CompanyContext)
-
+  const [searchTerm, setSearchTerm] = useState('')
   const [summaryData, setSummaryData] = useState()
   const [isDescriptionShown, setIsDescriptionShown] = useState(false)
+  const { setCompanySymbol, getCompanySymbol } = useContext(CompanyContext)
+  const history = useHistory()
 
   const summaryUrl = `${baseURL}/profile/${getCompanySymbol()}?apikey=${FIN_PREP_API_KEY}`
 
@@ -28,19 +28,21 @@ function CompanyHeader() {
   }, [summaryUrl])
 
   const handleSubmit = (e) => {
-    if (e.key === 'Enter' && inputRef.current.value) {
-      const uppercaseCompanySymbol = upperCase(inputRef.current.value)
-      setCompanySymbol(uppercaseCompanySymbol)
+    if ((e.key === 'Enter' || e.type === 'click') && !!searchTerm) {
+      setCompanySymbol(searchTerm)
+      history.push(`/company/${upperCase(searchTerm)}`)
     }
   }
   return (
     <div className="company-header">
       <div className="company-search-container">
-        <i className="fas fa-search"></i>
+        <span onClick={handleSubmit} className="search-icon">
+          <i className="fas fa-search"></i>
+        </span>
         <input
           //TODO: on state change implement search
           className="company-input-box"
-          ref={inputRef}
+          onChange={(e) => setSearchTerm(e.target.value)}
           onKeyPress={handleSubmit}
         />
       </div>

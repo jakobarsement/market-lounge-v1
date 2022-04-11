@@ -15,7 +15,7 @@ const App = () => {
           <NavigationProvider>
             <Switch>
               <Route exact path="/" component={LandingPage} />
-              <Route path="/company" component={CompanyPage} />
+              <Route exact path="/company/:id" component={CompanyPage} />
               <Route exact path="/books" component={CompanyPage} />
               <Route exact path="/checkout" component={CompanyPage} />
               <Route path="*" component={EntityNotFound} />

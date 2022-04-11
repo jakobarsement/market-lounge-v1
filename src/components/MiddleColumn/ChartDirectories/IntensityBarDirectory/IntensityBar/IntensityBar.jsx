@@ -54,7 +54,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
           <linearGradient id={indicator}>
             {chartData.map((data, index) => (
               <stop
-                key={data.date}
+                key={index}
                 offset={`${14.28 * index}%`}
                 stopColor="rgb(113, 209, 134)"
                 stopOpacity={opacityScale(data[indicator])}
@@ -78,7 +78,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
         <g transform={`translate(33,${100 - topTextMargin})`}>
           {chartData.map((data, index) => (
             <text
-              key={data.formattedDate}
+              key={index}
               x={132 * index}
               textAnchor="middle"
               fontSize={`${fontSize}px`}
@@ -92,7 +92,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
         <g transform={`translate(33,${120 - bottomTextMargin})`}>
           {chartData.map((data, index) => (
             <text
-              key={data.formattedDate}
+              key={index}
               x={132 * index}
               y={3}
               textAnchor="middle"

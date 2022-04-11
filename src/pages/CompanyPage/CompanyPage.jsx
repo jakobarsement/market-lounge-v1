@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import { CompanyContext } from 'state/companyContext'
-
 import RightColumn from '../../components/RightColumn/RightColumn'
 import LeftColumn from '../../components/LeftColumn/LeftColum'
 import CompanyHeader from '../../components/MiddleColumn/CompanyHeader/CompanyHeader'
@@ -13,7 +12,6 @@ import './CompanyPage.scss'
 
 const CompanyPage = () => {
   const { getCompanySymbol } = useContext(CompanyContext)
-
   return (
     <>
       {/*TODO: {window.alert("affiliates")} */}

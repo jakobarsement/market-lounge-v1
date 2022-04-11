@@ -32,11 +32,12 @@
     margin-right: 32px;
     align-self: flex-end;
 
-    .fa-search {
+    .search-icon {
       position: relative;
       color: $ten;
-      left: 20px;
-      bottom: -1px;
+      top: 1px;
+      left: 23px;
+      cursor: pointer;
     }
 
     .company-input-box {
