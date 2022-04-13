@@ -4,7 +4,9 @@ import { CompanyContext } from 'state/companyContext'
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { upperCase } from 'lodash'
+
 import './CompanyHeader.scss'
+
 const baseURL = process.env.REACT_APP_BASE_URL
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY
 

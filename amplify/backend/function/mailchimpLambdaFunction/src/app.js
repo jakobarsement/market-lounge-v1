@@ -51,7 +51,7 @@ app.post("/mailchimpApi", async function (req, res) {
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.info(`Server running on port ${PORT}`);
 });
 
 // Export the app object. When executing the application local this does nothing. However,

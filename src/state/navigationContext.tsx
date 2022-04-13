@@ -10,8 +10,6 @@ export const NavigationProvider = ({ children }: { children: JSX.Element | JSX.E
   const history = useHistory()
   const { setCompanySymbol, getCompanySymbol } = useContext(CompanyContext) as any
 
-  console.log('companysymbol', getCompanySymbol())
-
   // sync app with current path
   useEffect(() => {
     const paths = location.pathname.split('/').filter((x) => x !== '')

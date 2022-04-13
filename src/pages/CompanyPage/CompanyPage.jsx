@@ -7,11 +7,11 @@ import SharePriceChart from '../../components/MiddleColumn/SharePriceChart/Share
 import CompanyTableDirectory from '../../components/MiddleColumn/ChartDirectories/TableCellDirectory/TableCellDirectory'
 import IntensityBarDirectory from '../../components/MiddleColumn/ChartDirectories/IntensityBarDirectory/IntensityBarDirectory'
 import EmailForm from '../../components/MiddleColumn/EmailForm/EmailForm'
-
 import './CompanyPage.scss'
 
 const CompanyPage = () => {
   const { getCompanySymbol } = useContext(CompanyContext)
+
   return (
     <>
       {/*TODO: {window.alert("affiliates")} */}
