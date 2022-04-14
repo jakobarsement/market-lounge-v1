@@ -7,6 +7,8 @@ import CompanyPage from './pages/CompanyPage/CompanyPage'
 import EntityNotFound from 'pages/EntityNotFound/EntityNotFound'
 
 import './App.scss'
+import LoginButton from 'components/LoginButton'
+import LogoutButton from 'components/LogoutButton'
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <UserProvider>
           <CompanyProvider>
             <NavigationProvider>
+              <LoginButton />
+              <LogoutButton />
               <Switch>
                 <Route exact path="/" component={LandingPage} />
                 <Route exact path="/company/:id" component={CompanyPage} />

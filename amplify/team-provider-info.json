@@ -12,10 +12,13 @@
       "AmplifyAppId": "d2owx7yt3u4o7z"
     },
     "categories": {
+      "auth": {
+        "simplemarketsreacte8008d44": {}
+      },
       "function": {
         "mailchimpLambdaFunction": {
           "deploymentBucketName": "amplify-simplemarketsreact-dev-210734-deployment",
-          "s3Key": "amplify-builds/mailchimpLambdaFunction-6b414b526a6b33526372-build.zip"
+          "s3Key": "amplify-builds/mailchimpLambdaFunction-72617879334961665046-build.zip"
         }
       }
     }
