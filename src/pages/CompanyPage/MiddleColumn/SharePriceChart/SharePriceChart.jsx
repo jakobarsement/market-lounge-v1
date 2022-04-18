@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 import Highcharts from 'highcharts/highstock'
 import HighchartsReact from 'highcharts-react-official'
-import { useFetchData } from '../../../hooks/useFetchData'
+import { useFetchData } from '../../../../hooks/useFetchData'
 import './SharePriceChart.scss'
 const baseURL = process.env.REACT_APP_BASE_URL
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY

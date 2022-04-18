@@ -1,23 +1,41 @@
-@use "../../scss/abstracts/" as *;
+@use "scss/abstracts/" as *;
 
 .header-main {
   height: 50px;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent !important;
   .header-options {
     display: flex;
     z-index: 1;
     .option {
+      position: relative;
       width: 140px;
-      text-align: center;
+      top: 2px;
       h4 {
         color: $ten;
         font-size: 20px;
         font-weight: initial;
         text-align: center;
+      }
+      :hover {
+        color: $ten-hover;
+      }
+    }
+    .auth-options {
+      position: absolute;
+      right: 20px;
+      .MuiButton-contained {
+        margin: 0 4px 0 4px;
+        padding: 3px 6px 3px 6px;
+        &.login {
+          background-color: $line-1;
+        }
+        &.logout {
+          background-color: $five;
+        }
       }
     }
   }

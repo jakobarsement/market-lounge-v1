@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 import IntensityBar from './IntensityBar/IntensityBar'
-import { useFetchData } from '../../../../hooks/useFetchData'
+import { useFetchData } from '../../../../../hooks/useFetchData'
 import './IntensityBarDirectory.scss'
 const baseURL = process.env.REACT_APP_BASE_URL
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY

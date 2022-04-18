@@ -10,6 +10,7 @@ Amplify.configure(awsExports)
 const domain = process.env.REACT_APP_AUTH0_DOMAIN
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
 console.log({ domain, clientId, window: window.location.origin })
+
 ReactDOM.render(
   <Auth0Provider
     domain={domain}
