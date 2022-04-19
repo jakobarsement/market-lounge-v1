@@ -27,14 +27,24 @@
     .auth-options {
       position: absolute;
       right: 20px;
+      top: 13px;
       .MuiButton-contained {
-        margin: 0 4px 0 4px;
-        padding: 3px 6px 3px 6px;
+        margin: 0 4px;
+        padding: 0;
+
+        .MuiButton-label {
+          font-size: 16px;
+        }
+        :hover {
+          background-color: $line-2 !important;
+        }
         &.login {
           background-color: $line-1;
+          width: 70px;
         }
         &.logout {
           background-color: $five;
+          width: 85px;
         }
       }
     }

@@ -1,9 +1,16 @@
 import LoginButton from 'components/LoginButton'
 import LogoutButton from 'components/LogoutButton'
 import { Link } from 'react-router-dom'
+import { useAuth0 } from '@auth0/auth0-react'
+import { API } from 'aws-amplify'
 
 import './PrimaryNavbar.scss'
-const PrimaryNavbar = (props) => {
+
+const PrimaryNavbar = () => {
+  const { user, isAuthenticated } = useAuth0()
+
+  if (user) API.post('mailchimpApi', '/mailchimpApi', { body: { email: user.email } })
+
   return (
     <div className="header-main">
       <div className="logo-left">
@@ -25,8 +32,7 @@ const PrimaryNavbar = (props) => {
           <h4>About Us</h4>
         </Link>
         <div className="auth-options">
-          <LoginButton className="login" />
-          <LogoutButton className="logout" />
+          {isAuthenticated ? <LogoutButton className="logout" /> : <LoginButton className="login" />}
         </div>
       </div>
     </div>

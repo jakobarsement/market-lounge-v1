@@ -22,7 +22,6 @@ const EmailForm = () => {
 
       API.post('mailchimpApi', '/mailchimpApi', customArguments)
         .then((response) => {
-          console.info('Email Server Response', response)
           setSubmittedState(true)
         })
         .catch((error) => {
