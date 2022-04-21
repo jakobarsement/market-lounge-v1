@@ -2,12 +2,12 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import { CompanyProvider } from './state/companyContext'
 import { NavigationProvider } from 'state/navigationContext'
 import { UserProvider } from 'state/userContext'
+import PrimaryNavbar from 'components/PrimaryNavbar/PrimaryNavbar'
 import LandingPage from './pages/LandingPage/LandingPage'
 import CompanyPage from './pages/CompanyPage/CompanyPage'
 import EntityNotFound from 'pages/EntityNotFound/EntityNotFound'
 
 import './App.scss'
-import PrimaryNavbar from 'components/PrimaryNavbar/PrimaryNavbar'
 
 const App = () => {
   return (

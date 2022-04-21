@@ -32,7 +32,11 @@ const PrimaryNavbar = () => {
           <h4>About Us</h4>
         </Link>
         <div className="auth-options">
-          {isAuthenticated ? <LogoutButton className="logout" /> : <LoginButton className="login" />}
+          {isAuthenticated ? (
+            <LogoutButton conditionalAvatar className="logout" />
+          ) : (
+            <LoginButton className="login" />
+          )}
         </div>
       </div>
     </div>
