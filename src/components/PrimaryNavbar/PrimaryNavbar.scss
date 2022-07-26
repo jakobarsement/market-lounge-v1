@@ -51,3 +51,14 @@
     }
   }
 }
+
+@media (max-width: 760px) {
+  .header-main {
+    .header-options {
+      .auth-options {
+        position: absolute;
+        top: 45px;
+      }
+    }
+  }
+}
