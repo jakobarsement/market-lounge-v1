@@ -1,5 +1,5 @@
-import Highcharts from 'highcharts/highstock'
-import HighchartsReact from 'highcharts-react-official'
+import Highcharts from 'highcharts/highstock';
+import HighchartsReact from 'highcharts-react-official';
 
 const RatioChart = ({ company, chartData, indicator, yAxisLabel }) => {
   const options = {
@@ -61,14 +61,13 @@ const RatioChart = ({ company, chartData, indicator, yAxisLabel }) => {
         },
       },
     ],
-  }
+  };
 
   return (
-    <div className="company-ratio-chart">
+    <div className='company-ratio-chart'>
       <HighchartsReact highcharts={Highcharts} options={options} />
-      <span>Dingus</span>
     </div>
-  )
-}
+  );
+};
 
-export default RatioChart
+export default RatioChart;
