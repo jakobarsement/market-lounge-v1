@@ -1,7 +1,7 @@
 import { useContext } from 'react'
+import { CompanyContext } from 'state/companyContext'
 import { formatPublishedDateTime } from './NewsFeed.utils'
 import './NewsFeed.scss'
-import { CompanyContext } from 'state/companyContext'
 
 const NewsFeed = ({ feeds }) => {
   const { getCompanySymbol } = useContext(CompanyContext)

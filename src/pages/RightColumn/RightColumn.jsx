@@ -6,6 +6,7 @@ import Feedback from './FeedbackForm/FeedbackForm'
 // TODO: import BookOfTheWeek from "./books/book-of-the-week.component";
 const baseURL = process.env.REACT_APP_BASE_URL
 const FIN_PREP_API_KEY = process.env.REACT_APP_FIN_PREP_API_KEY
+const enableFeedback = false
 
 const RightColumn = () => {
   const { getCompanySymbol } = useContext(CompanyContext)
@@ -28,7 +29,7 @@ const RightColumn = () => {
     <>
       {/* <BookOfTheWeek></BookOfTheWeek> */}
       <NewsFeedTable feeds={responseState}></NewsFeedTable>
-      <Feedback />
+      {enableFeedback && <Feedback />}
     </>
   )
 }
