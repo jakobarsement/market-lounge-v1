@@ -8,6 +8,7 @@ import './PrimaryNavbar.scss'
 
 const PrimaryNavbar = () => {
   const { user, isAuthenticated } = useAuth0()
+  const enableLogin = false
 
   if (user) API.post('mailchimpApi', '/mailchimpApi', { body: { email: user.email } })
 
@@ -31,13 +32,15 @@ const PrimaryNavbar = () => {
         <Link className="option" to="/companypage">
           <h4>About Us</h4>
         </Link>
-        <div className="auth-options">
-          {isAuthenticated ? (
-            <LogoutButton conditionalAvatar className="logout" />
-          ) : (
-            <LoginButton className="login" />
-          )}
-        </div>
+        {enableLogin && (
+          <div className="auth-options">
+            {isAuthenticated ? (
+              <LogoutButton conditionalAvatar className="logout" />
+            ) : (
+              <LoginButton className="login" />
+            )}
+          </div>
+        )}
       </div>
     </div>
   )
