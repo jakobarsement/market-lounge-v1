@@ -1,4 +1,5 @@
-import PaypalExpressBtn from 'react-paypal-express-checkout'
+// This plugin is no longer suported for React versions 15^
+// import PaypalExpressBtn from 'react-paypal-express-checkout'
 
 export const PaypalForm = ({ amount }) => {
   const onSuccess = (payment) => {}
@@ -15,21 +16,22 @@ export const PaypalForm = ({ amount }) => {
   }
 
   return (
-    <PaypalExpressBtn
-      style={{
-        shape: 'rect',
-        color: 'blue',
-        layout: 'horizontal',
-        label: 'paypal',
-        fundingicons: true,
-      }}
-      env={process.env.REACT_APP_PROD === 'false' ? 'sandbox' : 'production'}
-      client={client}
-      currency={currency}
-      total={amount}
-      onError={onError}
-      onSuccess={onSuccess}
-      onCancel={onCancel}
-    />
+    <></>
+    // <PaypalExpressBtn
+    //   style={{
+    //     shape: 'rect',
+    //     color: 'blue',
+    //     layout: 'horizontal',
+    //     label: 'paypal',
+    //     fundingicons: true,
+    //   }}
+    //   env={process.env.REACT_APP_PROD === 'false' ? 'sandbox' : 'production'}
+    //   client={client}
+    //   currency={currency}
+    //   total={amount}
+    //   onError={onError}
+    //   onSuccess={onSuccess}
+    //   onCancel={onCancel}
+    // />
   )
 }
