@@ -44,7 +44,7 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
   const opacityScale = d3
     .scaleLinear()
     .domain([d3.min(domainValues), d3.max(domainValues)])
-    .range([-200, 60])
+    .range([0, 1])
 
   return (
     <>
@@ -52,17 +52,18 @@ const IntensityBar = ({ company, indicator, title, chartData }) => {
       <svg viewBox="0 0 1000 133 " preserveAspectRatio="xMidYMin">
         <defs>
           <linearGradient id={indicator}>
-            {chartData.map((data, index) => (
-              <stop
-                key={index}
-                offset={`${14.28 * index}%`}
-                stopColor="rgb(113, 209, 134)"
-                stopOpacity={opacityScale(data[indicator])}
-              ></stop>
-            ))}
+            {chartData.map((data, index) => {
+              const value = data[indicator]
+              const maxAbsValue = d3.max(chartData, (d) => Math.abs(d[indicator]))
+              const opacity = value >= 0 ? 1 : 1 - Math.abs(value) / maxAbsValue
+              const stopColor = value >= 0 ? 'rgb(113, 209, 134)' : 'rgb(209, 100, 100)'
+              return (
+                <stop key={index} offset={`${14.28 * index}%`} stopColor={stopColor} stopOpacity={opacity} />
+              )
+            })}
           </linearGradient>
         </defs>
-
+        {/* 'rgb(209, 100, 100)'  */}
         <rect
           x="20"
           y={`${barMargin}`}
