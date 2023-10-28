@@ -7,7 +7,7 @@
   justify-content: center;
   .company-details {
     margin-left: 8px;
-    color: $ten;
+    color: $ml-white;
     h2 {
       margin-bottom: 5px;
     }
@@ -34,7 +34,7 @@
 
     .search-icon {
       position: relative;
-      color: $ten;
+      color: $ml-white;
       top: 1px;
       left: 23px;
       cursor: pointer;
@@ -46,7 +46,7 @@
       min-width: 100px;
       background-color: $primary-background;
       border-color: $fifteen;
-      color: $ten;
+      color: $ml-white;
       font-size: 13px;
       font-weight: bold;
       padding-left: 26px;

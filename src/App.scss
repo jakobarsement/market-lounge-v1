@@ -1,5 +1,4 @@
 @use "./scss/abstracts/" as*;
-
 a {
   text-decoration: none;
   color: rgb(194, 26, 26);
@@ -9,9 +8,14 @@ body {
   overflow: overlay;
   overflow-x: hidden;
 }
+footer.footer-main {
+  color: $ml-white;
+  font-size: 10px;
+  text-align: center;
+  padding: 12px;
+}
 * {
-  font-family: 'Montserrat', 'Darker Grotesque', 'Open Sans Condensed',
-    sans-serif;
+  font-family: 'Montserrat', 'Darker Grotesque', 'Open Sans Condensed', sans-serif;
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;

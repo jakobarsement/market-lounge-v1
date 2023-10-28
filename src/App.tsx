@@ -28,6 +28,10 @@ const App = () => {
             </NavigationProvider>
           </CompanyProvider>
         </UserProvider>
+        <footer className="footer-main">
+          All data provided on Market Lounge is provided for informational purposes only, and is not intended
+          for trading or investing purposes.
+        </footer>
       </div>
     </BrowserRouter>
   )
