@@ -1,70 +1,28 @@
+![marketloung.org_screenshot](ml_screenshot.png)
+
 # Market Lounge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Market Lounge is an open source, interactive, data visualization app that helps users identify important financial metrics and trends before investing in public companies.
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+1. [Clone the repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+2. Navigate to the cloned project's directory
+3. Run `npm start` to host and view the project locally ([http://localhost:3000](http://localhost:3000) by default)
+4. Request access to the Jira board [here](https://entremont.atlassian.net/jira/software/c/projects/ML/boards/1/backlog?issueLimit=100&view=detail) where we manage tasks
+5. Join the slack channel [here](https://join.slack.com/t/simplemarkets/shared_invite/zt-29lp1xm5v-wImtuUt8j3DvvRm_UzQpwQ) and tell us what you're passionate about in the general channel 😊
 
-### `npm start`
+## Tech
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- React.js
+- AWS Amplify
+- D3
+- Highcharts
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Learn more about [React](https://reactjs.org/) and [CRA](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [Analyze bundle size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [Advanced configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
