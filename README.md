@@ -26,3 +26,7 @@ Learn more about [React](https://reactjs.org/) and [CRA](https://facebook.github
 - [Code Splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 - [Analyze bundle size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 - [Advanced configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+## License
+
+This work is licensed under [CC BY-NC-SA 4.0](./LICENSE)
