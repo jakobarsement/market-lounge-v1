@@ -2,7 +2,7 @@
 
 # Market Lounge
 
-Market Lounge is an open source, interactive, data visualization app that helps users identify important financial metrics and trends before investing in public companies.
+[marketlounge.org](https://marketlounge.org/) is an open source, interactive, data visualization app that helps users identify important financial metrics and trends before investing in public companies.
 
 ## Getting started
 
